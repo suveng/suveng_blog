@@ -15,7 +15,7 @@ export default hopeTheme({
 
   logo: "logo.svg",
 
-  repo: "suveng/blog",
+  repo: "suveng/suveng_blog",
 
   docsDir: "src",
 
