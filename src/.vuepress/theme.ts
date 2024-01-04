@@ -1,7 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
-import { MR_HOPE_AVATAR } from "./logo.js";
 
 export default hopeTheme({
   hostname: "https://suveng.github.io",
@@ -90,6 +89,14 @@ export default hopeTheme({
     //   provider: "Waline",
     //   serverURL: "https://waline-comment.vuejs.press",
     // },
+    comment: {
+      provider: "Giscus",
+      comment: true,
+      repo: "suveng/suveng_blog",
+      repoId : "R_kgDOLAqk7A",
+      categoryId:"DIC_kwDOLAqk7M4CcMAy",
+      category:"Announcements"
+    },
 
     // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
