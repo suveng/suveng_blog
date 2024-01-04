@@ -16,7 +16,7 @@ export const zhSidebar = sidebar({
       prefix: "posts/",
       children: "structure",
     },
-    "intro",
+    "/zh/intro",
     {
       text: "幻灯片",
       icon: "person-chalkboard",
