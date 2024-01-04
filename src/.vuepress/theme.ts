@@ -109,6 +109,12 @@ export default hopeTheme({
       json: true,
       count: 100000,
     },
+    sitemap: {
+
+    },
+    seo : {
+
+    },
 
     // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
