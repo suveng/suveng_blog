@@ -103,6 +103,13 @@ export default hopeTheme({
       license: "CC BY-NC-ND 4.0",
     },
 
+    feed: {
+      rss: true,
+      atom:true,
+      json: true,
+      count: 100000,
+    },
+
     // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,
