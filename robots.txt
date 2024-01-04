@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://suveng.github.io/sitemap.xml
+Sitemap: https://suveng.github.io/suveng/suveng_blog/sitemap.xml
