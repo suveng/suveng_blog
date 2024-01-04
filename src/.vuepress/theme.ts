@@ -97,6 +97,10 @@ export default hopeTheme({
       categoryId:"DIC_kwDOLAqk7M4CcMAy",
       category:"Announcements"
     },
+    searchPro: {
+      indexContent: true,
+      hotReload: true,
+    },
 
     // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
