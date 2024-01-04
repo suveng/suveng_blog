@@ -78,17 +78,10 @@ export default hopeTheme({
       "/zh/demo/encrypt.html": ["1234"],
     },
   },
-
+  copyright: "Copyright © 2024 苏文广",
   plugins: {
     blog: true,
 
-    // install @waline/client before enabling it
-    // WARNING: This is a test server for demo only.
-    // You should create and use your own comment service in production.
-    // comment: {
-    //   provider: "Waline",
-    //   serverURL: "https://waline-comment.vuejs.press",
-    // },
     comment: {
       provider: "Giscus",
       comment: true,
@@ -100,6 +93,14 @@ export default hopeTheme({
     searchPro: {
       indexContent: true,
       hotReload: true,
+    },
+
+    copyright: {
+      author: "苏文广",
+      global: true,
+      disableCopy: false,
+      disableSelection: false,
+      license: "CC BY-NC-ND 4.0",
     },
 
     // all features are enabled for demo, only preserve features you need here
