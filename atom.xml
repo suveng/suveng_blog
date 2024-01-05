@@ -3,13 +3,53 @@
   <id>https://suveng.github.io/suveng_blog/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-01-05T10:55:56.933Z</updated>
+  <updated>2024-01-05T11:16:53.054Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://suveng.github.io/suveng_blog/atom.xml"/>
   <link rel="alternate" href="https://suveng.github.io/suveng_blog/"/>
+  <category term="数据结构"/>
   <category term="算法"/>
   <category term="博客"/>
   <category term="博主"/>
+  <entry>
+    <title type="text">数组</title>
+    <id>https://suveng.github.io/suveng_blog/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html</id>
+    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html"/>
+    <updated>2024-01-05T11:15:57.000Z</updated>
+    <summary type="html"><![CDATA[<h1> 数组</h1>
+<p>数组是一种线性数据结构，它由一组连续的内存空间组成，用于存储同一类型的数据元素。</p>
+<h2> 数组的主要优点包括：</h2>
+<h3> 1. 直接访问</h3>
+<p>可以通过索引直接访问数组中的元素，时间复杂度为O(1)。</p>
+<h3> 2. 灵活操作</h3>
+<p>可以通过索引对数组中的元素进行增加、删除、修改等操作。</p>
+<h3> 3. 空间有效利用</h3>
+<p>在创建数组时，会预分配足够的内存空间用于存储元素，可以有效利用内存空间。</p>
+<h2> 数组的主要缺点包括：</h2>
+<h3> 1. 大小固定</h3>
+<p>数组的大小在创建时就需要确定，并且不能动态改变，如果需要存储更多的元素，需要重新创建一个更大的数组。</p>]]></summary>
+    <content type="html"><![CDATA[<h1> 数组</h1>
+<p>数组是一种线性数据结构，它由一组连续的内存空间组成，用于存储同一类型的数据元素。</p>
+<h2> 数组的主要优点包括：</h2>
+<h3> 1. 直接访问</h3>
+<p>可以通过索引直接访问数组中的元素，时间复杂度为O(1)。</p>
+<h3> 2. 灵活操作</h3>
+<p>可以通过索引对数组中的元素进行增加、删除、修改等操作。</p>
+<h3> 3. 空间有效利用</h3>
+<p>在创建数组时，会预分配足够的内存空间用于存储元素，可以有效利用内存空间。</p>
+<h2> 数组的主要缺点包括：</h2>
+<h3> 1. 大小固定</h3>
+<p>数组的大小在创建时就需要确定，并且不能动态改变，如果需要存储更多的元素，需要重新创建一个更大的数组。</p>
+<h3> 2. 无法插入中间元素</h3>
+<p>如果需要在数组的中间插入元素，需要将后面的元素都向后移动一位，时间复杂度为O(n)。</p>
+<h3> 3. 无法删除中间元素</h3>
+<p>如果需要删除数组中的中间元素，需要将后面的元素都向前移动一位，时间复杂度为O(n)。</p>
+<h2> 总结</h2>
+<p>综上所述，数组适用于元素数量固定且需要直接访问的场景，但是不适用于需要动态增加或删除元素的场景。</p>
+]]></content>
+    <category term="数据结构"/>
+    <published>2024-01-05T11:15:57.000Z</published>
+  </entry>
   <entry>
     <title type="text">斐波那契数列问题</title>
     <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html</id>
