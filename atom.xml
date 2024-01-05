@@ -3,7 +3,7 @@
   <id>https://suveng.github.io/suveng_blog/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-01-05T11:16:53.054Z</updated>
+  <updated>2024-01-05T11:19:52.199Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://suveng.github.io/suveng_blog/atom.xml"/>
   <link rel="alternate" href="https://suveng.github.io/suveng_blog/"/>
@@ -15,7 +15,7 @@
     <title type="text">数组</title>
     <id>https://suveng.github.io/suveng_blog/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html</id>
     <link href="https://suveng.github.io/suveng_blog/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html"/>
-    <updated>2024-01-05T11:15:57.000Z</updated>
+    <updated>2024-01-05T11:18:48.000Z</updated>
     <summary type="html"><![CDATA[<h1> 数组</h1>
 <p>数组是一种线性数据结构，它由一组连续的内存空间组成，用于存储同一类型的数据元素。</p>
 <h2> 数组的主要优点包括：</h2>
@@ -54,7 +54,7 @@
     <title type="text">斐波那契数列问题</title>
     <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html</id>
     <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html"/>
-    <updated>2024-01-05T10:54:53.000Z</updated>
+    <updated>2024-01-05T11:18:48.000Z</updated>
     <summary type="html"><![CDATA[<h1> 斐波那契数列问题</h1>
 <p>数学公式如下:</p>
 <p v-pre="" class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right" columnspacing=""><mtr><mtd class="mtr-glue"></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.16em" columnalign="center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>n</mi><mo>&gt;</mo><mo>=</mo><mn>1</mn></mrow></mstyle></mtd></mtr></mtable></mrow></mrow></mstyle></mtd><mtd class="mtr-glue"></mtd><mtd class="mml-eqn-num"></mtd></mtr></mtable><annotation encoding="application/x-tex">
