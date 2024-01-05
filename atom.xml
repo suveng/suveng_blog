@@ -3,37 +3,41 @@
   <id>https://suveng.github.io/suveng_blog/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-01-04T15:23:43.770Z</updated>
+  <updated>2024-01-05T02:26:12.806Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://suveng.github.io/suveng_blog/atom.xml"/>
   <link rel="alternate" href="https://suveng.github.io/suveng_blog/"/>
+  <category term="博客"/>
+  <category term="博主"/>
   <entry>
     <title type="text">记录搭建VuePress博客</title>
     <id>https://suveng.github.io/suveng_blog/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html</id>
     <link href="https://suveng.github.io/suveng_blog/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html"/>
-    <updated>2024-01-04T09:45:47.000Z</updated>
+    <updated>2024-01-05T02:25:32.000Z</updated>
     <summary type="html"><![CDATA[<h1> 记录搭建VuePress博客</h1>
 <p><a href="https://theme-hope.vuejs.press/zh/guide/blog/article.html" target="_blank" rel="noopener noreferrer">VuePress</a></p>
 ]]></summary>
     <content type="html"><![CDATA[<h1> 记录搭建VuePress博客</h1>
 <p><a href="https://theme-hope.vuejs.press/zh/guide/blog/article.html" target="_blank" rel="noopener noreferrer">VuePress</a></p>
 ]]></content>
+    <category term="博客"/>
     <published>2024-01-04T09:45:47.000Z</published>
   </entry>
   <entry>
     <title type="text">介绍页</title>
     <id>https://suveng.github.io/suveng_blog/zh/intro.html</id>
     <link href="https://suveng.github.io/suveng_blog/zh/intro.html"/>
-    <updated>2024-01-04T13:31:45.000Z</updated>
+    <updated>2024-01-05T02:25:32.000Z</updated>
     <summary type="html"><![CDATA[<h1> 介绍页</h1>
 <p>这是我的个人简历</p>
+<h2> 个人信息</h2>
 <p>姓名: 苏文广<br>
 性别: 男<br>
 出生年月: 1996-12<br>
 大学: 韩山师范学院-软件工程专业(2015.9~2019.6/全日制统招本科)<br>
 手机号: 18320664028<br>
 邮箱: suveng@163.com</p>
-<hr>
+<h2> 开发技能</h2>
 <ul>
 <li>4年工作经验</li>
 <li>熟悉 Java 语言, IO,反射,SPI,jvm, java agent</li>
@@ -51,13 +55,14 @@
 </ul>]]></summary>
     <content type="html"><![CDATA[<h1> 介绍页</h1>
 <p>这是我的个人简历</p>
+<h2> 个人信息</h2>
 <p>姓名: 苏文广<br>
 性别: 男<br>
 出生年月: 1996-12<br>
 大学: 韩山师范学院-软件工程专业(2015.9~2019.6/全日制统招本科)<br>
 手机号: 18320664028<br>
 邮箱: suveng@163.com</p>
-<hr>
+<h2> 开发技能</h2>
 <ul>
 <li>4年工作经验</li>
 <li>熟悉 Java 语言, IO,反射,SPI,jvm, java agent</li>
@@ -74,6 +79,7 @@
 <li>了解 Vue,React 框架, 编写过数据大屏以及后台管理界面</li>
 </ul>
 ]]></content>
+    <category term="博主"/>
     <published>2024-01-04T08:10:21.000Z</published>
   </entry>
 </feed>
