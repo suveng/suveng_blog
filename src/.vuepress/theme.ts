@@ -74,13 +74,14 @@ export default hopeTheme({
 
   encrypt: {
     config: {
-      "/demo/encrypt.html": ["1234"],
-      "/zh/demo/encrypt.html": ["1234"],
+      "/zh/posts/简历/Java简历.html": ["suveng"],
     },
   },
   copyright: "Copyright © 2024 苏文广",
   plugins: {
-    blog: true,
+    blog: {
+      excerpt:false,
+    },
 
     comment: {
       provider: "Giscus",

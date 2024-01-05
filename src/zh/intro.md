@@ -1,15 +1,17 @@
 ---
 icon: circle-info
-head: 
-  - - meta
-    - name: keywords
-      content: 苏文广
+category: 
+  - 博主
+tag:
+  - 博主
 ---
 
 # 介绍页
 
 这是我的个人简历
 
+
+## 个人信息
 
 姓名: 苏文广     
 性别: 男      
@@ -18,7 +20,8 @@ head:
 手机号: 18320664028    
 邮箱: suveng@163.com
 
----
+## 开发技能
+
 - 4年工作经验
 - 熟悉 Java 语言, IO,反射,SPI,jvm, java agent
 - 精通业务关系建模;能够独立设计大型复杂系统, 绘制系统架构图, UML 设计图, 精通 OKR 工作法
