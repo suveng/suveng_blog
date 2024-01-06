@@ -6,14 +6,232 @@
     <link>https://suveng.github.io/suveng_blog/</link>
     <description>苏文广的博客</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 05 Jan 2024 11:19:52 GMT</pubDate>
-    <lastBuildDate>Fri, 05 Jan 2024 11:19:52 GMT</lastBuildDate>
+    <pubDate>Sat, 06 Jan 2024 11:14:02 GMT</pubDate>
+    <lastBuildDate>Sat, 06 Jan 2024 11:14:02 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>数据结构</category>
     <category>算法</category>
+    <category>数据结构</category>
     <category>博客</category>
     <category>博主</category>
+    <item>
+      <title>电商搜索方案</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%90%9C%E7%B4%A2%E6%96%B9%E6%A1%88.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%90%9C%E7%B4%A2%E6%96%B9%E6%A1%88.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">电商搜索方案</source>
+      <description>https://zq99299.github.io/note-book/back-end-storage/</description>
+      <pubDate>Sat, 06 Jan 2024 11:11:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 电商搜索方案</h1>
+<p>https://zq99299.github.io/note-book/back-end-storage/</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>冒泡排序</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">冒泡排序</source>
+      <description>冒泡排序（Bubble Sort）是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。 算法描述 1. 从数列中挑出最小（大）元素，依次放到数列的起始位置； 2. 再从剩下的元素中挑出最小（大）元素，放到已排序序列的末尾； 3....</description>
+      <category>算法</category>
+      <pubDate>Sat, 06 Jan 2024 11:11:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 冒泡排序</h1>
+<p>冒泡排序（Bubble Sort）是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。</p>
+<h2> 算法描述</h2>
+<ol>
+<li>从数列中挑出最小（大）元素，依次放到数列的起始位置；</li>
+<li>再从剩下的元素中挑出最小（大）元素，放到已排序序列的末尾；</li>
+<li>重复步骤2，直到所有元素排序完成。</li>
+</ol>
+<h2> 示例</h2>
+<p>对数列 {5, 3, 8, 6, 4} 进行冒泡排序：</p>
+<p>第一轮：</p>
+<ul>
+<li>比较5和3，发现5&gt;3，交换位置，数列变成 {3, 5, 8, 6, 4}；</li>
+<li>比较5和8，发现5&lt;8，位置不变，数列还是 {3, 5, 8, 6, 4}；</li>
+<li>比较8和6，发现8&gt;6，交换位置，数列变成 {3, 5, 6, 8, 4}；</li>
+<li>比较8和4，发现8&gt;4，交换位置，数列变成 {3, 5, 6, 4, 8}；
+第一轮结束，此时最大元素8已经排好序，接下来对剩下的数列 {3, 5, 6, 4} 进行冒泡排序。</li>
+</ul>
+<p>第二轮：</p>
+<ul>
+<li>比较3和5，发现3&lt;5，位置不变，数列还是 {3, 5, 6, 4}；</li>
+<li>比较5和6，发现5&lt;6，位置不变，数列还是 {3, 5, 6, 4}；</li>
+<li>比较6和4，发现6&gt;4，交换位置，数列变成 {3, 5, 4, 6}；
+第二轮结束，此时次大元素6已经排好序，剩下的数列 {3, 5, 4} 继续冒泡排序。</li>
+</ul>
+<p>第三轮：</p>
+<ul>
+<li>比较3和5，发现3&lt;5，位置不变，数列还是 {3, 5, 4}；</li>
+<li>比较5和4，发现5&gt;4，交换位置，数列变成 {3, 4, 5}；
+第三轮结束，此时第三大元素5已经排好序，剩下的数列 {3, 4} 继续冒泡排序。</li>
+</ul>
+<p>第四轮：</p>
+<ul>
+<li>比较3和4，发现3&lt;4，位置不变，数列还是 {3, 4}；
+第四轮结束，此时最小元素3已经排好序，整个数列排序完成。</li>
+</ul>
+<h2> 复杂度分析</h2>
+<ul>
+<li>最好情况：当数组已经按照排序需求排好时，只需进行一次遍历，时间复杂度为O(n)；</li>
+<li>最坏情况：当数组是逆序排列时，需要进行n-1次遍历，时间复杂度为O(n^2)；</li>
+<li>平均情况：需要进行n-1次遍历，时间复杂度为O(n^2)。</li>
+</ul>
+<p>冒泡排序是一种稳定的排序算法。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>双指针</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%8F%8C%E6%8C%87%E9%92%88.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%8F%8C%E6%8C%87%E9%92%88.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">双指针</source>
+      <description>双指针算法（Two-Pointers Algorithm）是一种常见的算法思想，通常用于解决数组或链表相关的问题。该算法通过使用两个指针，分别从数组或链表的两端向中间移动，从而解决问题。 双指针算法通常可以分为两种情况： 1. 从数组的两端向中间移动的双指针算法： 这种情况下，我们通常使用两个指针从数组的两端同时开始遍历，然后根据具体的问题来决定两个指...</description>
+      <category>算法</category>
+      <pubDate>Sat, 06 Jan 2024 11:11:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 双指针</h1>
+<p>双指针算法（Two-Pointers Algorithm）是一种常见的算法思想，通常用于解决数组或链表相关的问题。该算法通过使用两个指针，分别从数组或链表的两端向中间移动，从而解决问题。
+双指针算法通常可以分为两种情况：</p>
+<ol>
+<li>
+<p>从数组的两端向中间移动的双指针算法：
+这种情况下，我们通常使用两个指针从数组的两端同时开始遍历，然后根据具体的问题来决定两个指针的移动方式。这种算法通常用于解决一些查找或筛选的问题，例如查找两个数的和等于目标值、查找数组中的环形子数组等。</p>
+</li>
+<li>
+<p>从数组的一端向另一端移动的双指针算法：
+这种情况下，我们通常使用两个指针，一个指向数组的起始位置，另一个从起始位置开始向后遍历。这种算法通常用于解决一些排序或统计的问题，例如验证只包含相同字符的最长子串、统计数组中元素出现次数等。</p>
+</li>
+</ol>
+<p>使用双指针算法可以有效地提高解决数组或链表相关问题的效率，因为双指针同时进行遍历，可以将时间复杂度从O(n^2)降低到O(n)。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>基数排序</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">基数排序</source>
+      <description>基本原理 基数排序是一种非比较性的排序算法。基数排序的基本思想是：将整数按位数划分为不同的桶，然后按每个位数分别对桶中的元素进行排序，最终将所有位数上的排序结果合并在一起，得到最终的排序结果。 基数排序的时间复杂度为O(dn)，其中d是数字的最大位数，n是待排序元素个数。 实现步骤 基数排序的实现步骤如下： 1. 获取待排序数组中的最大值，确定最大位数...</description>
+      <category>算法</category>
+      <pubDate>Sat, 06 Jan 2024 11:11:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 基数排序</h1>
+<h2> 基本原理</h2>
+<p>基数排序是一种非比较性的排序算法。基数排序的基本思想是：将整数按位数划分为不同的桶，然后按每个位数分别对桶中的元素进行排序，最终将所有位数上的排序结果合并在一起，得到最终的排序结果。</p>
+<p>基数排序的时间复杂度为O(dn)，其中d是数字的最大位数，n是待排序元素个数。</p>
+<h2> 实现步骤</h2>
+<p>基数排序的实现步骤如下：</p>
+<ol>
+<li>获取待排序数组中的最大值，确定最大位数d。</li>
+<li>对最末位进行排序，使用计数排序算法对每个数字出现的次数进行统计。</li>
+<li>基于计数排序的结果，依次确定每个数字在有序数组中的位置。</li>
+<li>将有序数组重新赋值给原数组。</li>
+<li>依次对每一位进行排序，直到最高位。</li>
+</ol>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>堆排序</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%A0%86%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%A0%86%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">堆排序</source>
+      <description>堆排序（Heap Sort）是利用堆（Heap）这种数据结构进行选择排序的一种算法。堆是一个可以推导具有最大或最小值的树形结构，堆排序利用堆的特性进行排序。 堆排序分为两个步骤： 1. 建堆（Build Heap）：将一个无序的数组构建成一个大顶堆（Max Heap）。大顶堆的特点是父节点的值大于或等于其子节点的值。建堆的过程从数组的最后一个非叶子节点...</description>
+      <category>算法</category>
+      <pubDate>Sat, 06 Jan 2024 11:11:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 堆排序</h1>
+<p>堆排序（Heap Sort）是利用堆（Heap）这种数据结构进行选择排序的一种算法。堆是一个可以推导具有最大或最小值的树形结构，堆排序利用堆的特性进行排序。</p>
+<p>堆排序分为两个步骤：</p>
+<ol>
+<li>
+<p>建堆（Build Heap）：将一个无序的数组构建成一个大顶堆（Max Heap）。大顶堆的特点是父节点的值大于或等于其子节点的值。建堆的过程从数组的最后一个非叶子节点开始，依次向上调整每个节点，使其满足大顶堆的特性。</p>
+</li>
+<li>
+<p>排序（Sort）：重复执行以下步骤，直到堆的大小为1：</p>
+<ul>
+<li>将堆中的最大元素（根节点）与堆的最后一个元素交换。</li>
+<li>将堆的大小减1。</li>
+<li>对堆进行调整，使其重新成为一个大顶堆。</li>
+</ul>
+</li>
+</ol>
+<p>重复上述步骤，每次取出的都是当前堆中的最大元素，最终得到的数组就是一个有序的数组。</p>
+<p>堆排序的时间复杂度为O(nlogn)，空间复杂度为O(1)。由于堆排序是一种不稳定的排序算法，因此在需要保持相同元素的原始顺序时应谨慎使用。</p>
+<p>以下是堆排序的示例代码：</p>
+<h2> Java实现</h2>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>快速排序</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">快速排序</source>
+      <description>快速排序是一种常用的排序算法，采用分治法（Divide and Conquer）的思想。它的基本步骤如下： 1. 从数列中挑出一个元素，称为“基准”（pivot）。 2. 将所有比基准值小的元素都放在基准前面，比基准值大的元素都放在基准的后面（相同的数可以放在任一边）。在这个分区退出之后，该基准就处于数列的中间位置。 3. 对基准的左右两个分区重复步骤...</description>
+      <category>算法</category>
+      <pubDate>Sat, 06 Jan 2024 11:11:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 快速排序</h1>
+<p>快速排序是一种常用的排序算法，采用分治法（Divide and Conquer）的思想。它的基本步骤如下：</p>
+<ol>
+<li>从数列中挑出一个元素，称为“基准”（pivot）。</li>
+<li>将所有比基准值小的元素都放在基准前面，比基准值大的元素都放在基准的后面（相同的数可以放在任一边）。在这个分区退出之后，该基准就处于数列的中间位置。</li>
+<li>对基准的左右两个分区重复步骤1和步骤2。
+快速排序的关键步骤是基准的选取，不同的选取方法会影响排序的效率。通常有以下几种选取方法：
+<ul>
+<li>选取第一个元素作为基准</li>
+<li>选取最后一个元素作为基准</li>
+<li>选取中间元素作为基准</li>
+<li>从数列中随机选取一个元素作为基准</li>
+</ul>
+</li>
+</ol>
+<p>快速排序的时间复杂度为O(nlogn)，但在最坏情况下时间复杂度为O(n^2)。为了避免最坏情况的发生，可以采用随机选取基准、三数中值法选取基准等优化方法。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>插入排序</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">插入排序</source>
+      <description>插入排序是一种简单直观的排序算法。它的基本思想是通过构建有序序列，对未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。 时间复杂度 在最坏的情况下，插入排序需要O(n^2)的时间复杂度和O(1)的空间复杂度。 空间复杂度 在最好情况下，插入排序需要O(n)的时间复杂度和O(1)的空间复杂度。 Java代码实现</description>
+      <category>算法</category>
+      <pubDate>Sat, 06 Jan 2024 11:11:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 插入排序</h1>
+<p>插入排序是一种简单直观的排序算法。它的基本思想是通过构建有序序列，对未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。</p>
+<h2> 时间复杂度</h2>
+<p>在最坏的情况下，插入排序需要O(n^2)的时间复杂度和O(1)的空间复杂度。</p>
+<h2> 空间复杂度</h2>
+<p>在最好情况下，插入排序需要O(n)的时间复杂度和O(1)的空间复杂度。</p>
+<h2> Java代码实现</h2>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>选择排序</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">选择排序</source>
+      <description>选择排序是一种简单直观的排序算法。它的基本思想是：每次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。 步骤 选择排序的算法步骤如下： 1. 在待排序的元素中，找到最小（大）的元素，将其与第一个元素交换位置。 2. 在剩下的元素中，找到最小（大）的元素，将其与第二个元素交换位置。 3. 重复上述步骤...</description>
+      <category>算法</category>
+      <pubDate>Sat, 06 Jan 2024 11:11:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 选择排序</h1>
+<p>选择排序是一种简单直观的排序算法。它的基本思想是：每次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。</p>
+<h2> 步骤</h2>
+<p>选择排序的算法步骤如下：</p>
+<ol>
+<li>在待排序的元素中，找到最小（大）的元素，将其与第一个元素交换位置。</li>
+<li>在剩下的元素中，找到最小（大）的元素，将其与第二个元素交换位置。</li>
+<li>重复上述步骤，直到所有元素均排序完毕。</li>
+</ol>
+<h2> 示例</h2>
+<p>给定数组 [3, 4, 2, 1, 5]，按升序排序。</p>
+<ol>
+<li>第一次遍历，找到最小元素 1，与第一个元素 3 交换位置，数组变为 [1, 4, 2, 3, 5]。</li>
+<li>第二次遍历，忽略第一个元素，找到最小元素 2，与第二个元素 4 交换位置，数组变为 [1, 2, 4, 3, 5]。</li>
+<li>第三次遍历，忽略前两个元素，找到最小元素 3，与第三个元素 4 交换位置，数组变为 [1, 2, 3, 4, 5]。</li>
+<li>第四次遍历，忽略前三个元素，找到最小元素 4，与第四个元素 4 交换位置，数组保持不变 [1, 2, 3, 4, 5]。</li>
+<li>第五次遍历，忽略前四个元素，找到最小元素 5，与第五个元素 5 交换位置，数组保持不变 [1, 2, 3, 4, 5]。</li>
+</ol>
+<p>最终得到的数组为 [1, 2, 3, 4, 5]，即为按升序排序后的结果。</p>
+<h2> 时间复杂度</h2>
+<p>选择排序的时间复杂度为 O(n^2)，其中 n 是待排序数组的长度。</p>
+<h2> 代码实现</h2>
+<p>下面是使用 Java 实现选择排序的示例代码：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>以上代码实现了选择排序的排序算法和排序结果的输出。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>数组</title>
       <link>https://suveng.github.io/suveng_blog/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html</link>
