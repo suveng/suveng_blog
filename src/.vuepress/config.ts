@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import plantUml from "markdown-it-plantuml";
+import { socialSharePlugin } from 'vuepress-plugin-social-share'
 
 export default defineUserConfig({
   base: "/suveng_blog/",
@@ -22,7 +23,12 @@ export default defineUserConfig({
   extendsMarkdown: (md) => {
     md.set({ breaks: true })
     md.use(plantUml)
-  }
+  },
+  plugins:[
+    socialSharePlugin({
+      networks :['wechat','qq','douban','telegram','qrcode']
+    }),
+  ]
 
   // Enable it with pwa
   // shouldPrefetch: false,
