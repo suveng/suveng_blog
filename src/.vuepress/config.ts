@@ -2,6 +2,7 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import plantUml from "markdown-it-plantuml";
 import { socialSharePlugin } from 'vuepress-plugin-social-share'
+import {googleAnalyticsPlugin} from "@vuepress/plugin-google-analytics";
 
 export default defineUserConfig({
   base: "/suveng_blog/",
@@ -28,6 +29,10 @@ export default defineUserConfig({
     socialSharePlugin({
       networks :['wechat','qq','douban','telegram','qrcode']
     }),
+    googleAnalyticsPlugin({
+      id:"G-99CKKNDMT8",
+      debug:true,
+    })
   ]
 
   // Enable it with pwa
