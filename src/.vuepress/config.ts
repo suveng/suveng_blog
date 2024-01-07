@@ -3,6 +3,7 @@ import theme from "./theme.js";
 import plantUml from "markdown-it-plantuml";
 import { socialSharePlugin } from 'vuepress-plugin-social-share'
 import {googleAnalyticsPlugin} from "@vuepress/plugin-google-analytics";
+import { searchConsolePlugin } from 'vuepress-plugin-china-search-console'
 
 export default defineUserConfig({
   base: "/suveng_blog/",
@@ -32,7 +33,10 @@ export default defineUserConfig({
     googleAnalyticsPlugin({
       id:"G-99CKKNDMT8",
       debug:true,
-    })
+    }),
+    searchConsolePlugin({
+      autoPushBaiduSwitch: true,
+    }),
   ]
 
   // Enable it with pwa
