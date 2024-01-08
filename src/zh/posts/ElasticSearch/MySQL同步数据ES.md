@@ -1,9 +1,11 @@
 ---
-category: ES
+category: ElasticSearch
 tag:
-  - ES
+  - ElasticSearch
+  - MySQL
   - Java
   - 方案
+order: 1
 ---
 
 # MySQL同步数据ES
