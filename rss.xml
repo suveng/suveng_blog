@@ -6,8 +6,8 @@
     <link>https://suveng.github.io/suveng_blog/</link>
     <description>苏文广的博客</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 08 Jan 2024 09:58:16 GMT</pubDate>
-    <lastBuildDate>Mon, 08 Jan 2024 09:58:16 GMT</lastBuildDate>
+    <pubDate>Mon, 08 Jan 2024 11:04:50 GMT</pubDate>
+    <lastBuildDate>Mon, 08 Jan 2024 11:04:50 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>ES</category>
@@ -19,12 +19,12 @@
     <category>博主</category>
     <item>
       <title>MySQL同步数据ES</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/ES/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/ES/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html</guid>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html</guid>
       <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL同步数据ES</source>
       <description>1. 同步双写 2. 异步双写 3. 定时任务 4. 数据订阅 同步双写 startuml skin rose node 商品服务 database MySQL storage ElasticSearch interface --&amp;gt; 商品服务 : 更新请求 商品服务 --&amp;gt; MySQL : 同步更新数据 商品服务 --&amp;gt; ElasticSearch :...</description>
       <category>ES</category>
-      <pubDate>Mon, 08 Jan 2024 09:57:36 GMT</pubDate>
+      <pubDate>Mon, 08 Jan 2024 10:02:09 GMT</pubDate>
       <content:encoded><![CDATA[<h1> MySQL同步数据ES</h1>
 <ol>
 <li>同步双写</li>
@@ -194,7 +194,7 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
 <li>订单</li>
 </ul>
 <h3> ES数据同步方案</h3>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/..%2FES%2FMySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html" target="blank">MySQL同步数据ES.md</a></p>
+<p><a href="/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html" target="blank">MySQL同步数据ES.md</a></p>
 <p>通过上面文章的方案比较, 最终选用数据订阅方式,进行ES数据同步</p>
 ]]></content:encoded>
     </item>
