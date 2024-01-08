@@ -3,6 +3,7 @@ category: ES
 tag:
   - ES
   - Java
+  - 方案
 ---
 
 # MySQL同步数据ES
