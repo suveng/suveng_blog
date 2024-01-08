@@ -3,15 +3,103 @@
   <id>https://suveng.github.io/suveng_blog/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-01-08T03:00:21.667Z</updated>
+  <updated>2024-01-08T08:04:02.074Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://suveng.github.io/suveng_blog/atom.xml"/>
   <link rel="alternate" href="https://suveng.github.io/suveng_blog/"/>
+  <category term="Java"/>
   <category term="电商"/>
   <category term="算法"/>
   <category term="数据结构"/>
   <category term="博客"/>
   <category term="博主"/>
+  <entry>
+    <title type="text">线程</title>
+    <id>https://suveng.github.io/suveng_blog/zh/posts/Java/%E7%BA%BF%E7%A8%8B.html</id>
+    <link href="https://suveng.github.io/suveng_blog/zh/posts/Java/%E7%BA%BF%E7%A8%8B.html"/>
+    <updated>2024-01-08T08:03:06.000Z</updated>
+    <summary type="html"><![CDATA[<h1> 线程</h1>
+<p>Java的线程是程序执行的最小单位，是操作系统进行调度的基本单元。Java中的线程由Thread类和Runnable接口实现。Thread类是一个实现了Runnable接口的类，它包含线程的控制方法和线程的生命周期方法。Runnable接口定义了一个run()方法，该方法包含线程要执行的代码。</p>
+<p>Java中的线程有以下几种状态：</p>
+<ol>
+<li>初始(NEW)：新创建了一个线程对象，但还没有调用start()方法。</li>
+<li>运行(RUNNABLE)：Java线程中将就绪（ready）和运行中（running）两种状态笼统的称为“运行”。<br>
+线程对象创建后，其他线程(比如main线程）调用了该对象的start()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获取CPU的使用权，此时处于就绪状态（ready）。就绪状态的线程在获得CPU时间片后变为运行中状态（running）。</li>
+<li>阻塞(BLOCKED)：表示线程阻塞于锁。</li>
+<li>等待(WAITING)：进入该状态的线程需要等待其他线程做出一些特定动作（通知或中断）。</li>
+<li>超时等待(TIMED_WAITING)：该状态不同于WAITING，它可以在指定的时间后自行返回。</li>
+<li>终止(TERMINATED)：表示该线程已经执行完毕。</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[<h1> 线程</h1>
+<p>Java的线程是程序执行的最小单位，是操作系统进行调度的基本单元。Java中的线程由Thread类和Runnable接口实现。Thread类是一个实现了Runnable接口的类，它包含线程的控制方法和线程的生命周期方法。Runnable接口定义了一个run()方法，该方法包含线程要执行的代码。</p>
+<p>Java中的线程有以下几种状态：</p>
+<ol>
+<li>初始(NEW)：新创建了一个线程对象，但还没有调用start()方法。</li>
+<li>运行(RUNNABLE)：Java线程中将就绪（ready）和运行中（running）两种状态笼统的称为“运行”。<br>
+线程对象创建后，其他线程(比如main线程）调用了该对象的start()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获取CPU的使用权，此时处于就绪状态（ready）。就绪状态的线程在获得CPU时间片后变为运行中状态（running）。</li>
+<li>阻塞(BLOCKED)：表示线程阻塞于锁。</li>
+<li>等待(WAITING)：进入该状态的线程需要等待其他线程做出一些特定动作（通知或中断）。</li>
+<li>超时等待(TIMED_WAITING)：该状态不同于WAITING，它可以在指定的时间后自行返回。</li>
+<li>终止(TERMINATED)：表示该线程已经执行完毕。</li>
+</ol>
+<img src="https://www.plantuml.com/plantuml/svg/ZPA_JiCm4CPtFuN75YcmCw0-11j2o6skYObphXn7KK1CB20oC362M62haDYenDEGje_HS_uZTMWMA_v-zztdioU95SQciM99994RdG1dxEBeadk-pj0xumWPF-NbylNlzwaiNfZxRpMJ8egf0WBEGmF2FwxiHcFMAPwHGMY9jJA6gqn82_u0Lm2BqVZ4xTDohINIiX0c8ezXXQTWRlztH6tbF2SynQQWRzhGKwLdKTKloN4M6eto1hYpPAtKvHiu1s2vasaIlMLpP5SiCI1gR-PMFZngusl1n195FPtru-VslIYNnVhXcGqKukXg60tPGkz_opXzRfvvsxTEkFbURLPlsw_xykUZPXh9KHNUNKGkGVcKwuwn2Q1F3s87" alt="uml diagram" loading="lazy">
+]]></content>
+    <category term="Java"/>
+    <published>2024-01-08T08:03:06.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">线程池</title>
+    <id>https://suveng.github.io/suveng_blog/zh/posts/Java/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html</id>
+    <link href="https://suveng.github.io/suveng_blog/zh/posts/Java/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html"/>
+    <updated>2024-01-08T08:03:06.000Z</updated>
+    <summary type="html"><![CDATA[<h1> 线程池</h1>
+<h2> 线程池设计思想</h2>
+<p>Java线程池的设计思想是为了提高线程的使用效率和响应能力，以及降低资源消耗和线程管理的复杂度。<br>
+Java线程池主要具有以下设计思想：</p>
+<ol>
+<li>重复使用线程：Java线程池中的线程可以被重复使用，而不是为每个任务创建一个新的线程。这样可以避免线程的创建和销毁带来的开销，提高程序的性能。</li>
+<li>控制资源消耗：Java线程池可以控制线程的数量，从而控制程序对系统资源的消耗。当线程数量过多时，可以避免过多的线程同时占用资源，导致资源浪费和系统负载过高。</li>
+<li>提高响应能力：Java线程池可以快速响应任务的提交和执行，从而提高程序的响应能力。当有新的任务提交时，线程池可以立即分配线程执行任务，而不用等待新的线程创建和就绪。</li>
+<li>任务执行管理：Java线程池可以对任务的执行进行管理，例如控制任务的执行顺序、限制任务的执行时间、处理任务的异常等。这样可以保证任务的执行质量，并提高程序的可靠性。</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[<h1> 线程池</h1>
+<h2> 线程池设计思想</h2>
+<p>Java线程池的设计思想是为了提高线程的使用效率和响应能力，以及降低资源消耗和线程管理的复杂度。<br>
+Java线程池主要具有以下设计思想：</p>
+<ol>
+<li>重复使用线程：Java线程池中的线程可以被重复使用，而不是为每个任务创建一个新的线程。这样可以避免线程的创建和销毁带来的开销，提高程序的性能。</li>
+<li>控制资源消耗：Java线程池可以控制线程的数量，从而控制程序对系统资源的消耗。当线程数量过多时，可以避免过多的线程同时占用资源，导致资源浪费和系统负载过高。</li>
+<li>提高响应能力：Java线程池可以快速响应任务的提交和执行，从而提高程序的响应能力。当有新的任务提交时，线程池可以立即分配线程执行任务，而不用等待新的线程创建和就绪。</li>
+<li>任务执行管理：Java线程池可以对任务的执行进行管理，例如控制任务的执行顺序、限制任务的执行时间、处理任务的异常等。这样可以保证任务的执行质量，并提高程序的可靠性。</li>
+</ol>
+<p>Java线程池通过ThreadPoolExecutor类来实现，该类提供了可重用的线程池，并提供了丰富的配置选项，可以根据实际需要来配置线程池的参数，以达到最佳的性能和效果。<br>
+Java线程池的设计思想是基于生产者-消费者模式，通过工作线程来执行任务，从而实现高效的并发处理。</p>
+<h2> 如何停止线程池中的线程</h2>
+<p>在Java中，线程池中的线程是并发执行的，不支持直接停止某一个线程。但是可以通过以下几种方式中断线程的执行：</p>
+<ol>
+<li>使用线程的interrupt方法中断线程</li>
+</ol>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>使用线程的interrupted方法检查中断标志位</li>
+</ol>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="3">
+<li>使用线程的isInterrupted方法检查中断状态</li>
+</ol>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 线程池的核心参数</h2>
+<p>线程池的核心参数如下：</p>
+<ul>
+<li><code>corePoolSize</code>：核心线程数，即线程池维护的最低线程数。</li>
+<li><code>maximumPoolSize</code>：最大线程数，即线程池维护的最大线程数。</li>
+<li><code>keepAliveTime</code>：线程空闲 timeout，即线程空闲 timeout 时间。</li>
+<li><code>unit</code>：时间单位。</li>
+<li><code>workQueue</code>：任务队列，用于保存等待线程执行的任务。</li>
+<li><code>threadFactory</code>：线程工厂，用于创建新线程。</li>
+<li><code>handler</code>：拒绝执行策略，当任务队列和线程池都达到最大容量时，将执行任务的续行策略。</li>
+</ul>
+]]></content>
+    <category term="Java"/>
+    <published>2024-01-08T08:03:06.000Z</published>
+  </entry>
   <entry>
     <title type="text">电商售后设计方案</title>
     <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%94%AE%E5%90%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
@@ -31,13 +119,14 @@
     <title type="text">电商商品设计方案</title>
     <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
     <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
-    <updated>2024-01-08T02:59:39.000Z</updated>
+    <updated>2024-01-08T08:03:06.000Z</updated>
     <summary type="html"><![CDATA[<h1> 电商商品设计方案</h1>
 <p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">]]></summary>
     <content type="html"><![CDATA[<h1> 电商商品设计方案</h1>
 <p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
+<h2> 商品的职责有哪些?</h2>
 ]]></content>
     <category term="电商"/>
     <published>2024-01-07T09:14:51.000Z</published>
