@@ -6,16 +6,100 @@
   "description": "苏文广的博客",
   "items": [
     {
+      "title": "MySQL主从复制",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html",
+      "content_html": "<h1> MySQL主从复制</h1>\n",
+      "date_published": "2024-01-08T15:24:42.000Z",
+      "date_modified": "2024-01-08T15:24:42.000Z",
+      "authors": [],
+      "tags": [
+        "MySQL"
+      ]
+    },
+    {
+      "title": "MySQL事务",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html",
+      "content_html": "<h1> MySQL事务</h1>\n",
+      "date_published": "2024-01-08T15:24:42.000Z",
+      "date_modified": "2024-01-08T15:24:42.000Z",
+      "authors": [],
+      "tags": [
+        "MySQL"
+      ]
+    },
+    {
+      "title": "MySQL分库分表",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html",
+      "content_html": "<h1> MySQL分库分表</h1>\n",
+      "date_published": "2024-01-08T15:24:42.000Z",
+      "date_modified": "2024-01-08T15:24:42.000Z",
+      "authors": [],
+      "tags": [
+        "MySQL"
+      ]
+    },
+    {
+      "title": "Gossip一致性算法",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "content_html": "<h1> Gossip一致性算法</h1>\n",
+      "date_published": "2024-01-08T15:24:42.000Z",
+      "date_modified": "2024-01-08T15:24:42.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "Paxos一致性算法",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "content_html": "<h1> Paxos一致性算法</h1>\n",
+      "date_published": "2024-01-08T15:24:42.000Z",
+      "date_modified": "2024-01-08T15:24:42.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "Raft一致性算法",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "content_html": "<h1> Raft一致性算法</h1>\n",
+      "date_published": "2024-01-08T15:24:42.000Z",
+      "date_modified": "2024-01-08T15:24:42.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "ZAB一致性算法",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "content_html": "<h1> ZAB一致性算法</h1>\n",
+      "date_published": "2024-01-08T15:24:42.000Z",
+      "date_modified": "2024-01-08T15:24:42.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
       "title": "MySQL同步数据ES",
       "url": "https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html",
       "id": "https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html",
       "summary": "1. 同步双写 2. 异步双写 3. 定时任务 4. 数据订阅 同步双写 startuml skin rose node 商品服务 database MySQL storage ElasticSearch interface --> 商品服务 : 更新请求 商品服务 --> MySQL : 同步更新数据 商品服务 --> ElasticSearch :...",
       "content_html": "<h1> MySQL同步数据ES</h1>\n<ol>\n<li>同步双写</li>\n<li>异步双写</li>\n<li>定时任务</li>\n<li>数据订阅</li>\n</ol>\n<h2> 同步双写</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNYoijFILLuEhNjwUJ6PtDwdtOjv4f9B4bCIYnELV2j30xquIekoIzAJ4zLSCr9B2x9J0vEJInApk3Ap2j9BKfBJ4vLqDMrGz6lOANmRFQMPzCsl5Y__Td69YuKEP1YiB50LKydz3nRknIYzjdK3Szwrs6gHR4Kknw7rBmKe9y0\" alt=\"uml diagram\" loading=\"lazy\">\n<p>优点:</p>\n<ul>\n<li>简单</li>\n</ul>\n<p>缺点:</p>\n<ul>\n<li>商品业务和搜索业务强耦合</li>\n<li>扩展性差, 需要定制搜索需求需求时, 还需要改动商品代码</li>\n<li>ES 和 MySQL 存在分布式事务问题</li>\n</ul>\n<h2> 异步双写</h2>\n<h2> 定时任务</h2>\n<h2> 数据订阅</h2>\n",
       "date_published": "2024-01-08T10:02:09.000Z",
-      "date_modified": "2024-01-08T10:02:09.000Z",
+      "date_modified": "2024-01-08T15:24:42.000Z",
       "authors": [],
       "tags": [
-        "ES"
+        "ElasticSearch"
       ]
     },
     {

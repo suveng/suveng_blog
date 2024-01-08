@@ -3,22 +3,107 @@
   <id>https://suveng.github.io/suveng_blog/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-01-08T11:04:50.003Z</updated>
+  <updated>2024-01-08T15:25:21.255Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://suveng.github.io/suveng_blog/atom.xml"/>
   <link rel="alternate" href="https://suveng.github.io/suveng_blog/"/>
-  <category term="ES"/>
+  <category term="MySQL"/>
+  <category term="算法"/>
+  <category term="ElasticSearch"/>
   <category term="Java"/>
   <category term="电商"/>
-  <category term="算法"/>
   <category term="数据结构"/>
   <category term="博客"/>
   <category term="博主"/>
   <entry>
+    <title type="text">MySQL主从复制</title>
+    <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html</id>
+    <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html"/>
+    <updated>2024-01-08T15:24:42.000Z</updated>
+    <summary type="html"><![CDATA[<h1> MySQL主从复制</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> MySQL主从复制</h1>
+]]></content>
+    <category term="MySQL"/>
+    <published>2024-01-08T15:24:42.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">MySQL事务</title>
+    <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html</id>
+    <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html"/>
+    <updated>2024-01-08T15:24:42.000Z</updated>
+    <summary type="html"><![CDATA[<h1> MySQL事务</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> MySQL事务</h1>
+]]></content>
+    <category term="MySQL"/>
+    <published>2024-01-08T15:24:42.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">MySQL分库分表</title>
+    <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</id>
+    <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html"/>
+    <updated>2024-01-08T15:24:42.000Z</updated>
+    <summary type="html"><![CDATA[<h1> MySQL分库分表</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> MySQL分库分表</h1>
+]]></content>
+    <category term="MySQL"/>
+    <published>2024-01-08T15:24:42.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Gossip一致性算法</title>
+    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
+    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
+    <updated>2024-01-08T15:24:42.000Z</updated>
+    <summary type="html"><![CDATA[<h1> Gossip一致性算法</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> Gossip一致性算法</h1>
+]]></content>
+    <category term="算法"/>
+    <published>2024-01-08T15:24:42.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Paxos一致性算法</title>
+    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
+    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
+    <updated>2024-01-08T15:24:42.000Z</updated>
+    <summary type="html"><![CDATA[<h1> Paxos一致性算法</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> Paxos一致性算法</h1>
+]]></content>
+    <category term="算法"/>
+    <published>2024-01-08T15:24:42.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Raft一致性算法</title>
+    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
+    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
+    <updated>2024-01-08T15:24:42.000Z</updated>
+    <summary type="html"><![CDATA[<h1> Raft一致性算法</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> Raft一致性算法</h1>
+]]></content>
+    <category term="算法"/>
+    <published>2024-01-08T15:24:42.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">ZAB一致性算法</title>
+    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
+    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
+    <updated>2024-01-08T15:24:42.000Z</updated>
+    <summary type="html"><![CDATA[<h1> ZAB一致性算法</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> ZAB一致性算法</h1>
+]]></content>
+    <category term="算法"/>
+    <published>2024-01-08T15:24:42.000Z</published>
+  </entry>
+  <entry>
     <title type="text">MySQL同步数据ES</title>
     <id>https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html</id>
     <link href="https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html"/>
-    <updated>2024-01-08T10:02:09.000Z</updated>
+    <updated>2024-01-08T15:24:42.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL同步数据ES</h1>
 <ol>
 <li>同步双写</li>
@@ -51,7 +136,7 @@
 <h2> 定时任务</h2>
 <h2> 数据订阅</h2>
 ]]></content>
-    <category term="ES"/>
+    <category term="ElasticSearch"/>
     <published>2024-01-08T10:02:09.000Z</published>
   </entry>
   <entry>

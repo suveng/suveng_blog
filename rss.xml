@@ -6,24 +6,95 @@
     <link>https://suveng.github.io/suveng_blog/</link>
     <description>苏文广的博客</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 08 Jan 2024 11:04:50 GMT</pubDate>
-    <lastBuildDate>Mon, 08 Jan 2024 11:04:50 GMT</lastBuildDate>
+    <pubDate>Mon, 08 Jan 2024 15:25:21 GMT</pubDate>
+    <lastBuildDate>Mon, 08 Jan 2024 15:25:21 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>ES</category>
+    <category>MySQL</category>
+    <category>算法</category>
+    <category>ElasticSearch</category>
     <category>Java</category>
     <category>电商</category>
-    <category>算法</category>
     <category>数据结构</category>
     <category>博客</category>
     <category>博主</category>
+    <item>
+      <title>MySQL主从复制</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL主从复制</source>
+      <category>MySQL</category>
+      <pubDate>Mon, 08 Jan 2024 15:24:42 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> MySQL主从复制</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>MySQL事务</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL事务</source>
+      <category>MySQL</category>
+      <pubDate>Mon, 08 Jan 2024 15:24:42 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> MySQL事务</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>MySQL分库分表</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL分库分表</source>
+      <category>MySQL</category>
+      <pubDate>Mon, 08 Jan 2024 15:24:42 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> MySQL分库分表</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Gossip一致性算法</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">Gossip一致性算法</source>
+      <category>算法</category>
+      <pubDate>Mon, 08 Jan 2024 15:24:42 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Gossip一致性算法</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Paxos一致性算法</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">Paxos一致性算法</source>
+      <category>算法</category>
+      <pubDate>Mon, 08 Jan 2024 15:24:42 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Paxos一致性算法</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Raft一致性算法</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">Raft一致性算法</source>
+      <category>算法</category>
+      <pubDate>Mon, 08 Jan 2024 15:24:42 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Raft一致性算法</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>ZAB一致性算法</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">ZAB一致性算法</source>
+      <category>算法</category>
+      <pubDate>Mon, 08 Jan 2024 15:24:42 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> ZAB一致性算法</h1>
+]]></content:encoded>
+    </item>
     <item>
       <title>MySQL同步数据ES</title>
       <link>https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html</link>
       <guid>https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html</guid>
       <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL同步数据ES</source>
       <description>1. 同步双写 2. 异步双写 3. 定时任务 4. 数据订阅 同步双写 startuml skin rose node 商品服务 database MySQL storage ElasticSearch interface --&amp;gt; 商品服务 : 更新请求 商品服务 --&amp;gt; MySQL : 同步更新数据 商品服务 --&amp;gt; ElasticSearch :...</description>
-      <category>ES</category>
+      <category>ElasticSearch</category>
       <pubDate>Mon, 08 Jan 2024 10:02:09 GMT</pubDate>
       <content:encoded><![CDATA[<h1> MySQL同步数据ES</h1>
 <ol>
