@@ -6,16 +6,49 @@
     <link>https://suveng.github.io/suveng_blog/</link>
     <description>苏文广的博客</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 08 Jan 2024 09:53:25 GMT</pubDate>
-    <lastBuildDate>Mon, 08 Jan 2024 09:53:25 GMT</lastBuildDate>
+    <pubDate>Mon, 08 Jan 2024 09:58:16 GMT</pubDate>
+    <lastBuildDate>Mon, 08 Jan 2024 09:58:16 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>ES</category>
     <category>Java</category>
     <category>电商</category>
     <category>算法</category>
     <category>数据结构</category>
     <category>博客</category>
     <category>博主</category>
+    <item>
+      <title>MySQL同步数据ES</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/ES/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/ES/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL同步数据ES</source>
+      <description>1. 同步双写 2. 异步双写 3. 定时任务 4. 数据订阅 同步双写 startuml skin rose node 商品服务 database MySQL storage ElasticSearch interface --&amp;gt; 商品服务 : 更新请求 商品服务 --&amp;gt; MySQL : 同步更新数据 商品服务 --&amp;gt; ElasticSearch :...</description>
+      <category>ES</category>
+      <pubDate>Mon, 08 Jan 2024 09:57:36 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> MySQL同步数据ES</h1>
+<ol>
+<li>同步双写</li>
+<li>异步双写</li>
+<li>定时任务</li>
+<li>数据订阅</li>
+</ol>
+<h2> 同步双写</h2>
+<img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNYoijFILLuEhNjwUJ6PtDwdtOjv4f9B4bCIYnELV2j30xquIekoIzAJ4zLSCr9B2x9J0vEJInApk3Ap2j9BKfBJ4vLqDMrGz6lOANmRFQMPzCsl5Y__Td69YuKEP1YiB50LKydz3nRknIYzjdK3Szwrs6gHR4Kknw7rBmKe9y0" alt="uml diagram" loading="lazy">
+<p>优点:</p>
+<ul>
+<li>简单</li>
+</ul>
+<p>缺点:</p>
+<ul>
+<li>商品业务和搜索业务强耦合</li>
+<li>扩展性差, 需要定制搜索需求需求时, 还需要改动商品代码</li>
+<li>ES 和 MySQL 存在分布式事务问题</li>
+</ul>
+<h2> 异步双写</h2>
+<h2> 定时任务</h2>
+<h2> 数据订阅</h2>
+]]></content:encoded>
+    </item>
     <item>
       <title>线程</title>
       <link>https://suveng.github.io/suveng_blog/zh/posts/Java/%E7%BA%BF%E7%A8%8B.html</link>
@@ -161,25 +194,8 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
 <li>订单</li>
 </ul>
 <h3> ES数据同步方案</h3>
-<ol>
-<li>同步双写</li>
-<li>异步双写</li>
-<li>定时任务</li>
-<li>数据订阅</li>
-</ol>
-<h4> 同步双写</h4>
-<img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNYoijFILLuEhNjwUJ6PtDwdtOjv4f9B4bCIYnELV2j30xquIekoIzAJ4zLSCr9B2x9J0vEJInApk3Ap2j9BKfBJ4vLqDMrGz6lOANmRFQMPzCsl5Y__Td69YuKEP1YiB50LKydz3nRknIYzjdK3Szwrs6gHR4Kknw7rBmKe9y0" alt="uml diagram" loading="lazy">
-<p>优点:</p>
-<ul>
-<li>简单</li>
-</ul>
-<p>缺点:</p>
-<ul>
-<li>商品业务和搜索业务强耦合</li>
-<li>扩展性差, 需要定制搜索需求需求时, 还需要改动商品代码</li>
-<li>ES 和 MySQL 存在分布式事务问题</li>
-</ul>
-<h4> 保障ES数据一致性</h4>
+<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/..%2FES%2FMySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html" target="blank">MySQL同步数据ES.md</a></p>
+<p>通过上面文章的方案比较, 最终选用数据订阅方式,进行ES数据同步</p>
 ]]></content:encoded>
     </item>
     <item>
