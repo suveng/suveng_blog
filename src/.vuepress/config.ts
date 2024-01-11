@@ -37,6 +37,12 @@ export default defineUserConfig({
     searchConsolePlugin({
       autoPushBaiduSwitch: true,
     }),
+  ],
+
+  head: [
+    //     <meta name="google-site-verification" content="BCYLlBTqItZkRsuw9tNYXU_GV5p78SwaYz2dmaWI6EQ" />
+    ['meta', { name: 'google-site-verification', content: 'BCYLlBTqItZkRsuw9tNYXU_GV5p78SwaYz2dmaWI6EQ'}],
+    ['meta', { name: 'keywords', content: 'suveng,苏文广'}],
   ]
 
   // Enable it with pwa
