@@ -3,18 +3,46 @@
   <id>https://suveng.github.io/suveng_blog/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-01-11T04:01:18.561Z</updated>
+  <updated>2024-01-11T07:20:28.367Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://suveng.github.io/suveng_blog/atom.xml"/>
   <link rel="alternate" href="https://suveng.github.io/suveng_blog/"/>
+  <category term="MySQL"/>
   <category term="ElasticSearch"/>
   <category term="算法"/>
   <category term="Java"/>
-  <category term="MySQL"/>
   <category term="电商"/>
   <category term="数据结构"/>
   <category term="博客"/>
   <category term="博主"/>
+  <entry>
+    <title type="text">MySQL的SQL执行过程</title>
+    <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.html</id>
+    <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.html"/>
+    <updated>2024-01-11T07:19:46.000Z</updated>
+    <summary type="html"><![CDATA[<h1> MySQL的SQL执行过程</h1>
+<p>这是MySQL架构组件执行流程, 最后交给存储引擎执行SQL;</p>
+<img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJbNWuihBJqbLS2dAB4ijuaf9B4bCIWGA-rO61_eeL7Cf045oVcv1VbvgNea2KEnPtzAd_OinnLyiN_niteIdCrTWIZtPC-DfppIiKiywbxzOs8DLwkdQ6K-RLZpTC_NPv3wkMYukY0iLT7Nje8wpKZ3KKtYwUzVprTqlziy3kWjP2TobG6L6UWeGUu22N0W9g3Aumu4gZVKK85oeIeGSL37SAq359de84IuKEPW3O9u3AZRLGuXmeSX15IDx5wZU3CtDADBe7ZG7Edl_bAUpvpsRkk5PxpeqFq93nKh10cXctz9dKxP1bJcavgK04mC0" alt="uml diagram" loading="lazy">]]></summary>
+    <content type="html"><![CDATA[<h1> MySQL的SQL执行过程</h1>
+<p>这是MySQL架构组件执行流程, 最后交给存储引擎执行SQL;</p>
+<img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJbNWuihBJqbLS2dAB4ijuaf9B4bCIWGA-rO61_eeL7Cf045oVcv1VbvgNea2KEnPtzAd_OinnLyiN_niteIdCrTWIZtPC-DfppIiKiywbxzOs8DLwkdQ6K-RLZpTC_NPv3wkMYukY0iLT7Nje8wpKZ3KKtYwUzVprTqlziy3kWjP2TobG6L6UWeGUu22N0W9g3Aumu4gZVKK85oeIeGSL37SAq359de84IuKEPW3O9u3AZRLGuXmeSX15IDx5wZU3CtDADBe7ZG7Edl_bAUpvpsRkk5PxpeqFq93nKh10cXctz9dKxP1bJcavgK04mC0" alt="uml diagram" loading="lazy">
+<p>InnoDB存储引擎执行过程</p>
+<p>这是InnoDB的写入操作流程<br>
+其中 redo log 时 InnoDB 特有的组件<br>
+binlog 时 MySQL 本身的组件</p>
+<img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNY0ejnMJthM_fiohRWG1zh87l-qcUT-u3ivxDQdatTyAnt7KWGp7YwTiRJrgLEfMbfgKK1-VavG8cd6zeWSa_spmL9TsmepKl9LyZ9JmVfchtbsRGD2FKe9eBbaCqjIeLhVBAh-sdNmkUx9p-REnze0qn60QBm-UB6vxDdO2fxDhdtoTuvBzPjUBftAaGbq3b9GBz238Moe8OyNTVph6F2qmbzEWh8DZnRq0uquCcENSdvkRcP9TR04Celu798pKi1XXm0" alt="uml diagram" loading="lazy">
+<p>redo log 的 作用</p>
+<ol>
+<li>
+<p>实现持久性和一致性</p>
+<p>由于数据的更新操作都是在内存发生的, 那么如果断电后, 如何保证内存的数据和磁盘的数据一致性, 那么redo log 的作用就是用来保证磁盘和内存数据的一致性;<br>
+假设数据在提交事务后, redo log 只存在内存, 还没有落入磁盘中, 这个时候发生了断电, 磁盘的数据是落后于内存的数据的, 那么断电恢复后, InnoDB会从redo log 中恢复BufferPool的环境, 这个时候再将差异的数据写入磁盘中, 保证了持久性和一致性</p>
+</li>
+</ol>
+]]></content>
+    <category term="MySQL"/>
+    <published>2024-01-11T07:19:46.000Z</published>
+  </entry>
   <entry>
     <title type="text">MySQL同步数据ES</title>
     <id>https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html</id>
