@@ -6,8 +6,8 @@
     <link>https://suveng.github.io/suveng_blog/</link>
     <description>苏文广的博客</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 11 Jan 2024 07:20:28 GMT</pubDate>
-    <lastBuildDate>Thu, 11 Jan 2024 07:20:28 GMT</lastBuildDate>
+    <pubDate>Thu, 11 Jan 2024 07:50:33 GMT</pubDate>
+    <lastBuildDate>Thu, 11 Jan 2024 07:50:33 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>MySQL</category>
@@ -18,6 +18,77 @@
     <category>数据结构</category>
     <category>博客</category>
     <category>博主</category>
+    <item>
+      <title>MySQL慢查询优化</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL慢查询优化</source>
+      <description>优化原则 1. 最左前缀匹配原则 2. 选择区分度高的列作为索引 3. 索引列不参与计算 4. 尽量扩展索引 排查慢查询过程 1. 找到耗时较长的SQL语句 2. 使用explain语句解析SQL执行计划 3. 排查执行计划中是否有全表扫描的情况 4. 排查执行计划中扫描行数较多的查询语句 5. 制定方案优化SQL 如果实在无法优化, 看看是否折中的方...</description>
+      <category>MySQL</category>
+      <pubDate>Thu, 11 Jan 2024 07:49:51 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> MySQL慢查询优化</h1>
+<h2> 优化原则</h2>
+<ol>
+<li>最左前缀匹配原则</li>
+<li>选择区分度高的列作为索引</li>
+<li>索引列不参与计算</li>
+<li>尽量扩展索引</li>
+</ol>
+<h2> 排查慢查询过程</h2>
+<ol>
+<li>
+<p>找到耗时较长的SQL语句</p>
+</li>
+<li>
+<p>使用explain语句解析SQL执行计划</p>
+</li>
+<li>
+<p>排查执行计划中是否有全表扫描的情况</p>
+</li>
+<li>
+<p>排查执行计划中扫描行数较多的查询语句</p>
+</li>
+<li>
+<p>制定方案优化SQL</p>
+<p>如果实在无法优化, 看看是否折中的方案实现业务</p>
+</li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>MySQL的语法解析器</title>
+      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%A3%E6%9E%90%E5%99%A8.html</link>
+      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%A3%E6%9E%90%E5%99%A8.html</guid>
+      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL的语法解析器</source>
+      <description>SQL本身是一种程序语言, 语言最终会被编译成指令在程序中运行; 那么语言本身是可以被解析, 对应的解析器有哪些实现 1. MySQL源码的解析器 由专门的公司维护 SQL Parser, https://www.sqlparser.com/ 2. 开源的SQL解析器 美团开源的SQL Advisor https://github.com/Meitua...</description>
+      <category>MySQL</category>
+      <pubDate>Thu, 11 Jan 2024 07:31:13 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> MySQL的语法解析器</h1>
+<p>SQL本身是一种程序语言, 语言最终会被编译成指令在程序中运行;</p>
+<p>那么语言本身是可以被解析, 对应的解析器有哪些实现</p>
+<ol>
+<li>
+<p>MySQL源码的解析器</p>
+<p>由专门的公司维护 SQL Parser, https://www.sqlparser.com/</p>
+</li>
+<li>
+<p>开源的SQL解析器</p>
+<ul>
+<li>美团开源的SQL Advisor https://github.com/Meituan-Dianping/SQLAdvisor</li>
+</ul>
+</li>
+</ol>
+<h2> 语法解析器应用场景</h2>
+<ul>
+<li>SQL分析监控</li>
+</ul>
+<h2> 语法解析原理</h2>
+<ul>
+<li></li>
+<li>构建语法树</li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>MySQL的SQL执行过程</title>
       <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.html</link>
