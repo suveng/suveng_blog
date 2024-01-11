@@ -6,6 +6,245 @@
   "description": "苏文广的博客",
   "items": [
     {
+      "title": "MySQL同步数据ES",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html",
+      "summary": "1. 同步双写 2. 异步双写 3. 定时任务 4. 数据订阅 同步双写 startuml skin rose node 商品服务 database MySQL storage ElasticSearch interface --> 商品服务 : 1. 更新商品请求 商品服务 --> MySQL : 2.同步更新数据 商品服务 --> ElasticS...",
+      "content_html": "<h1> MySQL同步数据ES</h1>\n<ol>\n<li>同步双写</li>\n<li>异步双写</li>\n<li>定时任务</li>\n<li>数据订阅</li>\n</ol>\n<h2> 同步双写</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYtaIaaiIKnAB4vLyAqC3lJXAYx9BqfCJrLmpKaiBibC3avDB4hEuChCAqajIajCJbNGrRL3qQzWfM2ef_1izfPdqpP0n5-it_viOnCNYYAGBh3vGEL6Uaydz3nRknIYvzdK3Szwrs6gHh4VgCiOcow7rBmKeFy0\" alt=\"uml diagram\" loading=\"lazy\">\n<h3> 优点</h3>\n<ol>\n<li>\n<p>简单</p>\n<p>仅需要在需要同步数据的逻辑上增加往ElasticSearch写</p>\n</li>\n<li>\n<p>保证实时性</p>\n</li>\n</ol>\n<h3> 缺点</h3>\n<ol>\n<li>\n<p>商品业务和搜索业务强耦合</p>\n</li>\n<li>\n<p>扩展性差</p>\n<p>需要定制搜索需求需求时, 还需要改动商品代码</p>\n</li>\n<li>\n<p>ElasticSearch 和 MySQL 需要额外保证一致性</p>\n<p>MySQL事务提交之后, 写入ElasticSearch出现网络异常, 那么ElasticSearch和MySQL的数据无法保证一致</p>\n</li>\n</ol>\n<h2> 异步双写</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYs4Y3oRCEVvbaLGaSBIrD9KXUp4jEn4hfJ4aiIanE9K1T_Au40V1DSr9x6u93CvE3MnA3c3YoiphoIrA2qnELL1LzSEnNm5AmL3lMUpjpoRjW4Y_6BzzcSRcxXGr80qWIq0gZP2KVriwePdlUkUxfgCgG7iGA06OxtdK-O_sRKSqvBdirgURUjurhYU2w8Mf0lPfq3D9df05I-sxCId6KLBNHs6_qpra5MysD3yVCgAP_ENlbY_2AgmR-dJ_iMene2SWXA6G7FCz1HUDCvwEg43wka9VK_RPZvjNOeQrWwfUId0E0K0\" alt=\"uml diagram\" loading=\"lazy\">\n<p>与同步双写相比分析优缺点</p>\n<h3> 优点</h3>\n<ul>\n<li>解耦合; 商品本身无需关注同步ElasticSearch的逻辑</li>\n</ul>\n<h3> 缺点</h3>\n<ul>\n<li>准实时, 存在MQ延迟</li>\n<li>需要考虑额外组件的可靠性, Kafka, 搜索服务</li>\n</ul>\n<h2> 定时任务</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYs4Y3oRCEVvbaLGaPJ4aiIanE9K1T_Au40V1DSr9x6u93CvE3MnA3c3YoiphoIrA2qnELL1LzSEnKm5AmL3lMUpjpoRjW4Y_6BzzcSRcxXGr80qWIq0gZP2KVriwePdlUkUxfhCXUmiXRew35kCzP1LF5qtwzdqRIysD3-VikBP_AKlrYzwEcS5nE2NqxUyd3NbHK_pqzbRdhQrFf_L0Z7fQSVq5mjNeDe3SXYALu4McUWfl6YSzNH21zHj4_gUjirysheKDKWSKlDIWC4D0000\" alt=\"uml diagram\" loading=\"lazy\">\n<h3> 优点</h3>\n<ol>\n<li>简单</li>\n</ol>\n<h3> 缺点</h3>\n<ol>\n<li>\n<p>无法保证实时性</p>\n<p>保证实时性主要依赖于搜索服务的定时间隔</p>\n</li>\n</ol>\n<h2> 数据订阅</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYtaAYnDBKrLI4xCIyo1o3wRCEVvbaLGsPJ4aiIanE9K1T_Au40V1DSr9x6u93CvE3MnA3c3YoiphoIrA2qnELL1LzSEnNm5AmL3lMUpjpoRjW4Y_6BzzcSRcxXGr80qWIq0gZP2KVriwePdlUkUxfhC1P47gGIx5QZIM0_CUh5kqSiPhKcPUJdvwLmGEP0gP6y05PleFTlMyMBBJaodF9_L0fHwrhYU2qLBNHs6Hqpra5MysD3yVCgAP_ENlbY_2AgmR-dJ_iMene2S0jHgfgVmed7MqmaTK0zDw7lQDlDfwrBKS7H8pKi1nXS0\" alt=\"uml diagram\" loading=\"lazy\">\n<h3> 优点</h3>\n<ol>\n<li>\n<p>解耦合</p>\n<p>利用canal订阅MySQL的binlog做到解耦合</p>\n</li>\n<li>\n<p>无业务侵入</p>\n<p>利用canal组件即可无需在商品代码上做改动</p>\n</li>\n<li>\n<p>准实时</p>\n<p>只存在binlog和业务回查的延迟</p>\n</li>\n<li>\n<p>良好的扩展行</p>\n<p>canal组件还支持各种数据库/客户端的写入适配器, 可以实现不同的数据写入需求, 例如 HBase</p>\n</li>\n</ol>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "ElasticSearch"
+      ]
+    },
+    {
+      "title": "Gossip一致性算法",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "content_html": "<h1> Gossip一致性算法</h1>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "Paxos一致性算法",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "content_html": "<h1> Paxos一致性算法</h1>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "Raft一致性算法",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "content_html": "<h1> Raft一致性算法</h1>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "ZAB一致性算法",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
+      "content_html": "<h1> ZAB一致性算法</h1>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "冒泡排序",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html",
+      "summary": "冒泡排序（Bubble Sort）是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。 算法描述 1. 从数列中挑出最小（大）元素，依次放到数列的起始位置； 2. 再从剩下的元素中挑出最小（大）元素，放到已排序序列的末尾； 3....",
+      "content_html": "<h1> 冒泡排序</h1>\n<p>冒泡排序（Bubble Sort）是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。</p>\n<h2> 算法描述</h2>\n<ol>\n<li>从数列中挑出最小（大）元素，依次放到数列的起始位置；</li>\n<li>再从剩下的元素中挑出最小（大）元素，放到已排序序列的末尾；</li>\n<li>重复步骤2，直到所有元素排序完成。</li>\n</ol>\n<h2> 示例</h2>\n<p>对数列 {5, 3, 8, 6, 4} 进行冒泡排序：</p>\n<p>第一轮：</p>\n<ul>\n<li>比较5和3，发现5&gt;3，交换位置，数列变成 {3, 5, 8, 6, 4}；</li>\n<li>比较5和8，发现5&lt;8，位置不变，数列还是 {3, 5, 8, 6, 4}；</li>\n<li>比较8和6，发现8&gt;6，交换位置，数列变成 {3, 5, 6, 8, 4}；</li>\n<li>比较8和4，发现8&gt;4，交换位置，数列变成 {3, 5, 6, 4, 8}；<br>\n第一轮结束，此时最大元素8已经排好序，接下来对剩下的数列 {3, 5, 6, 4} 进行冒泡排序。</li>\n</ul>\n<p>第二轮：</p>\n<ul>\n<li>比较3和5，发现3&lt;5，位置不变，数列还是 {3, 5, 6, 4}；</li>\n<li>比较5和6，发现5&lt;6，位置不变，数列还是 {3, 5, 6, 4}；</li>\n<li>比较6和4，发现6&gt;4，交换位置，数列变成 {3, 5, 4, 6}；<br>\n第二轮结束，此时次大元素6已经排好序，剩下的数列 {3, 5, 4} 继续冒泡排序。</li>\n</ul>\n<p>第三轮：</p>\n<ul>\n<li>比较3和5，发现3&lt;5，位置不变，数列还是 {3, 5, 4}；</li>\n<li>比较5和4，发现5&gt;4，交换位置，数列变成 {3, 4, 5}；<br>\n第三轮结束，此时第三大元素5已经排好序，剩下的数列 {3, 4} 继续冒泡排序。</li>\n</ul>\n<p>第四轮：</p>\n<ul>\n<li>比较3和4，发现3&lt;4，位置不变，数列还是 {3, 4}；<br>\n第四轮结束，此时最小元素3已经排好序，整个数列排序完成。</li>\n</ul>\n<h2> 复杂度分析</h2>\n<ul>\n<li>最好情况：当数组已经按照排序需求排好时，只需进行一次遍历，时间复杂度为O(n)；</li>\n<li>最坏情况：当数组是逆序排列时，需要进行n-1次遍历，时间复杂度为O(n^2)；</li>\n<li>平均情况：需要进行n-1次遍历，时间复杂度为O(n^2)。</li>\n</ul>\n<p>冒泡排序是一种稳定的排序算法。</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "双指针",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88.html",
+      "summary": "双指针算法（Two-Pointers Algorithm）是一种常见的算法思想，通常用于解决数组或链表相关的问题。该算法通过使用两个指针，分别从数组或链表的两端向中间移动，从而解决问题。 双指针算法通常可以分为两种情况： 1. 从数组的两端向中间移动的双指针算法： 这种情况下，我们通常使用两个指针从数组的两端同时开始遍历，然后根据具体的问题来决定两个指...",
+      "content_html": "<h1> 双指针</h1>\n<p>双指针算法（Two-Pointers Algorithm）是一种常见的算法思想，通常用于解决数组或链表相关的问题。该算法通过使用两个指针，分别从数组或链表的两端向中间移动，从而解决问题。<br>\n双指针算法通常可以分为两种情况：</p>\n<ol>\n<li>\n<p>从数组的两端向中间移动的双指针算法：<br>\n这种情况下，我们通常使用两个指针从数组的两端同时开始遍历，然后根据具体的问题来决定两个指针的移动方式。这种算法通常用于解决一些查找或筛选的问题，例如查找两个数的和等于目标值、查找数组中的环形子数组等。</p>\n</li>\n<li>\n<p>从数组的一端向另一端移动的双指针算法：<br>\n这种情况下，我们通常使用两个指针，一个指向数组的起始位置，另一个从起始位置开始向后遍历。这种算法通常用于解决一些排序或统计的问题，例如验证只包含相同字符的最长子串、统计数组中元素出现次数等。</p>\n</li>\n</ol>\n<p>使用双指针算法可以有效地提高解决数组或链表相关问题的效率，因为双指针同时进行遍历，可以将时间复杂度从O(n^2)降低到O(n)。</p>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "基数排序",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html",
+      "summary": "基本原理 基数排序是一种非比较性的排序算法。基数排序的基本思想是：将整数按位数划分为不同的桶，然后按每个位数分别对桶中的元素进行排序，最终将所有位数上的排序结果合并在一起，得到最终的排序结果。 基数排序的时间复杂度为O(dn)，其中d是数字的最大位数，n是待排序元素个数。 实现步骤 基数排序的实现步骤如下： 1. 获取待排序数组中的最大值，确定最大位数...",
+      "content_html": "<h1> 基数排序</h1>\n<h2> 基本原理</h2>\n<p>基数排序是一种非比较性的排序算法。基数排序的基本思想是：将整数按位数划分为不同的桶，然后按每个位数分别对桶中的元素进行排序，最终将所有位数上的排序结果合并在一起，得到最终的排序结果。</p>\n<p>基数排序的时间复杂度为O(dn)，其中d是数字的最大位数，n是待排序元素个数。</p>\n<h2> 实现步骤</h2>\n<p>基数排序的实现步骤如下：</p>\n<ol>\n<li>获取待排序数组中的最大值，确定最大位数d。</li>\n<li>对最末位进行排序，使用计数排序算法对每个数字出现的次数进行统计。</li>\n<li>基于计数排序的结果，依次确定每个数字在有序数组中的位置。</li>\n<li>将有序数组重新赋值给原数组。</li>\n<li>依次对每一位进行排序，直到最高位。</li>\n</ol>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "堆排序",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%A0%86%E6%8E%92%E5%BA%8F.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%A0%86%E6%8E%92%E5%BA%8F.html",
+      "summary": "堆排序（Heap Sort）是利用堆（Heap）这种数据结构进行选择排序的一种算法。堆是一个可以推导具有最大或最小值的树形结构，堆排序利用堆的特性进行排序。 堆排序分为两个步骤： 1. 建堆（Build Heap）：将一个无序的数组构建成一个大顶堆（Max Heap）。大顶堆的特点是父节点的值大于或等于其子节点的值。建堆的过程从数组的最后一个非叶子节点...",
+      "content_html": "<h1> 堆排序</h1>\n<p>堆排序（Heap Sort）是利用堆（Heap）这种数据结构进行选择排序的一种算法。堆是一个可以推导具有最大或最小值的树形结构，堆排序利用堆的特性进行排序。</p>\n<p>堆排序分为两个步骤：</p>\n<ol>\n<li>\n<p>建堆（Build Heap）：将一个无序的数组构建成一个大顶堆（Max Heap）。大顶堆的特点是父节点的值大于或等于其子节点的值。建堆的过程从数组的最后一个非叶子节点开始，依次向上调整每个节点，使其满足大顶堆的特性。</p>\n</li>\n<li>\n<p>排序（Sort）：重复执行以下步骤，直到堆的大小为1：</p>\n<ul>\n<li>将堆中的最大元素（根节点）与堆的最后一个元素交换。</li>\n<li>将堆的大小减1。</li>\n<li>对堆进行调整，使其重新成为一个大顶堆。</li>\n</ul>\n</li>\n</ol>\n<p>重复上述步骤，每次取出的都是当前堆中的最大元素，最终得到的数组就是一个有序的数组。</p>\n<p>堆排序的时间复杂度为O(nlogn)，空间复杂度为O(1)。由于堆排序是一种不稳定的排序算法，因此在需要保持相同元素的原始顺序时应谨慎使用。</p>\n<p>以下是堆排序的示例代码：</p>\n<h2> Java实现</h2>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "希尔排序",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html",
+      "content_html": "<h1> 希尔排序</h1>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "归并排序",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html",
+      "content_html": "<h1> 归并排序</h1>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "快速排序",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html",
+      "summary": "快速排序是一种常用的排序算法，采用分治法（Divide and Conquer）的思想。它的基本步骤如下： 1. 从数列中挑出一个元素，称为“基准”（pivot）。 2. 将所有比基准值小的元素都放在基准前面，比基准值大的元素都放在基准的后面（相同的数可以放在任一边）。在这个分区退出之后，该基准就处于数列的中间位置。 3. 对基准的左右两个分区重复步骤...",
+      "content_html": "<h1> 快速排序</h1>\n<p>快速排序是一种常用的排序算法，采用分治法（Divide and Conquer）的思想。它的基本步骤如下：</p>\n<ol>\n<li>从数列中挑出一个元素，称为“基准”（pivot）。</li>\n<li>将所有比基准值小的元素都放在基准前面，比基准值大的元素都放在基准的后面（相同的数可以放在任一边）。在这个分区退出之后，该基准就处于数列的中间位置。</li>\n<li>对基准的左右两个分区重复步骤1和步骤2。<br>\n快速排序的关键步骤是基准的选取，不同的选取方法会影响排序的效率。通常有以下几种选取方法：\n<ul>\n<li>选取第一个元素作为基准</li>\n<li>选取最后一个元素作为基准</li>\n<li>选取中间元素作为基准</li>\n<li>从数列中随机选取一个元素作为基准</li>\n</ul>\n</li>\n</ol>\n<p>快速排序的时间复杂度为O(nlogn)，但在最坏情况下时间复杂度为O(n^2)。为了避免最坏情况的发生，可以采用随机选取基准、三数中值法选取基准等优化方法。</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "插入排序",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html",
+      "summary": "插入排序是一种简单直观的排序算法。它的基本思想是通过构建有序序列，对未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。 时间复杂度 在最坏的情况下，插入排序需要O(n^2)的时间复杂度和O(1)的空间复杂度。 空间复杂度 在最好情况下，插入排序需要O(n)的时间复杂度和O(1)的空间复杂度。 Java代码实现",
+      "content_html": "<h1> 插入排序</h1>\n<p>插入排序是一种简单直观的排序算法。它的基本思想是通过构建有序序列，对未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。</p>\n<h2> 时间复杂度</h2>\n<p>在最坏的情况下，插入排序需要O(n^2)的时间复杂度和O(1)的空间复杂度。</p>\n<h2> 空间复杂度</h2>\n<p>在最好情况下，插入排序需要O(n)的时间复杂度和O(1)的空间复杂度。</p>\n<h2> Java代码实现</h2>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "斐波那契数列问题",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html",
+      "summary": "数学公式如下: $$ \\begin{align} f(n) = \\left\\{ \\begin{matrix} 0 & n=0 \\\\ 1 & n=1 \\\\ f(n-1)+f(n-2) & n>=1 \\end{matrix} \\right. \\end{align} $$",
+      "content_html": "<h1> 斐波那契数列问题</h1>\n<p>数学公式如下:</p>\n<p v-pre=\"\" class=\"katex-block\"><span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mtable rowspacing=\"0.25em\" columnalign=\"right\" columnspacing=\"\"><mtr><mtd class=\"mtr-glue\"></mtd><mtd><mstyle scriptlevel=\"0\" displaystyle=\"true\"><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mrow><mo fence=\"true\">{</mo><mtable rowspacing=\"0.16em\" columnalign=\"center center\" columnspacing=\"1em\"><mtr><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mn>1</mn></mstyle></mtd><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy=\"false\">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mrow><mi>n</mi><mo>&gt;</mo><mo>=</mo><mn>1</mn></mrow></mstyle></mtd></mtr></mtable></mrow></mrow></mstyle></mtd><mtd class=\"mtr-glue\"></mtd><mtd class=\"mml-eqn-num\"></mtd></mtr></mtable><annotation encoding=\"application/x-tex\">\n\\begin{align}\nf(n)  = \n\n\\left\\{\n    \\begin{matrix}\n        0   &amp; n=0  \\\\\n        1   &amp; n=1  \\\\  \n        f(n-1)+f(n-2)  &amp; n&gt;=1\n    \\end{matrix}\n\\right.\n\n\\end{align}\n</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:3.9em;vertical-align:-1.7em;\"></span><span class=\"mtable\"><span class=\"col-align-r\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:2.2em;\"><span style=\"top:-4.2em;\"><span class=\"pstrut\" style=\"height:4.05em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\" style=\"margin-right:0.10764em;\">f</span><span class=\"mopen\">(</span><span class=\"mord mathnormal\">n</span><span class=\"mclose\">)</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"minner\"><span class=\"mopen\"><span class=\"delimsizing mult\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:2.05em;\"><span style=\"top:-2.5em;\"><span class=\"pstrut\" style=\"height:3.15em;\"></span><span class=\"delimsizinginner delim-size4\"><span>⎩</span></span></span><span style=\"top:-2.492em;\"><span class=\"pstrut\" style=\"height:3.15em;\"></span><span style=\"height:0.016em;width:0.8889em;\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"0.8889em\" height=\"0.016em\" style=\"width:0.8889em\" viewBox=\"0 0 888.89 16\" preserveAspectRatio=\"xMinYMin\"><path d=\"M384 0 H504 V16 H384z M384 0 H504 V16 H384z\"></path></svg></span></span><span style=\"top:-3.15em;\"><span class=\"pstrut\" style=\"height:3.15em;\"></span><span class=\"delimsizinginner delim-size4\"><span>⎨</span></span></span><span style=\"top:-4.292em;\"><span class=\"pstrut\" style=\"height:3.15em;\"></span><span style=\"height:0.016em;width:0.8889em;\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"0.8889em\" height=\"0.016em\" style=\"width:0.8889em\" viewBox=\"0 0 888.89 16\" preserveAspectRatio=\"xMinYMin\"><path d=\"M384 0 H504 V16 H384z M384 0 H504 V16 H384z\"></path></svg></span></span><span style=\"top:-4.3em;\"><span class=\"pstrut\" style=\"height:3.15em;\"></span><span class=\"delimsizinginner delim-size4\"><span>⎧</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.55em;\"><span></span></span></span></span></span></span><span class=\"mord\"><span class=\"mtable\"><span class=\"col-align-c\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:2.05em;\"><span style=\"top:-4.21em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">0</span></span></span><span style=\"top:-3.01em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">1</span></span></span><span style=\"top:-1.81em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\" style=\"margin-right:0.10764em;\">f</span><span class=\"mopen\">(</span><span class=\"mord mathnormal\">n</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">−</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mord\">1</span><span class=\"mclose\">)</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10764em;\">f</span><span class=\"mopen\">(</span><span class=\"mord mathnormal\">n</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">−</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mord\">2</span><span class=\"mclose\">)</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.55em;\"><span></span></span></span></span></span><span class=\"arraycolsep\" style=\"width:0.5em;\"></span><span class=\"arraycolsep\" style=\"width:0.5em;\"></span><span class=\"col-align-c\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:2.05em;\"><span style=\"top:-4.21em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\">n</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mord\">0</span></span></span><span style=\"top:-3.01em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\">n</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mord\">1</span></span></span><span style=\"top:-1.81em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\">n</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">&gt;=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mord\">1</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.55em;\"><span></span></span></span></span></span></span></span><span class=\"mclose nulldelimiter\"></span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.7em;\"><span></span></span></span></span></span></span></span><span class=\"tag\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:2.2em;\"><span style=\"top:-4.2em;\"><span class=\"pstrut\" style=\"height:4.05em;\"></span><span class=\"eqn-num\"></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.7em;\"><span></span></span></span></span></span></span></span></span></p>\n<hr>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "桶排序",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%A1%B6%E6%8E%92%E5%BA%8F.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%A1%B6%E6%8E%92%E5%BA%8F.html",
+      "content_html": "<h1> 桶排序</h1>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "计数排序",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html",
+      "content_html": "<h1> 计数排序</h1>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "选择排序",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html",
+      "summary": "选择排序是一种简单直观的排序算法。它的基本思想是：每次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。 步骤 选择排序的算法步骤如下： 1. 在待排序的元素中，找到最小（大）的元素，将其与第一个元素交换位置。 2. 在剩下的元素中，找到最小（大）的元素，将其与第二个元素交换位置。 3. 重复上述步骤...",
+      "content_html": "<h1> 选择排序</h1>\n<p>选择排序是一种简单直观的排序算法。它的基本思想是：每次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。</p>\n<h2> 步骤</h2>\n<p>选择排序的算法步骤如下：</p>\n<ol>\n<li>在待排序的元素中，找到最小（大）的元素，将其与第一个元素交换位置。</li>\n<li>在剩下的元素中，找到最小（大）的元素，将其与第二个元素交换位置。</li>\n<li>重复上述步骤，直到所有元素均排序完毕。</li>\n</ol>\n<h2> 示例</h2>\n<p>给定数组 [3, 4, 2, 1, 5]，按升序排序。</p>\n<ol>\n<li>第一次遍历，找到最小元素 1，与第一个元素 3 交换位置，数组变为 [1, 4, 2, 3, 5]。</li>\n<li>第二次遍历，忽略第一个元素，找到最小元素 2，与第二个元素 4 交换位置，数组变为 [1, 2, 4, 3, 5]。</li>\n<li>第三次遍历，忽略前两个元素，找到最小元素 3，与第三个元素 4 交换位置，数组变为 [1, 2, 3, 4, 5]。</li>\n<li>第四次遍历，忽略前三个元素，找到最小元素 4，与第四个元素 4 交换位置，数组保持不变 [1, 2, 3, 4, 5]。</li>\n<li>第五次遍历，忽略前四个元素，找到最小元素 5，与第五个元素 5 交换位置，数组保持不变 [1, 2, 3, 4, 5]。</li>\n</ol>\n<p>最终得到的数组为 [1, 2, 3, 4, 5]，即为按升序排序后的结果。</p>\n<h2> 时间复杂度</h2>\n<p>选择排序的时间复杂度为 O(n^2)，其中 n 是待排序数组的长度。</p>\n<h2> 代码实现</h2>\n<p>下面是使用 Java 实现选择排序的示例代码：</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>以上代码实现了选择排序的排序算法和排序结果的输出。</p>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "算法"
+      ]
+    },
+    {
+      "title": "线程",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B.html",
+      "summary": "Java的线程是程序执行的最小单位，是操作系统进行调度的基本单元。Java中的线程由Thread类和Runnable接口实现。Thread类是一个实现了Runnable接口的类，它包含线程的控制方法和线程的生命周期方法。Runnable接口定义了一个run()方法，该方法包含线程要执行的代码。 Java中的线程有以下几种状态： 1. 初始(NEW)：新...",
+      "content_html": "<h1> 线程</h1>\n<p>Java的线程是程序执行的最小单位，是操作系统进行调度的基本单元。Java中的线程由Thread类和Runnable接口实现。Thread类是一个实现了Runnable接口的类，它包含线程的控制方法和线程的生命周期方法。Runnable接口定义了一个run()方法，该方法包含线程要执行的代码。</p>\n<p>Java中的线程有以下几种状态：</p>\n<ol>\n<li>初始(NEW)：新创建了一个线程对象，但还没有调用start()方法。</li>\n<li>运行(RUNNABLE)：Java线程中将就绪（ready）和运行中（running）两种状态笼统的称为“运行”。<br>\n线程对象创建后，其他线程(比如main线程）调用了该对象的start()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获取CPU的使用权，此时处于就绪状态（ready）。就绪状态的线程在获得CPU时间片后变为运行中状态（running）。</li>\n<li>阻塞(BLOCKED)：表示线程阻塞于锁。</li>\n<li>等待(WAITING)：进入该状态的线程需要等待其他线程做出一些特定动作（通知或中断）。</li>\n<li>超时等待(TIMED_WAITING)：该状态不同于WAITING，它可以在指定的时间后自行返回。</li>\n<li>终止(TERMINATED)：表示该线程已经执行完毕。</li>\n</ol>\n<img src=\"https://www.plantuml.com/plantuml/svg/ZPA_JiCm4CPtFuN75YcmCw0-11j2o6skYObphXn7KK1CB20oC362M62haDYenDEGje_HS_uZTMWMA_v-zztdioU95SQciM99994RdG1dxEBeadk-pj0xumWPF-NbylNlzwaiNfZxRpMJ8egf0WBEGmF2FwxiHcFMAPwHGMY9jJA6gqn82_u0Lm2BqVZ4xTDohINIiX0c8ezXXQTWRlztH6tbF2SynQQWRzhGKwLdKTKloN4M6eto1hYpPAtKvHiu1s2vasaIlMLpP5SiCI1gR-PMFZngusl1n195FPtru-VslIYNnVhXcGqKukXg60tPGkz_opXzRfvvsxTEkFbURLPlsw_xykUZPXh9KHNUNKGkGVcKwuwn2Q1F3s87\" alt=\"uml diagram\" loading=\"lazy\">\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "Java"
+      ]
+    },
+    {
+      "title": "线程池",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html",
+      "summary": "线程池设计思想 Java线程池的设计思想是为了提高线程的使用效率和响应能力，以及降低资源消耗和线程管理的复杂度。 Java线程池主要具有以下设计思想： 1. 重复使用线程：Java线程池中的线程可以被重复使用，而不是为每个任务创建一个新的线程。这样可以避免线程的创建和销毁带来的开销，提高程序的性能。 2. 控制资源消耗：Java线程池可以控制线程的数量...",
+      "content_html": "<h1> 线程池</h1>\n<h2> 线程池设计思想</h2>\n<p>Java线程池的设计思想是为了提高线程的使用效率和响应能力，以及降低资源消耗和线程管理的复杂度。<br>\nJava线程池主要具有以下设计思想：</p>\n<ol>\n<li>重复使用线程：Java线程池中的线程可以被重复使用，而不是为每个任务创建一个新的线程。这样可以避免线程的创建和销毁带来的开销，提高程序的性能。</li>\n<li>控制资源消耗：Java线程池可以控制线程的数量，从而控制程序对系统资源的消耗。当线程数量过多时，可以避免过多的线程同时占用资源，导致资源浪费和系统负载过高。</li>\n<li>提高响应能力：Java线程池可以快速响应任务的提交和执行，从而提高程序的响应能力。当有新的任务提交时，线程池可以立即分配线程执行任务，而不用等待新的线程创建和就绪。</li>\n<li>任务执行管理：Java线程池可以对任务的执行进行管理，例如控制任务的执行顺序、限制任务的执行时间、处理任务的异常等。这样可以保证任务的执行质量，并提高程序的可靠性。</li>\n</ol>\n<p>Java线程池通过ThreadPoolExecutor类来实现，该类提供了可重用的线程池，并提供了丰富的配置选项，可以根据实际需要来配置线程池的参数，以达到最佳的性能和效果。<br>\nJava线程池的设计思想是基于生产者-消费者模式，通过工作线程来执行任务，从而实现高效的并发处理。</p>\n<h2> 如何停止线程池中的线程</h2>\n<p>在Java中，线程池中的线程是并发执行的，不支持直接停止某一个线程。但是可以通过以下几种方式中断线程的执行：</p>\n<ol>\n<li>使用线程的interrupt方法中断线程</li>\n</ol>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><ol start=\"2\">\n<li>使用线程的interrupted方法检查中断标志位</li>\n</ol>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><ol start=\"3\">\n<li>使用线程的isInterrupted方法检查中断状态</li>\n</ol>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h2> 线程池的核心参数</h2>\n<p>线程池的核心参数如下：</p>\n<ul>\n<li><code>corePoolSize</code>：核心线程数，即线程池维护的最低线程数。</li>\n<li><code>maximumPoolSize</code>：最大线程数，即线程池维护的最大线程数。</li>\n<li><code>keepAliveTime</code>：线程空闲 timeout，即线程空闲 timeout 时间。</li>\n<li><code>unit</code>：时间单位。</li>\n<li><code>workQueue</code>：任务队列，用于保存等待线程执行的任务。</li>\n<li><code>threadFactory</code>：线程工厂，用于创建新线程。</li>\n<li><code>handler</code>：拒绝执行策略，当任务队列和线程池都达到最大容量时，将执行任务的续行策略。</li>\n</ul>\n",
+      "date_published": "2024-01-11T02:25:57.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
+      "authors": [],
+      "tags": [
+        "Java"
+      ]
+    },
+    {
       "title": "MySQL主从复制",
       "url": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html",
       "id": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html",
@@ -42,93 +281,6 @@
       ]
     },
     {
-      "title": "Gossip一致性算法",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
-      "content_html": "<h1> Gossip一致性算法</h1>\n",
-      "date_published": "2024-01-08T15:24:42.000Z",
-      "date_modified": "2024-01-08T15:24:42.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "Paxos一致性算法",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
-      "content_html": "<h1> Paxos一致性算法</h1>\n",
-      "date_published": "2024-01-08T15:24:42.000Z",
-      "date_modified": "2024-01-08T15:24:42.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "Raft一致性算法",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
-      "content_html": "<h1> Raft一致性算法</h1>\n",
-      "date_published": "2024-01-08T15:24:42.000Z",
-      "date_modified": "2024-01-08T15:24:42.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "ZAB一致性算法",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html",
-      "content_html": "<h1> ZAB一致性算法</h1>\n",
-      "date_published": "2024-01-08T15:24:42.000Z",
-      "date_modified": "2024-01-08T15:24:42.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "MySQL同步数据ES",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html",
-      "summary": "1. 同步双写 2. 异步双写 3. 定时任务 4. 数据订阅 同步双写 startuml skin rose node 商品服务 database MySQL storage ElasticSearch interface --> 商品服务 : 更新请求 商品服务 --> MySQL : 同步更新数据 商品服务 --> ElasticSearch :...",
-      "content_html": "<h1> MySQL同步数据ES</h1>\n<ol>\n<li>同步双写</li>\n<li>异步双写</li>\n<li>定时任务</li>\n<li>数据订阅</li>\n</ol>\n<h2> 同步双写</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNYoijFILLuEhNjwUJ6PtDwdtOjv4f9B4bCIYnELV2j30xquIekoIzAJ4zLSCr9B2x9J0vEJInApk3Ap2j9BKfBJ4vLqDMrGz6lOANmRFQMPzCsl5Y__Td69YuKEP1YiB50LKydz3nRknIYzjdK3Szwrs6gHR4Kknw7rBmKe9y0\" alt=\"uml diagram\" loading=\"lazy\">\n<p>优点:</p>\n<ul>\n<li>简单</li>\n</ul>\n<p>缺点:</p>\n<ul>\n<li>商品业务和搜索业务强耦合</li>\n<li>扩展性差, 需要定制搜索需求需求时, 还需要改动商品代码</li>\n<li>ES 和 MySQL 存在分布式事务问题</li>\n</ul>\n<h2> 异步双写</h2>\n<h2> 定时任务</h2>\n<h2> 数据订阅</h2>\n",
-      "date_published": "2024-01-08T10:02:09.000Z",
-      "date_modified": "2024-01-08T15:24:42.000Z",
-      "authors": [],
-      "tags": [
-        "ElasticSearch"
-      ]
-    },
-    {
-      "title": "线程",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/Java/%E7%BA%BF%E7%A8%8B.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/Java/%E7%BA%BF%E7%A8%8B.html",
-      "summary": "Java的线程是程序执行的最小单位，是操作系统进行调度的基本单元。Java中的线程由Thread类和Runnable接口实现。Thread类是一个实现了Runnable接口的类，它包含线程的控制方法和线程的生命周期方法。Runnable接口定义了一个run()方法，该方法包含线程要执行的代码。 Java中的线程有以下几种状态： 1. 初始(NEW)：新...",
-      "content_html": "<h1> 线程</h1>\n<p>Java的线程是程序执行的最小单位，是操作系统进行调度的基本单元。Java中的线程由Thread类和Runnable接口实现。Thread类是一个实现了Runnable接口的类，它包含线程的控制方法和线程的生命周期方法。Runnable接口定义了一个run()方法，该方法包含线程要执行的代码。</p>\n<p>Java中的线程有以下几种状态：</p>\n<ol>\n<li>初始(NEW)：新创建了一个线程对象，但还没有调用start()方法。</li>\n<li>运行(RUNNABLE)：Java线程中将就绪（ready）和运行中（running）两种状态笼统的称为“运行”。<br>\n线程对象创建后，其他线程(比如main线程）调用了该对象的start()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获取CPU的使用权，此时处于就绪状态（ready）。就绪状态的线程在获得CPU时间片后变为运行中状态（running）。</li>\n<li>阻塞(BLOCKED)：表示线程阻塞于锁。</li>\n<li>等待(WAITING)：进入该状态的线程需要等待其他线程做出一些特定动作（通知或中断）。</li>\n<li>超时等待(TIMED_WAITING)：该状态不同于WAITING，它可以在指定的时间后自行返回。</li>\n<li>终止(TERMINATED)：表示该线程已经执行完毕。</li>\n</ol>\n<img src=\"https://www.plantuml.com/plantuml/svg/ZPA_JiCm4CPtFuN75YcmCw0-11j2o6skYObphXn7KK1CB20oC362M62haDYenDEGje_HS_uZTMWMA_v-zztdioU95SQciM99994RdG1dxEBeadk-pj0xumWPF-NbylNlzwaiNfZxRpMJ8egf0WBEGmF2FwxiHcFMAPwHGMY9jJA6gqn82_u0Lm2BqVZ4xTDohINIiX0c8ezXXQTWRlztH6tbF2SynQQWRzhGKwLdKTKloN4M6eto1hYpPAtKvHiu1s2vasaIlMLpP5SiCI1gR-PMFZngusl1n195FPtru-VslIYNnVhXcGqKukXg60tPGkz_opXzRfvvsxTEkFbURLPlsw_xykUZPXh9KHNUNKGkGVcKwuwn2Q1F3s87\" alt=\"uml diagram\" loading=\"lazy\">\n",
-      "date_published": "2024-01-08T08:03:06.000Z",
-      "date_modified": "2024-01-08T08:03:06.000Z",
-      "authors": [],
-      "tags": [
-        "Java"
-      ]
-    },
-    {
-      "title": "线程池",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/Java/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/Java/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html",
-      "summary": "线程池设计思想 Java线程池的设计思想是为了提高线程的使用效率和响应能力，以及降低资源消耗和线程管理的复杂度。 Java线程池主要具有以下设计思想： 1. 重复使用线程：Java线程池中的线程可以被重复使用，而不是为每个任务创建一个新的线程。这样可以避免线程的创建和销毁带来的开销，提高程序的性能。 2. 控制资源消耗：Java线程池可以控制线程的数量...",
-      "content_html": "<h1> 线程池</h1>\n<h2> 线程池设计思想</h2>\n<p>Java线程池的设计思想是为了提高线程的使用效率和响应能力，以及降低资源消耗和线程管理的复杂度。<br>\nJava线程池主要具有以下设计思想：</p>\n<ol>\n<li>重复使用线程：Java线程池中的线程可以被重复使用，而不是为每个任务创建一个新的线程。这样可以避免线程的创建和销毁带来的开销，提高程序的性能。</li>\n<li>控制资源消耗：Java线程池可以控制线程的数量，从而控制程序对系统资源的消耗。当线程数量过多时，可以避免过多的线程同时占用资源，导致资源浪费和系统负载过高。</li>\n<li>提高响应能力：Java线程池可以快速响应任务的提交和执行，从而提高程序的响应能力。当有新的任务提交时，线程池可以立即分配线程执行任务，而不用等待新的线程创建和就绪。</li>\n<li>任务执行管理：Java线程池可以对任务的执行进行管理，例如控制任务的执行顺序、限制任务的执行时间、处理任务的异常等。这样可以保证任务的执行质量，并提高程序的可靠性。</li>\n</ol>\n<p>Java线程池通过ThreadPoolExecutor类来实现，该类提供了可重用的线程池，并提供了丰富的配置选项，可以根据实际需要来配置线程池的参数，以达到最佳的性能和效果。<br>\nJava线程池的设计思想是基于生产者-消费者模式，通过工作线程来执行任务，从而实现高效的并发处理。</p>\n<h2> 如何停止线程池中的线程</h2>\n<p>在Java中，线程池中的线程是并发执行的，不支持直接停止某一个线程。但是可以通过以下几种方式中断线程的执行：</p>\n<ol>\n<li>使用线程的interrupt方法中断线程</li>\n</ol>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><ol start=\"2\">\n<li>使用线程的interrupted方法检查中断标志位</li>\n</ol>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><ol start=\"3\">\n<li>使用线程的isInterrupted方法检查中断状态</li>\n</ol>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h2> 线程池的核心参数</h2>\n<p>线程池的核心参数如下：</p>\n<ul>\n<li><code>corePoolSize</code>：核心线程数，即线程池维护的最低线程数。</li>\n<li><code>maximumPoolSize</code>：最大线程数，即线程池维护的最大线程数。</li>\n<li><code>keepAliveTime</code>：线程空闲 timeout，即线程空闲 timeout 时间。</li>\n<li><code>unit</code>：时间单位。</li>\n<li><code>workQueue</code>：任务队列，用于保存等待线程执行的任务。</li>\n<li><code>threadFactory</code>：线程工厂，用于创建新线程。</li>\n<li><code>handler</code>：拒绝执行策略，当任务队列和线程池都达到最大容量时，将执行任务的续行策略。</li>\n</ul>\n",
-      "date_published": "2024-01-08T08:03:06.000Z",
-      "date_modified": "2024-01-08T08:16:49.000Z",
-      "authors": [],
-      "tags": [
-        "Java"
-      ]
-    },
-    {
       "title": "电商售后设计方案",
       "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%94%AE%E5%90%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html",
       "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%94%AE%E5%90%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html",
@@ -146,9 +298,9 @@
       "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html",
       "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html",
       "summary": "电商业务流程时序.md (%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.md) 商品的职责有哪些? 商品来源; 企业生产(自产自销) : 一般是有自己的供应链,公司内部记录和管理; 企业采购(B2B) : 从外部企业渠道采购到公司内部, 并由公司内部记录...",
-      "content_html": "<h1> 电商商品设计方案</h1>\n<p><a href=\"/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html\" target=\"blank\">电商业务流程时序.md</a></p>\n<img src=\"https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0\" alt=\"uml diagram\" loading=\"lazy\">\n<h2> 商品的职责有哪些?</h2>\n<ul>\n<li>商品来源\n<ul>\n<li>企业生产(自产自销) : 一般是有自己的供应链,公司内部记录和管理</li>\n<li>企业采购(B2B) : 从外部企业渠道采购到公司内部, 并由公司内部记录和管理</li>\n<li>企业回收(C2B) : 从个人手中回收商品, 并有公司内部记录和管理</li>\n</ul>\n</li>\n<li>商品规格</li>\n<li>商品描述</li>\n<li>商品定价</li>\n</ul>\n<h2> 商品上下游模块依赖</h2>\n<ul>\n<li>供应链模块(商品来源)</li>\n<li>订单模块(商品售卖)</li>\n<li>物流模块(商品物流)</li>\n</ul>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJbNWuihBJqbLU3grxUdaHYZdnRf5JtkdGZdFErS-smgKuO8eKR3HrOKgKB1IUBAZ6yXuDdsR3aJeQUlc5urJO8P1bG5rs46D0MfvsZ_nnPRbI5eczK3adi_UyMJN98W9N5nGzI2jK8kje6OWs_5a_y9dZUkvk1nIyrA0_W80\" alt=\"uml diagram\" loading=\"lazy\">\n<h2> 商品核心功能</h2>\n<ul>\n<li>录入商品</li>\n<li>搜索商品列表</li>\n<li>查询商品详情</li>\n<li>更新库存</li>\n</ul>\n<h2> 商品模型</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/ZLJDJW8n4BxtANhMy0wyX_50X0CHCQ5m8YOIZIu7ioIiPeqUW0iNOV5aT8cy36tXBUWwTNUwxQuUlw_V_7mparPPjzRfzYvQX9qtsxHpoHgK4FvunyU3xMOg1X4zgbGe4BlvhPYiWIxIoFTOlYpBDM9oBnVVVsY2Q1k7ukcJhtrYfwPA29ZOEPD7mCHktE7dPXzS6zsKw-EF_1HAzVnhp1UXrfEpLeqnQfZk4qgFDTMi8o27ddXzGuGojP-5YE33oEA4x-ysAqpWKMOqRlha59T5SpOUy8pLmzMl6mZGFW1e7m3uw47ELvdUiKx73D94QHpKrre0MWl0NSUu34UTD54kpbZg_tS4OOO6A6ilZdEojuDkC_ze79QxUPJRi60qARoHig2qFqZLuy4oGSwKk6XnIb1Pcq27wDm4FjI2RMJpAAuEAaLnxpd9Kssqw-gBEm00\" alt=\"uml diagram\" loading=\"lazy\">\n<h2> 搜索商品列表高性能低延时方案</h2>\n<p>使用ElasticSearch作为搜索引擎</p>\n<p>搜索相关度排序</p>\n<ol>\n<li>商品类目</li>\n<li>商品标签</li>\n<li>商品标题</li>\n<li>商品副标题</li>\n<li>商品描述</li>\n<li>规格描述</li>\n<li>热卖商品</li>\n</ol>\n<h3> ES数据映射</h3>\n<p>ES需要对以下数据做映射</p>\n<ul>\n<li>商品\n<ul>\n<li>商品类目</li>\n<li>商品标签</li>\n<li>商品规格</li>\n</ul>\n</li>\n<li>订单</li>\n</ul>\n<h3> ES数据同步方案</h3>\n<p><a href=\"/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES.html\" target=\"blank\">MySQL同步数据ES.md</a></p>\n<p>通过上面文章的方案比较, 最终选用数据订阅方式,进行ES数据同步</p>\n",
+      "content_html": "<h1> 电商商品设计方案</h1>\n<p><a href=\"/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html\" target=\"blank\">电商业务流程时序.md</a></p>\n<img src=\"https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0\" alt=\"uml diagram\" loading=\"lazy\">\n<h2> 商品的职责有哪些?</h2>\n<ul>\n<li>商品来源\n<ul>\n<li>企业生产(自产自销) : 一般是有自己的供应链,公司内部记录和管理</li>\n<li>企业采购(B2B) : 从外部企业渠道采购到公司内部, 并由公司内部记录和管理</li>\n<li>企业回收(C2B) : 从个人手中回收商品, 并有公司内部记录和管理</li>\n</ul>\n</li>\n<li>商品规格</li>\n<li>商品描述</li>\n<li>商品定价</li>\n</ul>\n<h2> 商品上下游模块依赖</h2>\n<ul>\n<li>供应链模块(商品来源)</li>\n<li>订单模块(商品售卖)</li>\n<li>物流模块(商品物流)</li>\n</ul>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJbNWuihBJqbLU3grxUdaHYZdnRf5JtkdGZdFErS-smgKuO8eKR3HrOKgKB1IUBAZ6yXuDdsR3aJeQUlc5urJO8P1bG5rs46D0MfvsZ_nnPRbI5eczK3adi_UyMJN98W9N5nGzI2jK8kje6OWs_5a_y9dZUkvk1nIyrA0_W80\" alt=\"uml diagram\" loading=\"lazy\">\n<h2> 商品核心功能</h2>\n<ul>\n<li>录入商品</li>\n<li>搜索商品列表</li>\n<li>查询商品详情</li>\n<li>更新库存</li>\n</ul>\n<h2> 商品模型</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/ZLJDJW8n4BxtANhMy0wyX_50X0CHCQ5m8YOIZIu7ioIiPeqUW0iNOV5aT8cy36tXBUWwTNUwxQuUlw_V_7mparPPjzRfzYvQX9qtsxHpoHgK4FvunyU3xMOg1X4zgbGe4BlvhPYiWIxIoFTOlYpBDM9oBnVVVsY2Q1k7ukcJhtrYfwPA29ZOEPD7mCHktE7dPXzS6zsKw-EF_1HAzVnhp1UXrfEpLeqnQfZk4qgFDTMi8o27ddXzGuGojP-5YE33oEA4x-ysAqpWKMOqRlha59T5SpOUy8pLmzMl6mZGFW1e7m3uw47ELvdUiKx73D94QHpKrre0MWl0NSUu34UTD54kpbZg_tS4OOO6A6ilZdEojuDkC_ze79QxUPJRi60qARoHig2qFqZLuy4oGSwKk6XnIb1Pcq27wDm4FjI2RMJpAAuEAaLnxpd9Kssqw-gBEm00\" alt=\"uml diagram\" loading=\"lazy\">\n<h2> 搜索商品列表高性能低延时方案</h2>\n<p>使用ElasticSearch作为搜索引擎</p>\n<p>搜索相关度排序</p>\n<ol>\n<li>商品类目</li>\n<li>商品标签</li>\n<li>商品标题</li>\n<li>商品副标题</li>\n<li>商品描述</li>\n<li>规格描述</li>\n<li>热卖商品</li>\n</ol>\n<h3> ES数据映射</h3>\n<p>ES需要对以下数据做映射</p>\n<ul>\n<li>商品\n<ul>\n<li>商品类目</li>\n<li>商品标签</li>\n<li>商品规格</li>\n</ul>\n</li>\n<li>订单</li>\n</ul>\n<h3> ES数据同步方案</h3>\n<p><a href=\"/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html\" target=\"blank\">MySQL同步数据ES.md</a></p>\n<p>通过上面文章的方案比较, 最终选用数据订阅方式,进行ES数据同步</p>\n",
       "date_published": "2024-01-07T09:14:51.000Z",
-      "date_modified": "2024-01-08T10:02:09.000Z",
+      "date_modified": "2024-01-11T02:25:57.000Z",
       "authors": [],
       "tags": [
         "电商"
@@ -220,145 +372,6 @@
       ]
     },
     {
-      "title": "冒泡排序",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html",
-      "summary": "冒泡排序（Bubble Sort）是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。 算法描述 1. 从数列中挑出最小（大）元素，依次放到数列的起始位置； 2. 再从剩下的元素中挑出最小（大）元素，放到已排序序列的末尾； 3....",
-      "content_html": "<h1> 冒泡排序</h1>\n<p>冒泡排序（Bubble Sort）是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。</p>\n<h2> 算法描述</h2>\n<ol>\n<li>从数列中挑出最小（大）元素，依次放到数列的起始位置；</li>\n<li>再从剩下的元素中挑出最小（大）元素，放到已排序序列的末尾；</li>\n<li>重复步骤2，直到所有元素排序完成。</li>\n</ol>\n<h2> 示例</h2>\n<p>对数列 {5, 3, 8, 6, 4} 进行冒泡排序：</p>\n<p>第一轮：</p>\n<ul>\n<li>比较5和3，发现5&gt;3，交换位置，数列变成 {3, 5, 8, 6, 4}；</li>\n<li>比较5和8，发现5&lt;8，位置不变，数列还是 {3, 5, 8, 6, 4}；</li>\n<li>比较8和6，发现8&gt;6，交换位置，数列变成 {3, 5, 6, 8, 4}；</li>\n<li>比较8和4，发现8&gt;4，交换位置，数列变成 {3, 5, 6, 4, 8}；<br>\n第一轮结束，此时最大元素8已经排好序，接下来对剩下的数列 {3, 5, 6, 4} 进行冒泡排序。</li>\n</ul>\n<p>第二轮：</p>\n<ul>\n<li>比较3和5，发现3&lt;5，位置不变，数列还是 {3, 5, 6, 4}；</li>\n<li>比较5和6，发现5&lt;6，位置不变，数列还是 {3, 5, 6, 4}；</li>\n<li>比较6和4，发现6&gt;4，交换位置，数列变成 {3, 5, 4, 6}；<br>\n第二轮结束，此时次大元素6已经排好序，剩下的数列 {3, 5, 4} 继续冒泡排序。</li>\n</ul>\n<p>第三轮：</p>\n<ul>\n<li>比较3和5，发现3&lt;5，位置不变，数列还是 {3, 5, 4}；</li>\n<li>比较5和4，发现5&gt;4，交换位置，数列变成 {3, 4, 5}；<br>\n第三轮结束，此时第三大元素5已经排好序，剩下的数列 {3, 4} 继续冒泡排序。</li>\n</ul>\n<p>第四轮：</p>\n<ul>\n<li>比较3和4，发现3&lt;4，位置不变，数列还是 {3, 4}；<br>\n第四轮结束，此时最小元素3已经排好序，整个数列排序完成。</li>\n</ul>\n<h2> 复杂度分析</h2>\n<ul>\n<li>最好情况：当数组已经按照排序需求排好时，只需进行一次遍历，时间复杂度为O(n)；</li>\n<li>最坏情况：当数组是逆序排列时，需要进行n-1次遍历，时间复杂度为O(n^2)；</li>\n<li>平均情况：需要进行n-1次遍历，时间复杂度为O(n^2)。</li>\n</ul>\n<p>冒泡排序是一种稳定的排序算法。</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
-      "date_published": "2024-01-06T11:11:12.000Z",
-      "date_modified": "2024-01-06T11:11:12.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "双指针",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%8F%8C%E6%8C%87%E9%92%88.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%8F%8C%E6%8C%87%E9%92%88.html",
-      "summary": "双指针算法（Two-Pointers Algorithm）是一种常见的算法思想，通常用于解决数组或链表相关的问题。该算法通过使用两个指针，分别从数组或链表的两端向中间移动，从而解决问题。 双指针算法通常可以分为两种情况： 1. 从数组的两端向中间移动的双指针算法： 这种情况下，我们通常使用两个指针从数组的两端同时开始遍历，然后根据具体的问题来决定两个指...",
-      "content_html": "<h1> 双指针</h1>\n<p>双指针算法（Two-Pointers Algorithm）是一种常见的算法思想，通常用于解决数组或链表相关的问题。该算法通过使用两个指针，分别从数组或链表的两端向中间移动，从而解决问题。<br>\n双指针算法通常可以分为两种情况：</p>\n<ol>\n<li>\n<p>从数组的两端向中间移动的双指针算法：<br>\n这种情况下，我们通常使用两个指针从数组的两端同时开始遍历，然后根据具体的问题来决定两个指针的移动方式。这种算法通常用于解决一些查找或筛选的问题，例如查找两个数的和等于目标值、查找数组中的环形子数组等。</p>\n</li>\n<li>\n<p>从数组的一端向另一端移动的双指针算法：<br>\n这种情况下，我们通常使用两个指针，一个指向数组的起始位置，另一个从起始位置开始向后遍历。这种算法通常用于解决一些排序或统计的问题，例如验证只包含相同字符的最长子串、统计数组中元素出现次数等。</p>\n</li>\n</ol>\n<p>使用双指针算法可以有效地提高解决数组或链表相关问题的效率，因为双指针同时进行遍历，可以将时间复杂度从O(n^2)降低到O(n)。</p>\n",
-      "date_published": "2024-01-06T11:11:12.000Z",
-      "date_modified": "2024-01-06T11:11:12.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "基数排序",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html",
-      "summary": "基本原理 基数排序是一种非比较性的排序算法。基数排序的基本思想是：将整数按位数划分为不同的桶，然后按每个位数分别对桶中的元素进行排序，最终将所有位数上的排序结果合并在一起，得到最终的排序结果。 基数排序的时间复杂度为O(dn)，其中d是数字的最大位数，n是待排序元素个数。 实现步骤 基数排序的实现步骤如下： 1. 获取待排序数组中的最大值，确定最大位数...",
-      "content_html": "<h1> 基数排序</h1>\n<h2> 基本原理</h2>\n<p>基数排序是一种非比较性的排序算法。基数排序的基本思想是：将整数按位数划分为不同的桶，然后按每个位数分别对桶中的元素进行排序，最终将所有位数上的排序结果合并在一起，得到最终的排序结果。</p>\n<p>基数排序的时间复杂度为O(dn)，其中d是数字的最大位数，n是待排序元素个数。</p>\n<h2> 实现步骤</h2>\n<p>基数排序的实现步骤如下：</p>\n<ol>\n<li>获取待排序数组中的最大值，确定最大位数d。</li>\n<li>对最末位进行排序，使用计数排序算法对每个数字出现的次数进行统计。</li>\n<li>基于计数排序的结果，依次确定每个数字在有序数组中的位置。</li>\n<li>将有序数组重新赋值给原数组。</li>\n<li>依次对每一位进行排序，直到最高位。</li>\n</ol>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
-      "date_published": "2024-01-06T11:11:12.000Z",
-      "date_modified": "2024-01-06T11:11:12.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "堆排序",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%A0%86%E6%8E%92%E5%BA%8F.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%A0%86%E6%8E%92%E5%BA%8F.html",
-      "summary": "堆排序（Heap Sort）是利用堆（Heap）这种数据结构进行选择排序的一种算法。堆是一个可以推导具有最大或最小值的树形结构，堆排序利用堆的特性进行排序。 堆排序分为两个步骤： 1. 建堆（Build Heap）：将一个无序的数组构建成一个大顶堆（Max Heap）。大顶堆的特点是父节点的值大于或等于其子节点的值。建堆的过程从数组的最后一个非叶子节点...",
-      "content_html": "<h1> 堆排序</h1>\n<p>堆排序（Heap Sort）是利用堆（Heap）这种数据结构进行选择排序的一种算法。堆是一个可以推导具有最大或最小值的树形结构，堆排序利用堆的特性进行排序。</p>\n<p>堆排序分为两个步骤：</p>\n<ol>\n<li>\n<p>建堆（Build Heap）：将一个无序的数组构建成一个大顶堆（Max Heap）。大顶堆的特点是父节点的值大于或等于其子节点的值。建堆的过程从数组的最后一个非叶子节点开始，依次向上调整每个节点，使其满足大顶堆的特性。</p>\n</li>\n<li>\n<p>排序（Sort）：重复执行以下步骤，直到堆的大小为1：</p>\n<ul>\n<li>将堆中的最大元素（根节点）与堆的最后一个元素交换。</li>\n<li>将堆的大小减1。</li>\n<li>对堆进行调整，使其重新成为一个大顶堆。</li>\n</ul>\n</li>\n</ol>\n<p>重复上述步骤，每次取出的都是当前堆中的最大元素，最终得到的数组就是一个有序的数组。</p>\n<p>堆排序的时间复杂度为O(nlogn)，空间复杂度为O(1)。由于堆排序是一种不稳定的排序算法，因此在需要保持相同元素的原始顺序时应谨慎使用。</p>\n<p>以下是堆排序的示例代码：</p>\n<h2> Java实现</h2>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
-      "date_published": "2024-01-06T11:11:12.000Z",
-      "date_modified": "2024-01-06T11:11:12.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "希尔排序",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html",
-      "content_html": "<h1> 希尔排序</h1>\n",
-      "date_published": "2024-01-06T11:11:12.000Z",
-      "date_modified": "2024-01-06T12:44:08.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "归并排序",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html",
-      "content_html": "<h1> 归并排序</h1>\n",
-      "date_published": "2024-01-06T11:11:12.000Z",
-      "date_modified": "2024-01-06T12:44:08.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "快速排序",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html",
-      "summary": "快速排序是一种常用的排序算法，采用分治法（Divide and Conquer）的思想。它的基本步骤如下： 1. 从数列中挑出一个元素，称为“基准”（pivot）。 2. 将所有比基准值小的元素都放在基准前面，比基准值大的元素都放在基准的后面（相同的数可以放在任一边）。在这个分区退出之后，该基准就处于数列的中间位置。 3. 对基准的左右两个分区重复步骤...",
-      "content_html": "<h1> 快速排序</h1>\n<p>快速排序是一种常用的排序算法，采用分治法（Divide and Conquer）的思想。它的基本步骤如下：</p>\n<ol>\n<li>从数列中挑出一个元素，称为“基准”（pivot）。</li>\n<li>将所有比基准值小的元素都放在基准前面，比基准值大的元素都放在基准的后面（相同的数可以放在任一边）。在这个分区退出之后，该基准就处于数列的中间位置。</li>\n<li>对基准的左右两个分区重复步骤1和步骤2。<br>\n快速排序的关键步骤是基准的选取，不同的选取方法会影响排序的效率。通常有以下几种选取方法：\n<ul>\n<li>选取第一个元素作为基准</li>\n<li>选取最后一个元素作为基准</li>\n<li>选取中间元素作为基准</li>\n<li>从数列中随机选取一个元素作为基准</li>\n</ul>\n</li>\n</ol>\n<p>快速排序的时间复杂度为O(nlogn)，但在最坏情况下时间复杂度为O(n^2)。为了避免最坏情况的发生，可以采用随机选取基准、三数中值法选取基准等优化方法。</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
-      "date_published": "2024-01-06T11:11:12.000Z",
-      "date_modified": "2024-01-06T11:11:12.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "插入排序",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html",
-      "summary": "插入排序是一种简单直观的排序算法。它的基本思想是通过构建有序序列，对未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。 时间复杂度 在最坏的情况下，插入排序需要O(n^2)的时间复杂度和O(1)的空间复杂度。 空间复杂度 在最好情况下，插入排序需要O(n)的时间复杂度和O(1)的空间复杂度。 Java代码实现",
-      "content_html": "<h1> 插入排序</h1>\n<p>插入排序是一种简单直观的排序算法。它的基本思想是通过构建有序序列，对未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。</p>\n<h2> 时间复杂度</h2>\n<p>在最坏的情况下，插入排序需要O(n^2)的时间复杂度和O(1)的空间复杂度。</p>\n<h2> 空间复杂度</h2>\n<p>在最好情况下，插入排序需要O(n)的时间复杂度和O(1)的空间复杂度。</p>\n<h2> Java代码实现</h2>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
-      "date_published": "2024-01-06T11:11:12.000Z",
-      "date_modified": "2024-01-06T11:11:12.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "桶排序",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%A1%B6%E6%8E%92%E5%BA%8F.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%A1%B6%E6%8E%92%E5%BA%8F.html",
-      "content_html": "<h1> 桶排序</h1>\n",
-      "date_published": "2024-01-06T11:11:12.000Z",
-      "date_modified": "2024-01-06T12:44:08.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "计数排序",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html",
-      "content_html": "<h1> 计数排序</h1>\n",
-      "date_published": "2024-01-06T11:11:12.000Z",
-      "date_modified": "2024-01-06T12:44:08.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
-      "title": "选择排序",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html",
-      "summary": "选择排序是一种简单直观的排序算法。它的基本思想是：每次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。 步骤 选择排序的算法步骤如下： 1. 在待排序的元素中，找到最小（大）的元素，将其与第一个元素交换位置。 2. 在剩下的元素中，找到最小（大）的元素，将其与第二个元素交换位置。 3. 重复上述步骤...",
-      "content_html": "<h1> 选择排序</h1>\n<p>选择排序是一种简单直观的排序算法。它的基本思想是：每次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。</p>\n<h2> 步骤</h2>\n<p>选择排序的算法步骤如下：</p>\n<ol>\n<li>在待排序的元素中，找到最小（大）的元素，将其与第一个元素交换位置。</li>\n<li>在剩下的元素中，找到最小（大）的元素，将其与第二个元素交换位置。</li>\n<li>重复上述步骤，直到所有元素均排序完毕。</li>\n</ol>\n<h2> 示例</h2>\n<p>给定数组 [3, 4, 2, 1, 5]，按升序排序。</p>\n<ol>\n<li>第一次遍历，找到最小元素 1，与第一个元素 3 交换位置，数组变为 [1, 4, 2, 3, 5]。</li>\n<li>第二次遍历，忽略第一个元素，找到最小元素 2，与第二个元素 4 交换位置，数组变为 [1, 2, 4, 3, 5]。</li>\n<li>第三次遍历，忽略前两个元素，找到最小元素 3，与第三个元素 4 交换位置，数组变为 [1, 2, 3, 4, 5]。</li>\n<li>第四次遍历，忽略前三个元素，找到最小元素 4，与第四个元素 4 交换位置，数组保持不变 [1, 2, 3, 4, 5]。</li>\n<li>第五次遍历，忽略前四个元素，找到最小元素 5，与第五个元素 5 交换位置，数组保持不变 [1, 2, 3, 4, 5]。</li>\n</ol>\n<p>最终得到的数组为 [1, 2, 3, 4, 5]，即为按升序排序后的结果。</p>\n<h2> 时间复杂度</h2>\n<p>选择排序的时间复杂度为 O(n^2)，其中 n 是待排序数组的长度。</p>\n<h2> 代码实现</h2>\n<p>下面是使用 Java 实现选择排序的示例代码：</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>以上代码实现了选择排序的排序算法和排序结果的输出。</p>\n",
-      "date_published": "2024-01-06T11:11:12.000Z",
-      "date_modified": "2024-01-06T11:11:12.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
-      ]
-    },
-    {
       "title": "数组",
       "url": "https://suveng.github.io/suveng_blog/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html",
       "id": "https://suveng.github.io/suveng_blog/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html",
@@ -369,19 +382,6 @@
       "authors": [],
       "tags": [
         "数据结构"
-      ]
-    },
-    {
-      "title": "斐波那契数列问题",
-      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html",
-      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html",
-      "summary": "数学公式如下: $$ \\begin{align} f(n) = \\left\\{ \\begin{matrix} 0 & n=0 \\\\ 1 & n=1 \\\\ f(n-1)+f(n-2) & n>=1 \\end{matrix} \\right. \\end{align} $$",
-      "content_html": "<h1> 斐波那契数列问题</h1>\n<p>数学公式如下:</p>\n<p v-pre=\"\" class=\"katex-block\"><span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mtable rowspacing=\"0.25em\" columnalign=\"right\" columnspacing=\"\"><mtr><mtd class=\"mtr-glue\"></mtd><mtd><mstyle scriptlevel=\"0\" displaystyle=\"true\"><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mrow><mo fence=\"true\">{</mo><mtable rowspacing=\"0.16em\" columnalign=\"center center\" columnspacing=\"1em\"><mtr><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mn>1</mn></mstyle></mtd><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy=\"false\">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mrow><mi>n</mi><mo>&gt;</mo><mo>=</mo><mn>1</mn></mrow></mstyle></mtd></mtr></mtable></mrow></mrow></mstyle></mtd><mtd class=\"mtr-glue\"></mtd><mtd class=\"mml-eqn-num\"></mtd></mtr></mtable><annotation encoding=\"application/x-tex\">\n\\begin{align}\nf(n)  = \n\n\\left\\{\n    \\begin{matrix}\n        0   &amp; n=0  \\\\\n        1   &amp; n=1  \\\\  \n        f(n-1)+f(n-2)  &amp; n&gt;=1\n    \\end{matrix}\n\\right.\n\n\\end{align}\n</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:3.9em;vertical-align:-1.7em;\"></span><span class=\"mtable\"><span class=\"col-align-r\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:2.2em;\"><span style=\"top:-4.2em;\"><span class=\"pstrut\" style=\"height:4.05em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\" style=\"margin-right:0.10764em;\">f</span><span class=\"mopen\">(</span><span class=\"mord mathnormal\">n</span><span class=\"mclose\">)</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"minner\"><span class=\"mopen\"><span class=\"delimsizing mult\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:2.05em;\"><span style=\"top:-2.5em;\"><span class=\"pstrut\" style=\"height:3.15em;\"></span><span class=\"delimsizinginner delim-size4\"><span>⎩</span></span></span><span style=\"top:-2.492em;\"><span class=\"pstrut\" style=\"height:3.15em;\"></span><span style=\"height:0.016em;width:0.8889em;\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"0.8889em\" height=\"0.016em\" style=\"width:0.8889em\" viewBox=\"0 0 888.89 16\" preserveAspectRatio=\"xMinYMin\"><path d=\"M384 0 H504 V16 H384z M384 0 H504 V16 H384z\"></path></svg></span></span><span style=\"top:-3.15em;\"><span class=\"pstrut\" style=\"height:3.15em;\"></span><span class=\"delimsizinginner delim-size4\"><span>⎨</span></span></span><span style=\"top:-4.292em;\"><span class=\"pstrut\" style=\"height:3.15em;\"></span><span style=\"height:0.016em;width:0.8889em;\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"0.8889em\" height=\"0.016em\" style=\"width:0.8889em\" viewBox=\"0 0 888.89 16\" preserveAspectRatio=\"xMinYMin\"><path d=\"M384 0 H504 V16 H384z M384 0 H504 V16 H384z\"></path></svg></span></span><span style=\"top:-4.3em;\"><span class=\"pstrut\" style=\"height:3.15em;\"></span><span class=\"delimsizinginner delim-size4\"><span>⎧</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.55em;\"><span></span></span></span></span></span></span><span class=\"mord\"><span class=\"mtable\"><span class=\"col-align-c\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:2.05em;\"><span style=\"top:-4.21em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">0</span></span></span><span style=\"top:-3.01em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">1</span></span></span><span style=\"top:-1.81em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\" style=\"margin-right:0.10764em;\">f</span><span class=\"mopen\">(</span><span class=\"mord mathnormal\">n</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">−</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mord\">1</span><span class=\"mclose\">)</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10764em;\">f</span><span class=\"mopen\">(</span><span class=\"mord mathnormal\">n</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">−</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mord\">2</span><span class=\"mclose\">)</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.55em;\"><span></span></span></span></span></span><span class=\"arraycolsep\" style=\"width:0.5em;\"></span><span class=\"arraycolsep\" style=\"width:0.5em;\"></span><span class=\"col-align-c\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:2.05em;\"><span style=\"top:-4.21em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\">n</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mord\">0</span></span></span><span style=\"top:-3.01em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\">n</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mord\">1</span></span></span><span style=\"top:-1.81em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\">n</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">&gt;=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mord\">1</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.55em;\"><span></span></span></span></span></span></span></span><span class=\"mclose nulldelimiter\"></span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.7em;\"><span></span></span></span></span></span></span></span><span class=\"tag\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:2.2em;\"><span style=\"top:-4.2em;\"><span class=\"pstrut\" style=\"height:4.05em;\"></span><span class=\"eqn-num\"></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.7em;\"><span></span></span></span></span></span></span></span></span></p>\n<hr>\n",
-      "date_published": "2024-01-05T10:54:05.000Z",
-      "date_modified": "2024-01-05T11:18:48.000Z",
-      "authors": [],
-      "tags": [
-        "算法"
       ]
     },
     {
