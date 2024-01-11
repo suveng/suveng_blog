@@ -114,7 +114,7 @@ interface --> 商品服务 : 1.更新商品请求
 MySQL --> canal : 3.canal订阅binlog
 canal --> 搜索服务 : 4.消费更新商品请求的消息
 搜索服务 ~~> 商品服务 : 5.搜索服务调用查询商品接口
-搜索服务 -->  : 6. 聚合数据后写入ElasticSearch
+搜索服务 --> ElasticSearch : 6. 聚合数据后写入ElasticSearch
 @enduml
 
 
