@@ -75,6 +75,7 @@ export default hopeTheme({
   encrypt: {
     config: {
       "/zh/posts/简历/Java简历.html": ["suveng"],
+      "/zh/posts/简历/职业规划.html": ["suveng"],
     },
   },
   copyright: "Copyright © 2024 苏文广",
