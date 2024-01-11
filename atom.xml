@@ -3,7 +3,7 @@
   <id>https://suveng.github.io/suveng_blog/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-01-11T02:54:44.098Z</updated>
+  <updated>2024-01-11T04:01:18.561Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://suveng.github.io/suveng_blog/atom.xml"/>
   <link rel="alternate" href="https://suveng.github.io/suveng_blog/"/>
@@ -19,7 +19,7 @@
     <title type="text">MySQL同步数据ES</title>
     <id>https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html</id>
     <link href="https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html"/>
-    <updated>2024-01-11T02:25:57.000Z</updated>
+    <updated>2024-01-11T04:00:35.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL同步数据ES</h1>
 <ol>
 <li>同步双写</li>
@@ -88,7 +88,7 @@
 </li>
 </ol>
 <h2> 数据订阅</h2>
-<img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYtaAYnDBKrLI4xCIyo1o3wRCEVvbaLGsPJ4aiIanE9K1T_Au40V1DSr9x6u93CvE3MnA3c3YoiphoIrA2qnELL1LzSEnNm5AmL3lMUpjpoRjW4Y_6BzzcSRcxXGr80qWIq0gZP2KVriwePdlUkUxfhC1P47gGIx5QZIM0_CUh5kqSiPhKcPUJdvwLmGEP0gP6y05PleFTlMyMBBJaodF9_L0fHwrhYU2qLBNHs6Hqpra5MysD3yVCgAP_ENlbY_2AgmR-dJ_iMene2S0jHgfgVmed7MqmaTK0zDw7lQDlDfwrBKS7H8pKi1nXS0" alt="uml diagram" loading="lazy">
+<img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYtaAYnDBKrLI4xCIyo1o3wRCEVvbaLGsPJ4aiIanE9K1T_Au40V1DSr9x6u93CvE3MnA3c3YoiphoIrA2qnELL1LzSEnNm5AmL3lMUpjpoRjW4Y_6BzzcSRcxXGr80qWIq0gZP2KVriwePdlUkUxfhC1P47gGIx5QZIM0_CUh5kqSiPhKcPUJdvwLmGEP0gP6y05PleFTlMyMBBJaodF9_L0fHwrhYU2qLBNHs6Hqpra5MysD3yVCgAP_ENlbY_2AgmR-dJ_iMene2SWX9OG7FCz1HUDCvwEg43whi9VK_RPZvjNOeQg0wfUId0o0C0" alt="uml diagram" loading="lazy">
 <h3> 优点</h3>
 <ol>
 <li>

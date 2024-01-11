@@ -6,8 +6,8 @@
     <link>https://suveng.github.io/suveng_blog/</link>
     <description>苏文广的博客</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 11 Jan 2024 02:54:44 GMT</pubDate>
-    <lastBuildDate>Thu, 11 Jan 2024 02:54:44 GMT</lastBuildDate>
+    <pubDate>Thu, 11 Jan 2024 04:01:18 GMT</pubDate>
+    <lastBuildDate>Thu, 11 Jan 2024 04:01:18 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>ElasticSearch</category>
@@ -85,7 +85,7 @@
 </li>
 </ol>
 <h2> 数据订阅</h2>
-<img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYtaAYnDBKrLI4xCIyo1o3wRCEVvbaLGsPJ4aiIanE9K1T_Au40V1DSr9x6u93CvE3MnA3c3YoiphoIrA2qnELL1LzSEnNm5AmL3lMUpjpoRjW4Y_6BzzcSRcxXGr80qWIq0gZP2KVriwePdlUkUxfhC1P47gGIx5QZIM0_CUh5kqSiPhKcPUJdvwLmGEP0gP6y05PleFTlMyMBBJaodF9_L0fHwrhYU2qLBNHs6Hqpra5MysD3yVCgAP_ENlbY_2AgmR-dJ_iMene2S0jHgfgVmed7MqmaTK0zDw7lQDlDfwrBKS7H8pKi1nXS0" alt="uml diagram" loading="lazy">
+<img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYtaAYnDBKrLI4xCIyo1o3wRCEVvbaLGsPJ4aiIanE9K1T_Au40V1DSr9x6u93CvE3MnA3c3YoiphoIrA2qnELL1LzSEnNm5AmL3lMUpjpoRjW4Y_6BzzcSRcxXGr80qWIq0gZP2KVriwePdlUkUxfhC1P47gGIx5QZIM0_CUh5kqSiPhKcPUJdvwLmGEP0gP6y05PleFTlMyMBBJaodF9_L0fHwrhYU2qLBNHs6Hqpra5MysD3yVCgAP_ENlbY_2AgmR-dJ_iMene2SWX9OG7FCz1HUDCvwEg43whi9VK_RPZvjNOeQg0wfUId0o0C0" alt="uml diagram" loading="lazy">
 <h3> 优点</h3>
 <ol>
 <li>
