@@ -6,6 +6,32 @@
   "description": "苏文广的博客",
   "items": [
     {
+      "title": "MySQL索引B+树高度计算",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html",
+      "summary": "1. 总记录数 N 2. 记录大小 k Byte 3. 索引大小 x Byte 4. 数据库指针大小 6 Byte 5. 数据库页大小 16KB 从底往上计算高度 叶子节点存放数据 一个叶子节点存放数据量 c = 16 * 1024 / k 一个非叶子节点存放叶子节点数量 b = 16 * 1024 / (x + 6) 总页数 p = N / c 索引...",
+      "content_html": "<h1> MySQL索引B+树高度计算</h1>\n<ol>\n<li>总记录数 N</li>\n<li>记录大小 k Byte</li>\n<li>索引大小 x Byte</li>\n<li>数据库指针大小 6 Byte</li>\n<li>数据库页大小  16KB</li>\n</ol>\n<p>从底往上计算高度</p>\n<p>叶子节点存放数据</p>\n<p>一个叶子节点存放数据量 c = 16 * 1024 / k</p>\n<p>一个非叶子节点存放叶子节点数量 b = 16 * 1024 / (x + 6)</p>\n<p>总页数 p = N / c</p>\n<p>索引的高度 h = log(p,b)</p>\n<p>树高 = h + 1</p>\n<h2> 例子计算</h2>\n<p>总记录N = 20,000,000</p>\n<p>记录大小k = 1024</p>\n<p>索引大小x = 8</p>\n<p>总页数p = 1250000</p>\n<p>索引数b = 1170</p>\n<p>索引树高log(p,b) = 2</p>\n<p>树高 = 3</p>\n<p>总结, 2千万的数据,B+树的高度为3</p>\n",
+      "date_published": "2024-01-13T02:57:27.000Z",
+      "date_modified": "2024-01-13T02:57:27.000Z",
+      "authors": [],
+      "tags": [
+        "MySQL"
+      ]
+    },
+    {
+      "title": "高并发设计",
+      "url": "https://suveng.github.io/suveng_blog/zh/posts/%E6%9E%B6%E6%9E%84/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1.html",
+      "id": "https://suveng.github.io/suveng_blog/zh/posts/%E6%9E%B6%E6%9E%84/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1.html",
+      "summary": "高并发定义 高并发是指在一定时间内，大量的请求同时访问应用程序或系统，导致系统出现性能瓶颈，如响应时间变慢、服务不可用等问题。 高并发通常出现在促销活动、秒杀场景、网站流量高峰期等情况下。 衡量高并发的指标 响应时间(RT); 并发数(QPS); 请求成功率(成功数/总数); 资源利用率; CPU; 内存; IO; JVM GC; 影响并发的因素 硬件...",
+      "content_html": "<h1> 高并发设计</h1>\n<h2> 高并发定义</h2>\n<p>高并发是指在一定时间内，大量的请求同时访问应用程序或系统，导致系统出现性能瓶颈，如响应时间变慢、服务不可用等问题。</p>\n<p>高并发通常出现在促销活动、秒杀场景、网站流量高峰期等情况下。</p>\n<h2> 衡量高并发的指标</h2>\n<ul>\n<li>响应时间(RT)</li>\n<li>并发数(QPS)</li>\n<li>请求成功率(成功数/总数)</li>\n<li>资源利用率\n<ul>\n<li>CPU</li>\n<li>内存</li>\n<li>IO</li>\n<li>JVM GC</li>\n</ul>\n</li>\n</ul>\n<h2> 影响并发的因素</h2>\n<ul>\n<li>硬件\n<ul>\n<li>CPU</li>\n<li>内存</li>\n<li>磁盘</li>\n</ul>\n</li>\n<li>软件架构\n<ul>\n<li>单体架构</li>\n<li>分布式架构</li>\n</ul>\n</li>\n<li>数据库\n<ul>\n<li>MySQL</li>\n<li>Redis</li>\n</ul>\n</li>\n<li>网络\n<ul>\n<li>带宽, 上行速率/下行速率</li>\n</ul>\n</li>\n<li>程序代码</li>\n</ul>\n<h2> 高并发设计</h2>\n<p>如果设计一个高并发的系统, 考虑的因素比较多, 这里用控制变量法去控制其他因素保持不变, 只看程序代码的方式, 设计一个高并发的程序</p>\n<ul>\n<li>\n<p>硬件固定</p>\n<p>4c8G的硬件</p>\n</li>\n<li>\n<p>软件架构固定</p>\n<p>使用单体架构, 测试单体的并发性能可以粗略估算水平扩容的分布式架构的性能; 当然, 具体分布式架构下的并发性能还是需要测试, 但是这里为了测试方便才使用单体架构</p>\n</li>\n<li>\n<p>数据库固定</p>\n<p>固定使用MySQL和Redis</p>\n</li>\n<li>\n<p>网络固定</p>\n<p>本地网络, 家庭网络的路由大概是千兆网, 这里网络不会成为卡点</p>\n</li>\n<li>\n<p>编程语言固定</p>\n<p>Java</p>\n</li>\n<li>\n<p>改变程序代码(库存接口)</p>\n<ol>\n<li>\n<p>仅使用MySQL 无缓存 (MySQL的缓存忽略不计)</p>\n</li>\n<li>\n<p>MySQL + Redis 2级缓存</p>\n</li>\n<li>\n<p>MySQL + Redis + 内存 3级缓存</p>\n<p>以上三种迭代的方式, 测试并发性能</p>\n</li>\n</ol>\n</li>\n</ul>\n<h3> 测试无缓存</h3>\n<h3> 测试2级缓存</h3>\n<h3> 测试3级缓存</h3>\n",
+      "date_published": "2024-01-13T02:57:27.000Z",
+      "date_modified": "2024-01-13T02:57:27.000Z",
+      "authors": [],
+      "tags": [
+        "架构"
+      ]
+    },
+    {
       "title": "MySQL慢查询优化",
       "url": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html",
       "id": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html",
