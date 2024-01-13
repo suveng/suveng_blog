@@ -3,7 +3,7 @@
   <id>https://suveng.github.io/suveng_blog/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-01-13T02:58:09.251Z</updated>
+  <updated>2024-01-13T03:17:12.201Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://suveng.github.io/suveng_blog/atom.xml"/>
   <link rel="alternate" href="https://suveng.github.io/suveng_blog/"/>
@@ -20,7 +20,7 @@
     <title type="text">MySQL索引B+树高度计算</title>
     <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html</id>
     <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html"/>
-    <updated>2024-01-13T02:57:27.000Z</updated>
+    <updated>2024-01-13T03:15:06.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL索引B+树高度计算</h1>
 <ol>
 <li>总记录数 N</li>
@@ -50,7 +50,7 @@
 <p>总页数 p = N / c</p>
 <p>索引的高度 h = log(p,b)</p>
 <p>树高 = h + 1</p>
-<h2> 例子计算</h2>
+<h2> 聚簇索引例子计算</h2>
 <p>总记录N = 20,000,000</p>
 <p>记录大小k = 1024</p>
 <p>索引大小x = 8</p>
@@ -59,6 +59,17 @@
 <p>索引树高log(p,b) = 2</p>
 <p>树高 = 3</p>
 <p>总结, 2千万的数据,B+树的高度为3</p>
+<h2> 辅助索引例子计算</h2>
+<p>辅助索引的叶子节点存放的事主键值, 辅助索引找到主键, 通过主键去聚簇索引查找记录</p>
+<p>辅助索引最大是256Byte</p>
+<p>总记录N = 20,000,000</p>
+<p>记录大小k = 8</p>
+<p>索引大小x = 256</p>
+<p>总页数p = 9765</p>
+<p>索引数b = 62</p>
+<p>索引树高log(p,b) = 3</p>
+<p>树高 = 4</p>
+<p>总结, 2千万的数据,辅助索引B+树的高度为4</p>
 ]]></content>
     <category term="MySQL"/>
     <published>2024-01-13T02:57:27.000Z</published>

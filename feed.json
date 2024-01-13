@@ -10,9 +10,9 @@
       "url": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html",
       "id": "https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html",
       "summary": "1. 总记录数 N 2. 记录大小 k Byte 3. 索引大小 x Byte 4. 数据库指针大小 6 Byte 5. 数据库页大小 16KB 从底往上计算高度 叶子节点存放数据 一个叶子节点存放数据量 c = 16 * 1024 / k 一个非叶子节点存放叶子节点数量 b = 16 * 1024 / (x + 6) 总页数 p = N / c 索引...",
-      "content_html": "<h1> MySQL索引B+树高度计算</h1>\n<ol>\n<li>总记录数 N</li>\n<li>记录大小 k Byte</li>\n<li>索引大小 x Byte</li>\n<li>数据库指针大小 6 Byte</li>\n<li>数据库页大小  16KB</li>\n</ol>\n<p>从底往上计算高度</p>\n<p>叶子节点存放数据</p>\n<p>一个叶子节点存放数据量 c = 16 * 1024 / k</p>\n<p>一个非叶子节点存放叶子节点数量 b = 16 * 1024 / (x + 6)</p>\n<p>总页数 p = N / c</p>\n<p>索引的高度 h = log(p,b)</p>\n<p>树高 = h + 1</p>\n<h2> 例子计算</h2>\n<p>总记录N = 20,000,000</p>\n<p>记录大小k = 1024</p>\n<p>索引大小x = 8</p>\n<p>总页数p = 1250000</p>\n<p>索引数b = 1170</p>\n<p>索引树高log(p,b) = 2</p>\n<p>树高 = 3</p>\n<p>总结, 2千万的数据,B+树的高度为3</p>\n",
+      "content_html": "<h1> MySQL索引B+树高度计算</h1>\n<ol>\n<li>总记录数 N</li>\n<li>记录大小 k Byte</li>\n<li>索引大小 x Byte</li>\n<li>数据库指针大小 6 Byte</li>\n<li>数据库页大小  16KB</li>\n</ol>\n<p>从底往上计算高度</p>\n<p>叶子节点存放数据</p>\n<p>一个叶子节点存放数据量 c = 16 * 1024 / k</p>\n<p>一个非叶子节点存放叶子节点数量 b = 16 * 1024 / (x + 6)</p>\n<p>总页数 p = N / c</p>\n<p>索引的高度 h = log(p,b)</p>\n<p>树高 = h + 1</p>\n<h2> 聚簇索引例子计算</h2>\n<p>总记录N = 20,000,000</p>\n<p>记录大小k = 1024</p>\n<p>索引大小x = 8</p>\n<p>总页数p = 1250000</p>\n<p>索引数b = 1170</p>\n<p>索引树高log(p,b) = 2</p>\n<p>树高 = 3</p>\n<p>总结, 2千万的数据,B+树的高度为3</p>\n<h2> 辅助索引例子计算</h2>\n<p>辅助索引的叶子节点存放的事主键值, 辅助索引找到主键, 通过主键去聚簇索引查找记录</p>\n<p>辅助索引最大是256Byte</p>\n<p>总记录N = 20,000,000</p>\n<p>记录大小k = 8</p>\n<p>索引大小x = 256</p>\n<p>总页数p = 9765</p>\n<p>索引数b = 62</p>\n<p>索引树高log(p,b) = 3</p>\n<p>树高 = 4</p>\n<p>总结, 2千万的数据,辅助索引B+树的高度为4</p>\n",
       "date_published": "2024-01-13T02:57:27.000Z",
-      "date_modified": "2024-01-13T02:57:27.000Z",
+      "date_modified": "2024-01-13T03:15:06.000Z",
       "authors": [],
       "tags": [
         "MySQL"

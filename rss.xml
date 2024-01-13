@@ -6,8 +6,8 @@
     <link>https://suveng.github.io/suveng_blog/</link>
     <description>苏文广的博客</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 13 Jan 2024 02:58:09 GMT</pubDate>
-    <lastBuildDate>Sat, 13 Jan 2024 02:58:09 GMT</lastBuildDate>
+    <pubDate>Sat, 13 Jan 2024 03:17:12 GMT</pubDate>
+    <lastBuildDate>Sat, 13 Jan 2024 03:17:12 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>MySQL</category>
@@ -42,7 +42,7 @@
 <p>总页数 p = N / c</p>
 <p>索引的高度 h = log(p,b)</p>
 <p>树高 = h + 1</p>
-<h2> 例子计算</h2>
+<h2> 聚簇索引例子计算</h2>
 <p>总记录N = 20,000,000</p>
 <p>记录大小k = 1024</p>
 <p>索引大小x = 8</p>
@@ -51,6 +51,17 @@
 <p>索引树高log(p,b) = 2</p>
 <p>树高 = 3</p>
 <p>总结, 2千万的数据,B+树的高度为3</p>
+<h2> 辅助索引例子计算</h2>
+<p>辅助索引的叶子节点存放的事主键值, 辅助索引找到主键, 通过主键去聚簇索引查找记录</p>
+<p>辅助索引最大是256Byte</p>
+<p>总记录N = 20,000,000</p>
+<p>记录大小k = 8</p>
+<p>索引大小x = 256</p>
+<p>总页数p = 9765</p>
+<p>索引数b = 62</p>
+<p>索引树高log(p,b) = 3</p>
+<p>树高 = 4</p>
+<p>总结, 2千万的数据,辅助索引B+树的高度为4</p>
 ]]></content:encoded>
     </item>
     <item>
