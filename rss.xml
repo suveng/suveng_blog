@@ -6,8 +6,8 @@
     <link>https://suveng.github.io/suveng_blog/</link>
     <description>苏文广的博客</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 13 Jan 2024 03:17:12 GMT</pubDate>
-    <lastBuildDate>Sat, 13 Jan 2024 03:17:12 GMT</lastBuildDate>
+    <pubDate>Sat, 13 Jan 2024 08:30:38 GMT</pubDate>
+    <lastBuildDate>Sat, 13 Jan 2024 08:30:38 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>MySQL</category>
@@ -754,9 +754,38 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
       <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</link>
       <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</guid>
       <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL分库分表</source>
+      <description>为什么要分库分表 需要分库分表的情况无非是数据库性能无法满足业务要求; 1. 读慢 数据量过大,导致InnoDB的存储文件.ibd过大, MySQL需要先将ibd文件读取到内存中进行查找,然后将数据返回给客户端 磁盘IO可能成为瓶颈, 读取文件; CPU内存查找可能成为瓶颈, 查找; 网络传输可能成为瓶颈; 2. 写慢 数据量过大,导致InnoDB的存...</description>
       <category>MySQL</category>
       <pubDate>Mon, 08 Jan 2024 15:24:42 GMT</pubDate>
       <content:encoded><![CDATA[<h1> MySQL分库分表</h1>
+<h2> 为什么要分库分表</h2>
+<p>需要分库分表的情况无非是数据库性能无法满足业务要求;</p>
+<ol>
+<li>
+<p>读慢</p>
+<p>数据量过大,导致InnoDB的存储文件<code>&lt;表名&gt;.ibd</code>过大, MySQL需要先将ibd文件读取到内存中进行查找,然后将数据返回给客户端</p>
+<ul>
+<li>磁盘IO可能成为瓶颈, 读取文件</li>
+<li>CPU内存查找可能成为瓶颈, 查找</li>
+<li>网络传输可能成为瓶颈</li>
+</ul>
+</li>
+<li>
+<p>写慢</p>
+<p>数据量过大,导致InnoDB的存储文件<code>&lt;表名&gt;.ibd</code>过大, MySQL需要先将ibd文件读取到内存中进行查找写入位置, 然后将数据写入, 如果写不会导致B+树结构变化, 那么是用乐观锁写入, 如果写入数据会导致B+树的索引结构变化(新增页),那么是分段悲观锁写入的方式, 这种方式是串行的;</p>
+<ul>
+<li>磁盘IO可能成为瓶颈, 读取文件, 写入文件(新增页)</li>
+<li>CPU内存查找</li>
+<li>网络传输可能成为瓶颈</li>
+<li>读写锁机制更新索引B+树<br>
+总结下来, 其实更多是写锁导致的并发性能问题</li>
+</ul>
+</li>
+<li>
+<p>并发慢</p>
+<p>但数据库的连接数却是有限的，在高并发场景下多个业务同时对一个数据库操作，很容易将连接数耗尽导致too many connections报错，导致后续数据库无法正常访问。</p>
+</li>
+</ol>
 ]]></content:encoded>
     </item>
     <item>

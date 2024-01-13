@@ -3,7 +3,7 @@
   <id>https://suveng.github.io/suveng_blog/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-01-13T03:17:12.201Z</updated>
+  <updated>2024-01-13T08:30:38.907Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://suveng.github.io/suveng_blog/atom.xml"/>
   <link rel="alternate" href="https://suveng.github.io/suveng_blog/"/>
@@ -995,10 +995,65 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
     <title type="text">MySQL分库分表</title>
     <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</id>
     <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html"/>
-    <updated>2024-01-08T15:24:42.000Z</updated>
+    <updated>2024-01-13T08:29:49.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL分库分表</h1>
-]]></summary>
+<h2> 为什么要分库分表</h2>
+<p>需要分库分表的情况无非是数据库性能无法满足业务要求;</p>
+<ol>
+<li>
+<p>读慢</p>
+<p>数据量过大,导致InnoDB的存储文件<code>&lt;表名&gt;.ibd</code>过大, MySQL需要先将ibd文件读取到内存中进行查找,然后将数据返回给客户端</p>
+<ul>
+<li>磁盘IO可能成为瓶颈, 读取文件</li>
+<li>CPU内存查找可能成为瓶颈, 查找</li>
+<li>网络传输可能成为瓶颈</li>
+</ul>
+</li>
+<li>
+<p>写慢</p>
+<p>数据量过大,导致InnoDB的存储文件<code>&lt;表名&gt;.ibd</code>过大, MySQL需要先将ibd文件读取到内存中进行查找写入位置, 然后将数据写入, 如果写不会导致B+树结构变化, 那么是用乐观锁写入, 如果写入数据会导致B+树的索引结构变化(新增页),那么是分段悲观锁写入的方式, 这种方式是串行的;</p>
+<ul>
+<li>磁盘IO可能成为瓶颈, 读取文件, 写入文件(新增页)</li>
+<li>CPU内存查找</li>
+<li>网络传输可能成为瓶颈</li>
+<li>读写锁机制更新索引B+树<br>
+总结下来, 其实更多是写锁导致的并发性能问题</li>
+</ul>
+</li>
+<li>
+<p>并发慢</p>
+<p>但数据库的连接数却是有限的，在高并发场景下多个业务同时对一个数据库操作，很容易将连接数耗尽导致too many connections报错，导致后续数据库无法正常访问。</p>
+</li>
+</ol>]]></summary>
     <content type="html"><![CDATA[<h1> MySQL分库分表</h1>
+<h2> 为什么要分库分表</h2>
+<p>需要分库分表的情况无非是数据库性能无法满足业务要求;</p>
+<ol>
+<li>
+<p>读慢</p>
+<p>数据量过大,导致InnoDB的存储文件<code>&lt;表名&gt;.ibd</code>过大, MySQL需要先将ibd文件读取到内存中进行查找,然后将数据返回给客户端</p>
+<ul>
+<li>磁盘IO可能成为瓶颈, 读取文件</li>
+<li>CPU内存查找可能成为瓶颈, 查找</li>
+<li>网络传输可能成为瓶颈</li>
+</ul>
+</li>
+<li>
+<p>写慢</p>
+<p>数据量过大,导致InnoDB的存储文件<code>&lt;表名&gt;.ibd</code>过大, MySQL需要先将ibd文件读取到内存中进行查找写入位置, 然后将数据写入, 如果写不会导致B+树结构变化, 那么是用乐观锁写入, 如果写入数据会导致B+树的索引结构变化(新增页),那么是分段悲观锁写入的方式, 这种方式是串行的;</p>
+<ul>
+<li>磁盘IO可能成为瓶颈, 读取文件, 写入文件(新增页)</li>
+<li>CPU内存查找</li>
+<li>网络传输可能成为瓶颈</li>
+<li>读写锁机制更新索引B+树<br>
+总结下来, 其实更多是写锁导致的并发性能问题</li>
+</ul>
+</li>
+<li>
+<p>并发慢</p>
+<p>但数据库的连接数却是有限的，在高并发场景下多个业务同时对一个数据库操作，很容易将连接数耗尽导致too many connections报错，导致后续数据库无法正常访问。</p>
+</li>
+</ol>
 ]]></content>
     <category term="MySQL"/>
     <published>2024-01-08T15:24:42.000Z</published>
