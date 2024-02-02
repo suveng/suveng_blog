@@ -6,6 +6,7 @@ tag:
   - Java
   - 方案
 order: 1
+permalink: mysql_sync_es
 ---
 
 # MySQL同步数据ES
