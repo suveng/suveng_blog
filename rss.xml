@@ -6,8 +6,8 @@
     <link>https://suveng.github.io/suveng_blog/</link>
     <description>苏文广的博客</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 02 Feb 2024 07:30:38 GMT</pubDate>
-    <lastBuildDate>Fri, 02 Feb 2024 07:30:38 GMT</lastBuildDate>
+    <pubDate>Fri, 02 Feb 2024 07:44:10 GMT</pubDate>
+    <lastBuildDate>Fri, 02 Feb 2024 07:44:10 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>MySQL</category>
@@ -261,8 +261,8 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>MySQL同步数据ES</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html</guid>
+      <link>https://suveng.github.io/suveng_blog/mysql_sync_es.html</link>
+      <guid>https://suveng.github.io/suveng_blog/mysql_sync_es.html</guid>
       <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL同步数据ES</source>
       <description>1. 同步双写 2. 异步双写 3. 定时任务 4. 数据订阅 同步双写 startuml skin rose node 商品服务 database MySQL storage ElasticSearch interface --&amp;gt; 商品服务 : 1. 更新商品请求 商品服务 --&amp;gt; MySQL : 2.同步更新数据 商品服务 --&amp;gt; ElasticS...</description>
       <category>ElasticSearch</category>
