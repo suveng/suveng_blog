@@ -455,7 +455,7 @@
       "url": "https://suveng.github.io/suveng_blog/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html",
       "id": "https://suveng.github.io/suveng_blog/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html",
       "summary": "VuePress (https://theme-hope.vuejs.press/zh/guide/blog/article.html)",
-      "content_html": "<h1> 记录搭建VuePress博客</h1>\n<p><a href=\"https://theme-hope.vuejs.press/zh/guide/blog/article.html\" target=\"_blank\" rel=\"noopener noreferrer\">VuePress</a></p>\n",
+      "content_html": "<h1> 记录搭建VuePress博客</h1>\n<p><a href=\"https://theme-hope.vuejs.press/zh/guide/blog/article.html\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">VuePress</a></p>\n",
       "date_published": "2024-01-04T09:45:47.000Z",
       "date_modified": "2024-01-05T02:25:32.000Z",
       "authors": [],
