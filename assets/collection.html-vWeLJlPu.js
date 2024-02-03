@@ -1,1 +1,0 @@
-import{_ as t}from"./plugin-vue_export-helper-x3n3nnut.js";import{o,c,a as e,d as a}from"./app-B-zxItK3.js";const r={},n=e("h1",{id:"jvm垃圾回收",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#jvm垃圾回收","aria-hidden":"true"},"#"),a(" JVM垃圾回收")],-1),s=[n];function _(d,i){return o(),c("div",null,s)}const m=t(r,[["render",_],["__file","collection.html.vue"]]);export{m as default};

@@ -109,12 +109,12 @@
     },
     {
       "title": "MySQL同步数据ES",
-      "url": "https://suveng.github.io/mysql/sync/es.html",
-      "id": "https://suveng.github.io/mysql/sync/es.html",
+      "url": "https://suveng.github.io/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html",
+      "id": "https://suveng.github.io/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html",
       "summary": "1. 同步双写 2. 异步双写 3. 定时任务 4. 数据订阅 同步双写 startuml skin rose node 商品服务 database MySQL storage ElasticSearch interface --> 商品服务 : 1. 更新商品请求 商品服务 --> MySQL : 2.同步更新数据 商品服务 --> ElasticS...",
       "content_html": "<h1> MySQL同步数据ES</h1>\n<ol>\n<li>同步双写</li>\n<li>异步双写</li>\n<li>定时任务</li>\n<li>数据订阅</li>\n</ol>\n<h2> 同步双写</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYtaIaaiIKnAB4vLyAqC3lJXAYx9BqfCJrLmpKaiBibC3avDB4hEuChCAqajIajCJbNGrRL3qQzWfM2ef_1izfPdqpP0n5-it_viOnCNYYAGBh3vGEL6Uaydz3nRknIYvzdK3Szwrs6gHh4VgCiOcow7rBmKeFy0\" alt=\"uml diagram\" loading=\"lazy\">\n<h3> 优点</h3>\n<ol>\n<li>\n<p>简单</p>\n<p>仅需要在需要同步数据的逻辑上增加往ElasticSearch写</p>\n</li>\n<li>\n<p>保证实时性</p>\n</li>\n</ol>\n<h3> 缺点</h3>\n<ol>\n<li>\n<p>商品业务和搜索业务强耦合</p>\n</li>\n<li>\n<p>扩展性差</p>\n<p>需要定制搜索需求需求时, 还需要改动商品代码</p>\n</li>\n<li>\n<p>ElasticSearch 和 MySQL 需要额外保证一致性</p>\n<p>MySQL事务提交之后, 写入ElasticSearch出现网络异常, 那么ElasticSearch和MySQL的数据无法保证一致</p>\n</li>\n</ol>\n<h2> 异步双写</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYs4Y3oRCEVvbaLGaSBIrD9KXUp4jEn4hfJ4aiIanE9K1T_Au40V1DSr9x6u93CvE3MnA3c3YoiphoIrA2qnELL1LzSEnNm5AmL3lMUpjpoRjW4Y_6BzzcSRcxXGr80qWIq0gZP2KVriwePdlUkUxfgCgG7iGA06OxtdK-O_sRKSqvBdirgURUjurhYU2w8Mf0lPfq3D9df05I-sxCId6KLBNHs6_qpra5MysD3yVCgAP_ENlbY_2AgmR-dJ_iMene2SWXA6G7FCz1HUDCvwEg43wka9VK_RPZvjNOeQrWwfUId0E0K0\" alt=\"uml diagram\" loading=\"lazy\">\n<p>与同步双写相比分析优缺点</p>\n<h3> 优点</h3>\n<ul>\n<li>解耦合; 商品本身无需关注同步ElasticSearch的逻辑</li>\n</ul>\n<h3> 缺点</h3>\n<ul>\n<li>准实时, 存在MQ延迟</li>\n<li>需要考虑额外组件的可靠性, Kafka, 搜索服务</li>\n</ul>\n<h2> 定时任务</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYs4Y3oRCEVvbaLGaPJ4aiIanE9K1T_Au40V1DSr9x6u93CvE3MnA3c3YoiphoIrA2qnELL1LzSEnKm5AmL3lMUpjpoRjW4Y_6BzzcSRcxXGr80qWIq0gZP2KVriwePdlUkUxfhCXUmiXRew35kCzP1LF5qtwzdqRIysD3-VikBP_AKlrYzwEcS5nE2NqxUyd3NbHK_pqzbRdhQrFf_L0Z7fQSVq5mjNeDe3SXYALu4McUWfl6YSzNH21zHj4_gUjirysheKDKWSKlDIWC4D0000\" alt=\"uml diagram\" loading=\"lazy\">\n<h3> 优点</h3>\n<ol>\n<li>简单</li>\n</ol>\n<h3> 缺点</h3>\n<ol>\n<li>\n<p>无法保证实时性</p>\n<p>保证实时性主要依赖于搜索服务的定时间隔</p>\n</li>\n</ol>\n<h2> 数据订阅</h2>\n<img src=\"https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpinJACelJkNAoqz9LNWwjUtfvCPdStgVTYtaAYnDBKrLI4xCIyo1o3wRCEVvbaLGsPJ4aiIanE9K1T_Au40V1DSr9x6u93CvE3MnA3c3YoiphoIrA2qnELL1LzSEnNm5AmL3lMUpjpoRjW4Y_6BzzcSRcxXGr80qWIq0gZP2KVriwePdlUkUxfhC1P47gGIx5QZIM0_CUh5kqSiPhKcPUJdvwLmGEP0gP6y05PleFTlMyMBBJaodF9_L0fHwrhYU2qLBNHs6Hqpra5MysD3yVCgAP_ENlbY_2AgmR-dJ_iMene2SWX9OG7FCz1HUDCvwEg43whi9VK_RPZvjNOeQg0wfUId0o0C0\" alt=\"uml diagram\" loading=\"lazy\">\n<h3> 优点</h3>\n<ol>\n<li>\n<p>解耦合</p>\n<p>利用canal订阅MySQL的binlog做到解耦合</p>\n</li>\n<li>\n<p>无业务侵入</p>\n<p>利用canal组件即可无需在商品代码上做改动</p>\n</li>\n<li>\n<p>准实时</p>\n<p>只存在binlog和业务回查的延迟</p>\n</li>\n<li>\n<p>良好的扩展行</p>\n<p>canal组件还支持各种数据库/客户端的写入适配器, 可以实现不同的数据写入需求, 例如 HBase</p>\n</li>\n</ol>\n",
       "date_published": "2024-01-11T02:25:57.000Z",
-      "date_modified": "2024-02-03T03:11:13.000Z",
+      "date_modified": "2024-02-03T05:17:36.000Z",
       "authors": [],
       "tags": [
         "ElasticSearch"
@@ -322,11 +322,11 @@
     },
     {
       "title": "JVM内存模型",
-      "url": "https://suveng.github.io/jvm/memory/model.html",
-      "id": "https://suveng.github.io/jvm/memory/model.html",
+      "url": "https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.html",
+      "id": "https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.html",
       "content_html": "<h1> JVM内存模型</h1>\n",
       "date_published": "2024-01-11T02:25:57.000Z",
-      "date_modified": "2024-02-03T03:11:13.000Z",
+      "date_modified": "2024-02-03T05:17:36.000Z",
       "authors": [],
       "tags": [
         "Java"
@@ -334,11 +334,11 @@
     },
     {
       "title": "JVM参数调优",
-      "url": "https://suveng.github.io/jvm/args/optimize.html",
-      "id": "https://suveng.github.io/jvm/args/optimize.html",
+      "url": "https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98.html",
+      "id": "https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98.html",
       "content_html": "<h1> JVM参数调优</h1>\n",
       "date_published": "2024-01-11T02:25:57.000Z",
-      "date_modified": "2024-02-03T03:11:13.000Z",
+      "date_modified": "2024-02-03T05:17:36.000Z",
       "authors": [],
       "tags": [
         "Java"
@@ -346,11 +346,11 @@
     },
     {
       "title": "JVM垃圾回收",
-      "url": "https://suveng.github.io/jvm/garbage/collection.html",
-      "id": "https://suveng.github.io/jvm/garbage/collection.html",
+      "url": "https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html",
+      "id": "https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html",
       "content_html": "<h1> JVM垃圾回收</h1>\n",
       "date_published": "2024-01-11T02:25:57.000Z",
-      "date_modified": "2024-02-03T03:11:13.000Z",
+      "date_modified": "2024-02-03T05:17:36.000Z",
       "authors": [],
       "tags": [
         "Java"
@@ -358,11 +358,11 @@
     },
     {
       "title": "CountDownLatch锁",
-      "url": "https://suveng.github.io/juc/CountDownLatch.html",
-      "id": "https://suveng.github.io/juc/CountDownLatch.html",
+      "url": "https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/CountDownLatch%E9%94%81.html",
+      "id": "https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/CountDownLatch%E9%94%81.html",
       "content_html": "<h1> CountDownLatch锁</h1>\n",
       "date_published": "2024-01-11T02:25:57.000Z",
-      "date_modified": "2024-02-03T03:11:13.000Z",
+      "date_modified": "2024-02-03T05:17:36.000Z",
       "authors": [],
       "tags": [
         "Java"
@@ -370,11 +370,11 @@
     },
     {
       "title": "CyclicBarrier锁",
-      "url": "https://suveng.github.io/juc/CyclicBarrier.html",
-      "id": "https://suveng.github.io/juc/CyclicBarrier.html",
+      "url": "https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/CyclicBarrier%E9%94%81.html",
+      "id": "https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/CyclicBarrier%E9%94%81.html",
       "content_html": "<h1> CyclicBarrier锁</h1>\n",
       "date_published": "2024-01-11T02:25:57.000Z",
-      "date_modified": "2024-02-03T03:11:13.000Z",
+      "date_modified": "2024-02-03T05:17:36.000Z",
       "authors": [],
       "tags": [
         "Java"
@@ -382,11 +382,11 @@
     },
     {
       "title": "Phaser锁",
-      "url": "https://suveng.github.io/juc/countDownLatch.html",
-      "id": "https://suveng.github.io/juc/countDownLatch.html",
+      "url": "https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/Phaser%E9%94%81.html",
+      "id": "https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/Phaser%E9%94%81.html",
       "content_html": "<h1> Phaser锁</h1>\n",
       "date_published": "2024-01-11T02:25:57.000Z",
-      "date_modified": "2024-02-03T03:11:13.000Z",
+      "date_modified": "2024-02-03T05:17:36.000Z",
       "authors": [],
       "tags": [
         "Java"
@@ -420,11 +420,11 @@
     },
     {
       "title": "SpringBean的生命周期",
-      "url": "https://suveng.github.io/spring/bean/life/cycle.html",
-      "id": "https://suveng.github.io/spring/bean/life/cycle.html",
+      "url": "https://suveng.github.io/zh/posts/Java/Java%E6%A1%86%E6%9E%B6/spring/SpringBean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.html",
+      "id": "https://suveng.github.io/zh/posts/Java/Java%E6%A1%86%E6%9E%B6/spring/SpringBean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.html",
       "content_html": "<h1> SpringBean的生命周期</h1>\n",
       "date_published": "2024-01-11T02:25:57.000Z",
-      "date_modified": "2024-02-03T03:11:13.000Z",
+      "date_modified": "2024-02-03T05:17:36.000Z",
       "authors": [],
       "tags": [
         "Java"

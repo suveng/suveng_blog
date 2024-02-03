@@ -3,7 +3,7 @@
   <id>https://suveng.github.io/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-02-03T03:12:24.195Z</updated>
+  <updated>2024-02-03T05:18:15.001Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://suveng.github.io/atom.xml"/>
   <link rel="alternate" href="https://suveng.github.io/"/>
@@ -486,9 +486,9 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">MySQL同步数据ES</title>
-    <id>https://suveng.github.io/mysql/sync/es.html</id>
-    <link href="https://suveng.github.io/mysql/sync/es.html"/>
-    <updated>2024-02-03T03:11:13.000Z</updated>
+    <id>https://suveng.github.io/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html</id>
+    <link href="https://suveng.github.io/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html"/>
+    <updated>2024-02-03T05:17:36.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL同步数据ES</h1>
 <ol>
 <li>同步双写</li>
@@ -1038,9 +1038,9 @@ f(n)  =
   </entry>
   <entry>
     <title type="text">JVM内存模型</title>
-    <id>https://suveng.github.io/jvm/memory/model.html</id>
-    <link href="https://suveng.github.io/jvm/memory/model.html"/>
-    <updated>2024-02-03T03:11:13.000Z</updated>
+    <id>https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.html</id>
+    <link href="https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.html"/>
+    <updated>2024-02-03T05:17:36.000Z</updated>
     <summary type="html"><![CDATA[<h1> JVM内存模型</h1>
 ]]></summary>
     <content type="html"><![CDATA[<h1> JVM内存模型</h1>
@@ -1050,9 +1050,9 @@ f(n)  =
   </entry>
   <entry>
     <title type="text">JVM参数调优</title>
-    <id>https://suveng.github.io/jvm/args/optimize.html</id>
-    <link href="https://suveng.github.io/jvm/args/optimize.html"/>
-    <updated>2024-02-03T03:11:13.000Z</updated>
+    <id>https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98.html</id>
+    <link href="https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98.html"/>
+    <updated>2024-02-03T05:17:36.000Z</updated>
     <summary type="html"><![CDATA[<h1> JVM参数调优</h1>
 ]]></summary>
     <content type="html"><![CDATA[<h1> JVM参数调优</h1>
@@ -1062,9 +1062,9 @@ f(n)  =
   </entry>
   <entry>
     <title type="text">JVM垃圾回收</title>
-    <id>https://suveng.github.io/jvm/garbage/collection.html</id>
-    <link href="https://suveng.github.io/jvm/garbage/collection.html"/>
-    <updated>2024-02-03T03:11:13.000Z</updated>
+    <id>https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html</id>
+    <link href="https://suveng.github.io/zh/posts/Java/jvm/JVM%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html"/>
+    <updated>2024-02-03T05:17:36.000Z</updated>
     <summary type="html"><![CDATA[<h1> JVM垃圾回收</h1>
 ]]></summary>
     <content type="html"><![CDATA[<h1> JVM垃圾回收</h1>
@@ -1074,9 +1074,9 @@ f(n)  =
   </entry>
   <entry>
     <title type="text">CountDownLatch锁</title>
-    <id>https://suveng.github.io/juc/CountDownLatch.html</id>
-    <link href="https://suveng.github.io/juc/CountDownLatch.html"/>
-    <updated>2024-02-03T03:11:13.000Z</updated>
+    <id>https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/CountDownLatch%E9%94%81.html</id>
+    <link href="https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/CountDownLatch%E9%94%81.html"/>
+    <updated>2024-02-03T05:17:36.000Z</updated>
     <summary type="html"><![CDATA[<h1> CountDownLatch锁</h1>
 ]]></summary>
     <content type="html"><![CDATA[<h1> CountDownLatch锁</h1>
@@ -1086,9 +1086,9 @@ f(n)  =
   </entry>
   <entry>
     <title type="text">CyclicBarrier锁</title>
-    <id>https://suveng.github.io/juc/CyclicBarrier.html</id>
-    <link href="https://suveng.github.io/juc/CyclicBarrier.html"/>
-    <updated>2024-02-03T03:11:13.000Z</updated>
+    <id>https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/CyclicBarrier%E9%94%81.html</id>
+    <link href="https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/CyclicBarrier%E9%94%81.html"/>
+    <updated>2024-02-03T05:17:36.000Z</updated>
     <summary type="html"><![CDATA[<h1> CyclicBarrier锁</h1>
 ]]></summary>
     <content type="html"><![CDATA[<h1> CyclicBarrier锁</h1>
@@ -1098,9 +1098,9 @@ f(n)  =
   </entry>
   <entry>
     <title type="text">Phaser锁</title>
-    <id>https://suveng.github.io/juc/countDownLatch.html</id>
-    <link href="https://suveng.github.io/juc/countDownLatch.html"/>
-    <updated>2024-02-03T03:11:13.000Z</updated>
+    <id>https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/Phaser%E9%94%81.html</id>
+    <link href="https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/Phaser%E9%94%81.html"/>
+    <updated>2024-02-03T05:17:36.000Z</updated>
     <summary type="html"><![CDATA[<h1> Phaser锁</h1>
 ]]></summary>
     <content type="html"><![CDATA[<h1> Phaser锁</h1>
@@ -1197,9 +1197,9 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">SpringBean的生命周期</title>
-    <id>https://suveng.github.io/spring/bean/life/cycle.html</id>
-    <link href="https://suveng.github.io/spring/bean/life/cycle.html"/>
-    <updated>2024-02-03T03:11:13.000Z</updated>
+    <id>https://suveng.github.io/zh/posts/Java/Java%E6%A1%86%E6%9E%B6/spring/SpringBean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.html</id>
+    <link href="https://suveng.github.io/zh/posts/Java/Java%E6%A1%86%E6%9E%B6/spring/SpringBean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.html"/>
+    <updated>2024-02-03T05:17:36.000Z</updated>
     <summary type="html"><![CDATA[<h1> SpringBean的生命周期</h1>
 ]]></summary>
     <content type="html"><![CDATA[<h1> SpringBean的生命周期</h1>
