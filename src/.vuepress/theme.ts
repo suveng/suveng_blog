@@ -3,7 +3,7 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://suveng.github.io",
+  hostname: "https://suveng.site",
 
   author: {
     name: "苏文广",
