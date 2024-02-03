@@ -6,7 +6,7 @@ import {googleAnalyticsPlugin} from "@vuepress/plugin-google-analytics";
 import { searchConsolePlugin } from 'vuepress-plugin-china-search-console'
 
 export default defineUserConfig({
-  base: "/suveng_blog/",
+  base: "/",
 
   locales: {
     // "/en/": {
