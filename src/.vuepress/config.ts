@@ -50,8 +50,8 @@ export default defineUserConfig({
     links : {
       externalAttrs:{ target: '_blank', rel: 'nofollow noopener noreferrer' }
     }
-  }
+  },
 
   // Enable it with pwa
-  // shouldPrefetch: false,
+  shouldPrefetch: true,
 });
