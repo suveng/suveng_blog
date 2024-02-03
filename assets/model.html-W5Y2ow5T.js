@@ -1,0 +1,1 @@
+import{_ as t}from"./plugin-vue_export-helper-x3n3nnut.js";import{o,c as a,a as e,d as r}from"./app-B-zxItK3.js";const c={},s=e("h1",{id:"jvm内存模型",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#jvm内存模型","aria-hidden":"true"},"#"),r(" JVM内存模型")],-1),d=[s];function n(_,i){return o(),a("div",null,d)}const h=t(c,[["render",n],["__file","model.html.vue"]]);export{h as default};

@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://suveng.github.io/suveng_blog/atom.xsl"?>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://suveng.github.io/atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
-  <id>https://suveng.github.io/suveng_blog/</id>
+  <id>https://suveng.github.io/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-02-02T07:44:10.305Z</updated>
+  <updated>2024-02-03T03:12:24.195Z</updated>
   <generator>vuepress-plugin-feed2</generator>
-  <link rel="self" href="https://suveng.github.io/suveng_blog/atom.xml"/>
-  <link rel="alternate" href="https://suveng.github.io/suveng_blog/"/>
+  <link rel="self" href="https://suveng.github.io/atom.xml"/>
+  <link rel="alternate" href="https://suveng.github.io/"/>
+  <category term="记录"/>
   <category term="MySQL"/>
   <category term="架构"/>
   <category term="ElasticSearch"/>
@@ -17,9 +18,164 @@
   <category term="博客"/>
   <category term="博主"/>
   <entry>
+    <title type="text">函数</title>
+    <id>https://suveng.github.io/zh/posts/vue3/%E5%87%BD%E6%95%B0.html</id>
+    <link href="https://suveng.github.io/zh/posts/vue3/%E5%87%BD%E6%95%B0.html"/>
+    <updated>2024-02-03T03:11:13.000Z</updated>
+    <summary type="html"><![CDATA[<h1> 函数</h1>
+<ol>
+<li>
+<p>setup</p>
+<p>初始化组件函数, 暴露数据和方法</p>
+</li>
+<li>
+<p>ref</p>
+<p>响应式操作数据,修改数据, 视图改变, 推荐用来操作基础数据</p>
+</li>
+<li>
+<p>reactive</p>
+<p>响应式操作数据,修改数据, 视图改变, 只能操作复杂数据对象</p>
+</li>
+<li>
+<p>toRef</p>
+<p>响应式操作数据,修改数据, 视图不改变, 源数据改变</p>
+</li>
+<li>
+<p>toRefs</p>
+<p>暴露对象里面的字段</p>
+</li>
+<li>
+<p>computed计算属性</p>
+</li>
+<li>
+<p>监听器 watch</p>
+</li>
+<li>
+<p>watchEffect</p>
+</li>
+<li>
+<p>shallowRef shallowReactive</p>
+</li>
+<li>
+<p>组件传值</p>
+<ul>
+<li>provide 传</li>
+<li>inject 接</li>
+</ul>
+</li>
+<li>
+<p>vuex</p>
+</li>
+<li>
+<p>生命周期</p>
+</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[<h1> 函数</h1>
+<ol>
+<li>
+<p>setup</p>
+<p>初始化组件函数, 暴露数据和方法</p>
+</li>
+<li>
+<p>ref</p>
+<p>响应式操作数据,修改数据, 视图改变, 推荐用来操作基础数据</p>
+</li>
+<li>
+<p>reactive</p>
+<p>响应式操作数据,修改数据, 视图改变, 只能操作复杂数据对象</p>
+</li>
+<li>
+<p>toRef</p>
+<p>响应式操作数据,修改数据, 视图不改变, 源数据改变</p>
+</li>
+<li>
+<p>toRefs</p>
+<p>暴露对象里面的字段</p>
+</li>
+<li>
+<p>computed计算属性</p>
+</li>
+<li>
+<p>监听器 watch</p>
+</li>
+<li>
+<p>watchEffect</p>
+</li>
+<li>
+<p>shallowRef shallowReactive</p>
+</li>
+<li>
+<p>组件传值</p>
+<ul>
+<li>provide 传</li>
+<li>inject 接</li>
+</ul>
+</li>
+<li>
+<p>vuex</p>
+</li>
+<li>
+<p>生命周期</p>
+</li>
+</ol>
+<p>https://www.javalc.com/post/24.html<br>
+https://blog.csdn.net/supming1/article/details/121267418</p>
+]]></content>
+    <published>2024-02-03T03:11:13.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">免费中文字体文件下载</title>
+    <id>https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/%E5%85%8D%E8%B4%B9%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/%E5%85%8D%E8%B4%B9%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD.html"/>
+    <updated>2024-02-03T03:11:13.000Z</updated>
+    <summary type="html"><![CDATA[<h1> 免费中文字体文件下载</h1>
+<p>以下是收录免费中问字体的github仓库</p>
+<ul>
+<li>https://github.com/zenozeng/Free-Chinese-Fonts?tab=readme-ov-file</li>
+<li>https://drxie.github.io/OSFCC/</li>
+</ul>
+]]></summary>
+    <content type="html"><![CDATA[<h1> 免费中文字体文件下载</h1>
+<p>以下是收录免费中问字体的github仓库</p>
+<ul>
+<li>https://github.com/zenozeng/Free-Chinese-Fonts?tab=readme-ov-file</li>
+<li>https://drxie.github.io/OSFCC/</li>
+</ul>
+]]></content>
+    <category term="记录"/>
+    <published>2024-02-03T03:11:13.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">GUI渲染模式</title>
+    <id>https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/GUI%E6%B8%B2%E6%9F%93%E6%A8%A1%E5%BC%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/GUI%E6%B8%B2%E6%9F%93%E6%A8%A1%E5%BC%8F.html"/>
+    <updated>2024-01-19T14:43:34.000Z</updated>
+    <summary type="html"><![CDATA[<h1> GUI渲染模式</h1>
+<h2> 即时模式</h2>
+<p>每次渲染都立即重新绘制, 每一帧都会消耗CPU和GPU资源</p>
+<p>适用于动态元素渲染, 比如 实时图表，动画，特效，游戏等</p>
+<h2> 保留模式</h2>
+<p>每次渲染的是需要改变的元素, 不会重新绘制, 但是需要记录状态, 所以消耗内存</p>
+<h2> 资料</h2>
+<p>https://learn.microsoft.com/zh-cn/windows/win32/learnwin32/retained-mode-versus-immediate-mode</p>
+<p>https://zhuanlan.zhihu.com/p/534695668</p>]]></summary>
+    <content type="html"><![CDATA[<h1> GUI渲染模式</h1>
+<h2> 即时模式</h2>
+<p>每次渲染都立即重新绘制, 每一帧都会消耗CPU和GPU资源</p>
+<p>适用于动态元素渲染, 比如 实时图表，动画，特效，游戏等</p>
+<h2> 保留模式</h2>
+<p>每次渲染的是需要改变的元素, 不会重新绘制, 但是需要记录状态, 所以消耗内存</p>
+<h2> 资料</h2>
+<p>https://learn.microsoft.com/zh-cn/windows/win32/learnwin32/retained-mode-versus-immediate-mode</p>
+<p>https://zhuanlan.zhihu.com/p/534695668</p>
+]]></content>
+    <category term="记录"/>
+    <published>2024-01-19T14:43:34.000Z</published>
+  </entry>
+  <entry>
     <title type="text">MySQL索引B+树高度计算</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html"/>
+    <id>https://suveng.github.io/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html</id>
+    <link href="https://suveng.github.io/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html"/>
     <updated>2024-01-13T03:15:06.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL索引B+树高度计算</h1>
 <ol>
@@ -76,8 +232,8 @@
   </entry>
   <entry>
     <title type="text">高并发设计</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E6%9E%B6%E6%9E%84/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E6%9E%B6%E6%9E%84/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1.html"/>
+    <id>https://suveng.github.io/zh/posts/%E6%9E%B6%E6%9E%84/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E6%9E%B6%E6%9E%84/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1.html"/>
     <updated>2024-01-13T02:57:27.000Z</updated>
     <summary type="html"><![CDATA[<h1> 高并发设计</h1>
 <h2> 高并发定义</h2>
@@ -191,8 +347,8 @@
   </entry>
   <entry>
     <title type="text">MySQL慢查询优化</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html"/>
+    <id>https://suveng.github.io/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html</id>
+    <link href="https://suveng.github.io/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html"/>
     <updated>2024-01-11T07:49:51.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL慢查询优化</h1>
 <h2> 优化原则</h2>
@@ -254,8 +410,8 @@
   </entry>
   <entry>
     <title type="text">MySQL的语法解析器</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%A3%E6%9E%90%E5%99%A8.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%A3%E6%9E%90%E5%99%A8.html"/>
+    <id>https://suveng.github.io/zh/posts/MySQL/MySQL%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%A3%E6%9E%90%E5%99%A8.html</id>
+    <link href="https://suveng.github.io/zh/posts/MySQL/MySQL%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%A3%E6%9E%90%E5%99%A8.html"/>
     <updated>2024-01-11T07:31:13.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL的语法解析器</h1>
 <p>SQL本身是一种程序语言, 语言最终会被编译成指令在程序中运行;</p>
@@ -302,8 +458,8 @@
   </entry>
   <entry>
     <title type="text">MySQL的SQL执行过程</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.html"/>
+    <id>https://suveng.github.io/zh/posts/MySQL/MySQL%E7%9A%84SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.html</id>
+    <link href="https://suveng.github.io/zh/posts/MySQL/MySQL%E7%9A%84SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.html"/>
     <updated>2024-01-11T07:19:46.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL的SQL执行过程</h1>
 <p>这是MySQL架构组件执行流程, 最后交给存储引擎执行SQL;</p>
@@ -330,9 +486,9 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">MySQL同步数据ES</title>
-    <id>https://suveng.github.io/suveng_blog/mysql_sync_es.html</id>
-    <link href="https://suveng.github.io/suveng_blog/mysql_sync_es.html"/>
-    <updated>2024-02-02T07:43:11.000Z</updated>
+    <id>https://suveng.github.io/mysql/sync/es.html</id>
+    <link href="https://suveng.github.io/mysql/sync/es.html"/>
+    <updated>2024-02-03T03:11:13.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL同步数据ES</h1>
 <ol>
 <li>同步双写</li>
@@ -427,8 +583,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">Gossip一致性算法</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> Gossip一致性算法</h1>
 ]]></summary>
@@ -439,8 +595,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">Paxos一致性算法</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> Paxos一致性算法</h1>
 ]]></summary>
@@ -451,8 +607,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">Raft一致性算法</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> Raft一致性算法</h1>
 ]]></summary>
@@ -463,8 +619,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">ZAB一致性算法</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> ZAB一致性算法</h1>
 ]]></summary>
@@ -475,8 +631,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">冒泡排序</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 冒泡排序</h1>
 <p>冒泡排序（Bubble Sort）是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。</p>
@@ -537,8 +693,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">双指针</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 双指针</h1>
 <p>双指针算法（Two-Pointers Algorithm）是一种常见的算法思想，通常用于解决数组或链表相关的问题。该算法通过使用两个指针，分别从数组或链表的两端向中间移动，从而解决问题。<br>
@@ -573,8 +729,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">基数排序</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 基数排序</h1>
 <h2> 基本原理</h2>
@@ -608,8 +764,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">堆排序</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%A0%86%E6%8E%92%E5%BA%8F.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%A0%86%E6%8E%92%E5%BA%8F.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%A0%86%E6%8E%92%E5%BA%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%A0%86%E6%8E%92%E5%BA%8F.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 堆排序</h1>
 <p>堆排序（Heap Sort）是利用堆（Heap）这种数据结构进行选择排序的一种算法。堆是一个可以推导具有最大或最小值的树形结构，堆排序利用堆的特性进行排序。</p>
@@ -653,8 +809,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">希尔排序</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 希尔排序</h1>
 ]]></summary>
@@ -665,8 +821,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">归并排序</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 归并排序</h1>
 ]]></summary>
@@ -677,8 +833,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">快速排序</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 快速排序</h1>
 <p>快速排序是一种常用的排序算法，采用分治法（Divide and Conquer）的思想。它的基本步骤如下：</p>
@@ -717,8 +873,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">插入排序</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 插入排序</h1>
 <p>插入排序是一种简单直观的排序算法。它的基本思想是通过构建有序序列，对未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。</p>
@@ -772,8 +928,8 @@ binlog 时 MySQL 本身的组件</p>
   </entry>
   <entry>
     <title type="text">斐波那契数列问题</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 斐波那契数列问题</h1>
 <p>数学公式如下:</p>
@@ -814,8 +970,8 @@ f(n)  =
   </entry>
   <entry>
     <title type="text">桶排序</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%A1%B6%E6%8E%92%E5%BA%8F.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%A1%B6%E6%8E%92%E5%BA%8F.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%A1%B6%E6%8E%92%E5%BA%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%A1%B6%E6%8E%92%E5%BA%8F.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 桶排序</h1>
 ]]></summary>
@@ -826,8 +982,8 @@ f(n)  =
   </entry>
   <entry>
     <title type="text">计数排序</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 计数排序</h1>
 ]]></summary>
@@ -838,8 +994,8 @@ f(n)  =
   </entry>
   <entry>
     <title type="text">选择排序</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 选择排序</h1>
 <p>选择排序是一种简单直观的排序算法。它的基本思想是：每次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。</p>
@@ -881,9 +1037,81 @@ f(n)  =
     <published>2024-01-11T02:25:57.000Z</published>
   </entry>
   <entry>
+    <title type="text">JVM内存模型</title>
+    <id>https://suveng.github.io/jvm/memory/model.html</id>
+    <link href="https://suveng.github.io/jvm/memory/model.html"/>
+    <updated>2024-02-03T03:11:13.000Z</updated>
+    <summary type="html"><![CDATA[<h1> JVM内存模型</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> JVM内存模型</h1>
+]]></content>
+    <category term="Java"/>
+    <published>2024-01-11T02:25:57.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">JVM参数调优</title>
+    <id>https://suveng.github.io/jvm/args/optimize.html</id>
+    <link href="https://suveng.github.io/jvm/args/optimize.html"/>
+    <updated>2024-02-03T03:11:13.000Z</updated>
+    <summary type="html"><![CDATA[<h1> JVM参数调优</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> JVM参数调优</h1>
+]]></content>
+    <category term="Java"/>
+    <published>2024-01-11T02:25:57.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">JVM垃圾回收</title>
+    <id>https://suveng.github.io/jvm/garbage/collection.html</id>
+    <link href="https://suveng.github.io/jvm/garbage/collection.html"/>
+    <updated>2024-02-03T03:11:13.000Z</updated>
+    <summary type="html"><![CDATA[<h1> JVM垃圾回收</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> JVM垃圾回收</h1>
+]]></content>
+    <category term="Java"/>
+    <published>2024-01-11T02:25:57.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">CountDownLatch锁</title>
+    <id>https://suveng.github.io/juc/CountDownLatch.html</id>
+    <link href="https://suveng.github.io/juc/CountDownLatch.html"/>
+    <updated>2024-02-03T03:11:13.000Z</updated>
+    <summary type="html"><![CDATA[<h1> CountDownLatch锁</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> CountDownLatch锁</h1>
+]]></content>
+    <category term="Java"/>
+    <published>2024-01-11T02:25:57.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">CyclicBarrier锁</title>
+    <id>https://suveng.github.io/juc/CyclicBarrier.html</id>
+    <link href="https://suveng.github.io/juc/CyclicBarrier.html"/>
+    <updated>2024-02-03T03:11:13.000Z</updated>
+    <summary type="html"><![CDATA[<h1> CyclicBarrier锁</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> CyclicBarrier锁</h1>
+]]></content>
+    <category term="Java"/>
+    <published>2024-01-11T02:25:57.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Phaser锁</title>
+    <id>https://suveng.github.io/juc/countDownLatch.html</id>
+    <link href="https://suveng.github.io/juc/countDownLatch.html"/>
+    <updated>2024-02-03T03:11:13.000Z</updated>
+    <summary type="html"><![CDATA[<h1> Phaser锁</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> Phaser锁</h1>
+]]></content>
+    <category term="Java"/>
+    <published>2024-01-11T02:25:57.000Z</published>
+  </entry>
+  <entry>
     <title type="text">线程</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B.html"/>
+    <id>https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B.html</id>
+    <link href="https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 线程</h1>
 <p>Java的线程是程序执行的最小单位，是操作系统进行调度的基本单元。Java中的线程由Thread类和Runnable接口实现。Thread类是一个实现了Runnable接口的类，它包含线程的控制方法和线程的生命周期方法。Runnable接口定义了一个run()方法，该方法包含线程要执行的代码。</p>
@@ -916,8 +1144,8 @@ f(n)  =
   </entry>
   <entry>
     <title type="text">线程池</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html"/>
+    <id>https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html</id>
+    <link href="https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 线程池</h1>
 <h2> 线程池设计思想</h2>
@@ -968,9 +1196,21 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
     <published>2024-01-11T02:25:57.000Z</published>
   </entry>
   <entry>
+    <title type="text">SpringBean的生命周期</title>
+    <id>https://suveng.github.io/spring/bean/life/cycle.html</id>
+    <link href="https://suveng.github.io/spring/bean/life/cycle.html"/>
+    <updated>2024-02-03T03:11:13.000Z</updated>
+    <summary type="html"><![CDATA[<h1> SpringBean的生命周期</h1>
+]]></summary>
+    <content type="html"><![CDATA[<h1> SpringBean的生命周期</h1>
+]]></content>
+    <category term="Java"/>
+    <published>2024-01-11T02:25:57.000Z</published>
+  </entry>
+  <entry>
     <title type="text">MySQL主从复制</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html"/>
+    <id>https://suveng.github.io/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html</id>
+    <link href="https://suveng.github.io/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html"/>
     <updated>2024-01-08T15:24:42.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL主从复制</h1>
 ]]></summary>
@@ -981,8 +1221,8 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">MySQL事务</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html"/>
+    <id>https://suveng.github.io/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html</id>
+    <link href="https://suveng.github.io/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html"/>
     <updated>2024-01-08T15:24:42.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL事务</h1>
 ]]></summary>
@@ -993,8 +1233,8 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">MySQL分库分表</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html"/>
+    <id>https://suveng.github.io/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</id>
+    <link href="https://suveng.github.io/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html"/>
     <updated>2024-01-13T08:29:49.000Z</updated>
     <summary type="html"><![CDATA[<h1> MySQL分库分表</h1>
 <h2> 为什么要分库分表</h2>
@@ -1060,14 +1300,14 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">电商售后设计方案</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%94%AE%E5%90%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%94%AE%E5%90%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%94%AE%E5%90%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%94%AE%E5%90%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
     <updated>2024-01-08T10:00:41.000Z</updated>
     <summary type="html"><![CDATA[<h1> 电商售后设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">]]></summary>
     <content type="html"><![CDATA[<h1> 电商售后设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 ]]></content>
     <category term="电商"/>
@@ -1075,14 +1315,14 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">电商商品设计方案</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
     <updated>2024-01-11T02:25:57.000Z</updated>
     <summary type="html"><![CDATA[<h1> 电商商品设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">]]></summary>
     <content type="html"><![CDATA[<h1> 电商商品设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 <h2> 商品的职责有哪些?</h2>
 <ul>
@@ -1138,7 +1378,7 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
 <li>订单</li>
 </ul>
 <h3> ES数据同步方案</h3>
-<p><a href="/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html" target="blank">MySQL同步数据ES.md</a></p>
+<p><a href="/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html" target="blank">MySQL同步数据ES.md</a></p>
 <p>通过上面文章的方案比较, 最终选用数据订阅方式,进行ES数据同步</p>
 ]]></content>
     <category term="电商"/>
@@ -1146,14 +1386,14 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">电商搜索设计方案</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%90%9C%E7%B4%A2%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%90%9C%E7%B4%A2%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%90%9C%E7%B4%A2%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%90%9C%E7%B4%A2%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
     <updated>2024-01-08T10:00:41.000Z</updated>
     <summary type="html"><![CDATA[<h1> 电商搜索设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">]]></summary>
     <content type="html"><![CDATA[<h1> 电商搜索设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 <p>https://zq99299.github.io/note-book/back-end-storage/</p>
 ]]></content>
@@ -1162,14 +1402,14 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">电商支付设计方案</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%94%AF%E4%BB%98%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%94%AF%E4%BB%98%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%94%AF%E4%BB%98%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%94%AF%E4%BB%98%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
     <updated>2024-01-08T10:00:41.000Z</updated>
     <summary type="html"><![CDATA[<h1> 电商支付设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">]]></summary>
     <content type="html"><![CDATA[<h1> 电商支付设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 ]]></content>
     <category term="电商"/>
@@ -1177,14 +1417,14 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">电商购物车方案</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%B4%AD%E7%89%A9%E8%BD%A6%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%B4%AD%E7%89%A9%E8%BD%A6%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%B4%AD%E7%89%A9%E8%BD%A6%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%B4%AD%E7%89%A9%E8%BD%A6%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
     <updated>2024-01-08T10:00:41.000Z</updated>
     <summary type="html"><![CDATA[<h1> 电商购物车方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">]]></summary>
     <content type="html"><![CDATA[<h1> 电商购物车方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 ]]></content>
     <category term="电商"/>
@@ -1192,8 +1432,8 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">电商业务流程时序</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html"/>
     <updated>2024-01-07T09:14:51.000Z</updated>
     <summary type="html"><![CDATA[<h1> 电商业务流程时序</h1>
 <!-- #region uml -->
@@ -1208,14 +1448,14 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">电商订单设计方案</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%AE%A2%E5%8D%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%AE%A2%E5%8D%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
+    <id>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%AE%A2%E5%8D%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%AE%A2%E5%8D%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html"/>
     <updated>2024-01-08T10:00:41.000Z</updated>
     <summary type="html"><![CDATA[<h1> 电商订单设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">]]></summary>
     <content type="html"><![CDATA[<h1> 电商订单设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 <h2> 电商订单的职责</h2>
 <ol>
@@ -1264,8 +1504,8 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">数组</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html"/>
+    <id>https://suveng.github.io/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html"/>
     <updated>2024-01-05T11:18:48.000Z</updated>
     <summary type="html"><![CDATA[<h1> 数组</h1>
 <p>数组是一种线性数据结构，它由一组连续的内存空间组成，用于存储同一类型的数据元素。</p>
@@ -1303,8 +1543,8 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">记录搭建VuePress博客</title>
-    <id>https://suveng.github.io/suveng_blog/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html"/>
+    <id>https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html</id>
+    <link href="https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html"/>
     <updated>2024-01-05T02:25:32.000Z</updated>
     <summary type="html"><![CDATA[<h1> 记录搭建VuePress博客</h1>
 <p><a href="https://theme-hope.vuejs.press/zh/guide/blog/article.html" target="_blank" rel="nofollow noopener noreferrer">VuePress</a></p>
@@ -1317,8 +1557,8 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
   </entry>
   <entry>
     <title type="text">介绍页</title>
-    <id>https://suveng.github.io/suveng_blog/zh/intro.html</id>
-    <link href="https://suveng.github.io/suveng_blog/zh/intro.html"/>
+    <id>https://suveng.github.io/zh/intro.html</id>
+    <link href="https://suveng.github.io/zh/intro.html"/>
     <updated>2024-01-05T02:25:32.000Z</updated>
     <summary type="html"><![CDATA[<h1> 介绍页</h1>
 <p>这是我的个人简历</p>

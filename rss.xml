@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://suveng.github.io/suveng_blog/rss.xsl"?>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://suveng.github.io/rss.xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <atom:link href="https://suveng.github.io/suveng_blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://suveng.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <title>苏文广的博客</title>
-    <link>https://suveng.github.io/suveng_blog/</link>
+    <link>https://suveng.github.io/</link>
     <description>苏文广的博客</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 02 Feb 2024 07:44:10 GMT</pubDate>
-    <lastBuildDate>Fri, 02 Feb 2024 07:44:10 GMT</lastBuildDate>
+    <pubDate>Sat, 03 Feb 2024 03:12:24 GMT</pubDate>
+    <lastBuildDate>Sat, 03 Feb 2024 03:12:24 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>记录</category>
     <category>MySQL</category>
     <category>架构</category>
     <category>ElasticSearch</category>
@@ -20,10 +21,104 @@
     <category>博客</category>
     <category>博主</category>
     <item>
+      <title>函数</title>
+      <link>https://suveng.github.io/zh/posts/vue3/%E5%87%BD%E6%95%B0.html</link>
+      <guid>https://suveng.github.io/zh/posts/vue3/%E5%87%BD%E6%95%B0.html</guid>
+      <source url="https://suveng.github.io/rss.xml">函数</source>
+      <description>1. setup 初始化组件函数, 暴露数据和方法 2. ref 响应式操作数据,修改数据, 视图改变, 推荐用来操作基础数据 3. reactive 响应式操作数据,修改数据, 视图改变, 只能操作复杂数据对象 4. toRef 响应式操作数据,修改数据, 视图不改变, 源数据改变 5. toRefs 暴露对象里面的字段 6. computed计算属...</description>
+      <pubDate>Sat, 03 Feb 2024 03:11:13 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 函数</h1>
+<ol>
+<li>
+<p>setup</p>
+<p>初始化组件函数, 暴露数据和方法</p>
+</li>
+<li>
+<p>ref</p>
+<p>响应式操作数据,修改数据, 视图改变, 推荐用来操作基础数据</p>
+</li>
+<li>
+<p>reactive</p>
+<p>响应式操作数据,修改数据, 视图改变, 只能操作复杂数据对象</p>
+</li>
+<li>
+<p>toRef</p>
+<p>响应式操作数据,修改数据, 视图不改变, 源数据改变</p>
+</li>
+<li>
+<p>toRefs</p>
+<p>暴露对象里面的字段</p>
+</li>
+<li>
+<p>computed计算属性</p>
+</li>
+<li>
+<p>监听器 watch</p>
+</li>
+<li>
+<p>watchEffect</p>
+</li>
+<li>
+<p>shallowRef shallowReactive</p>
+</li>
+<li>
+<p>组件传值</p>
+<ul>
+<li>provide 传</li>
+<li>inject 接</li>
+</ul>
+</li>
+<li>
+<p>vuex</p>
+</li>
+<li>
+<p>生命周期</p>
+</li>
+</ol>
+<p>https://www.javalc.com/post/24.html<br>
+https://blog.csdn.net/supming1/article/details/121267418</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>免费中文字体文件下载</title>
+      <link>https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/%E5%85%8D%E8%B4%B9%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/%E5%85%8D%E8%B4%B9%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD.html</guid>
+      <source url="https://suveng.github.io/rss.xml">免费中文字体文件下载</source>
+      <description>以下是收录免费中问字体的github仓库 https://github.com/zenozeng/Free-Chinese-Fonts?tab=readme-ov-file; https://drxie.github.io/OSFCC/;</description>
+      <category>记录</category>
+      <pubDate>Sat, 03 Feb 2024 03:11:13 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 免费中文字体文件下载</h1>
+<p>以下是收录免费中问字体的github仓库</p>
+<ul>
+<li>https://github.com/zenozeng/Free-Chinese-Fonts?tab=readme-ov-file</li>
+<li>https://drxie.github.io/OSFCC/</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>GUI渲染模式</title>
+      <link>https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/GUI%E6%B8%B2%E6%9F%93%E6%A8%A1%E5%BC%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/GUI%E6%B8%B2%E6%9F%93%E6%A8%A1%E5%BC%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">GUI渲染模式</source>
+      <description>即时模式 每次渲染都立即重新绘制, 每一帧都会消耗CPU和GPU资源 适用于动态元素渲染, 比如 实时图表，动画，特效，游戏等 保留模式 每次渲染的是需要改变的元素, 不会重新绘制, 但是需要记录状态, 所以消耗内存 资料 https://learn.microsoft.com/zh-cn/windows/win32/learnwin32/retain...</description>
+      <category>记录</category>
+      <pubDate>Fri, 19 Jan 2024 14:43:34 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> GUI渲染模式</h1>
+<h2> 即时模式</h2>
+<p>每次渲染都立即重新绘制, 每一帧都会消耗CPU和GPU资源</p>
+<p>适用于动态元素渲染, 比如 实时图表，动画，特效，游戏等</p>
+<h2> 保留模式</h2>
+<p>每次渲染的是需要改变的元素, 不会重新绘制, 但是需要记录状态, 所以消耗内存</p>
+<h2> 资料</h2>
+<p>https://learn.microsoft.com/zh-cn/windows/win32/learnwin32/retained-mode-versus-immediate-mode</p>
+<p>https://zhuanlan.zhihu.com/p/534695668</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>MySQL索引B+树高度计算</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL索引B+树高度计算</source>
+      <link>https://suveng.github.io/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html</link>
+      <guid>https://suveng.github.io/zh/posts/MySQL/MySQL%E7%B4%A2%E5%BC%95B_%E6%A0%91%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97.html</guid>
+      <source url="https://suveng.github.io/rss.xml">MySQL索引B+树高度计算</source>
       <description>1. 总记录数 N 2. 记录大小 k Byte 3. 索引大小 x Byte 4. 数据库指针大小 6 Byte 5. 数据库页大小 16KB 从底往上计算高度 叶子节点存放数据 一个叶子节点存放数据量 c = 16 * 1024 / k 一个非叶子节点存放叶子节点数量 b = 16 * 1024 / (x + 6) 总页数 p = N / c 索引...</description>
       <category>MySQL</category>
       <pubDate>Sat, 13 Jan 2024 02:57:27 GMT</pubDate>
@@ -66,9 +161,9 @@
     </item>
     <item>
       <title>高并发设计</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E6%9E%B6%E6%9E%84/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E6%9E%B6%E6%9E%84/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">高并发设计</source>
+      <link>https://suveng.github.io/zh/posts/%E6%9E%B6%E6%9E%84/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E6%9E%B6%E6%9E%84/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1.html</guid>
+      <source url="https://suveng.github.io/rss.xml">高并发设计</source>
       <description>高并发定义 高并发是指在一定时间内，大量的请求同时访问应用程序或系统，导致系统出现性能瓶颈，如响应时间变慢、服务不可用等问题。 高并发通常出现在促销活动、秒杀场景、网站流量高峰期等情况下。 衡量高并发的指标 响应时间(RT); 并发数(QPS); 请求成功率(成功数/总数); 资源利用率; CPU; 内存; IO; JVM GC; 影响并发的因素 硬件...</description>
       <category>架构</category>
       <pubDate>Sat, 13 Jan 2024 02:57:27 GMT</pubDate>
@@ -164,9 +259,9 @@
     </item>
     <item>
       <title>MySQL慢查询优化</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL慢查询优化</source>
+      <link>https://suveng.github.io/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html</link>
+      <guid>https://suveng.github.io/zh/posts/MySQL/MySQL%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96.html</guid>
+      <source url="https://suveng.github.io/rss.xml">MySQL慢查询优化</source>
       <description>优化原则 1. 最左前缀匹配原则 2. 选择区分度高的列作为索引 3. 索引列不参与计算 4. 尽量扩展索引 排查慢查询过程 1. 找到耗时较长的SQL语句 2. 使用explain语句解析SQL执行计划 3. 排查执行计划中是否有全表扫描的情况 4. 排查执行计划中扫描行数较多的查询语句 5. 制定方案优化SQL 如果实在无法优化, 看看是否折中的方...</description>
       <category>MySQL</category>
       <pubDate>Thu, 11 Jan 2024 07:49:51 GMT</pubDate>
@@ -201,9 +296,9 @@
     </item>
     <item>
       <title>MySQL的语法解析器</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%A3%E6%9E%90%E5%99%A8.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%A3%E6%9E%90%E5%99%A8.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL的语法解析器</source>
+      <link>https://suveng.github.io/zh/posts/MySQL/MySQL%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%A3%E6%9E%90%E5%99%A8.html</link>
+      <guid>https://suveng.github.io/zh/posts/MySQL/MySQL%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%A3%E6%9E%90%E5%99%A8.html</guid>
+      <source url="https://suveng.github.io/rss.xml">MySQL的语法解析器</source>
       <description>SQL本身是一种程序语言, 语言最终会被编译成指令在程序中运行; 那么语言本身是可以被解析, 对应的解析器有哪些实现 1. MySQL源码的解析器 由专门的公司维护 SQL Parser, https://www.sqlparser.com/ 2. 开源的SQL解析器 美团开源的SQL Advisor https://github.com/Meitua...</description>
       <category>MySQL</category>
       <pubDate>Thu, 11 Jan 2024 07:31:13 GMT</pubDate>
@@ -235,9 +330,9 @@
     </item>
     <item>
       <title>MySQL的SQL执行过程</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E7%9A%84SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL的SQL执行过程</source>
+      <link>https://suveng.github.io/zh/posts/MySQL/MySQL%E7%9A%84SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.html</link>
+      <guid>https://suveng.github.io/zh/posts/MySQL/MySQL%E7%9A%84SQL%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.html</guid>
+      <source url="https://suveng.github.io/rss.xml">MySQL的SQL执行过程</source>
       <description>这是MySQL架构组件执行流程, 最后交给存储引擎执行SQL; startuml skin rose node Driver database MySQL { component SQL接口 component SQL解析器 component SQL优化器 component SQL执行器 component SQL存储引擎 } Driver --&amp;gt;...</description>
       <category>MySQL</category>
       <pubDate>Thu, 11 Jan 2024 07:19:46 GMT</pubDate>
@@ -261,9 +356,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>MySQL同步数据ES</title>
-      <link>https://suveng.github.io/suveng_blog/mysql_sync_es.html</link>
-      <guid>https://suveng.github.io/suveng_blog/mysql_sync_es.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL同步数据ES</source>
+      <link>https://suveng.github.io/mysql/sync/es.html</link>
+      <guid>https://suveng.github.io/mysql/sync/es.html</guid>
+      <source url="https://suveng.github.io/rss.xml">MySQL同步数据ES</source>
       <description>1. 同步双写 2. 异步双写 3. 定时任务 4. 数据订阅 同步双写 startuml skin rose node 商品服务 database MySQL storage ElasticSearch interface --&amp;gt; 商品服务 : 1. 更新商品请求 商品服务 --&amp;gt; MySQL : 2.同步更新数据 商品服务 --&amp;gt; ElasticS...</description>
       <category>ElasticSearch</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
@@ -350,9 +445,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>Gossip一致性算法</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">Gossip一致性算法</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Gossip%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
+      <source url="https://suveng.github.io/rss.xml">Gossip一致性算法</source>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
       <content:encoded><![CDATA[<h1> Gossip一致性算法</h1>
@@ -360,9 +455,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>Paxos一致性算法</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">Paxos一致性算法</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Paxos%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
+      <source url="https://suveng.github.io/rss.xml">Paxos一致性算法</source>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
       <content:encoded><![CDATA[<h1> Paxos一致性算法</h1>
@@ -370,9 +465,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>Raft一致性算法</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">Raft一致性算法</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
+      <source url="https://suveng.github.io/rss.xml">Raft一致性算法</source>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
       <content:encoded><![CDATA[<h1> Raft一致性算法</h1>
@@ -380,9 +475,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>ZAB一致性算法</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">ZAB一致性算法</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/ZAB%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95.html</guid>
+      <source url="https://suveng.github.io/rss.xml">ZAB一致性算法</source>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
       <content:encoded><![CDATA[<h1> ZAB一致性算法</h1>
@@ -390,9 +485,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>冒泡排序</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">冒泡排序</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">冒泡排序</source>
       <description>冒泡排序（Bubble Sort）是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。 算法描述 1. 从数列中挑出最小（大）元素，依次放到数列的起始位置； 2. 再从剩下的元素中挑出最小（大）元素，放到已排序序列的末尾； 3....</description>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
@@ -443,9 +538,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>双指针</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">双指针</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88.html</guid>
+      <source url="https://suveng.github.io/rss.xml">双指针</source>
       <description>双指针算法（Two-Pointers Algorithm）是一种常见的算法思想，通常用于解决数组或链表相关的问题。该算法通过使用两个指针，分别从数组或链表的两端向中间移动，从而解决问题。 双指针算法通常可以分为两种情况： 1. 从数组的两端向中间移动的双指针算法： 这种情况下，我们通常使用两个指针从数组的两端同时开始遍历，然后根据具体的问题来决定两个指...</description>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
@@ -467,9 +562,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>基数排序</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">基数排序</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">基数排序</source>
       <description>基本原理 基数排序是一种非比较性的排序算法。基数排序的基本思想是：将整数按位数划分为不同的桶，然后按每个位数分别对桶中的元素进行排序，最终将所有位数上的排序结果合并在一起，得到最终的排序结果。 基数排序的时间复杂度为O(dn)，其中d是数字的最大位数，n是待排序元素个数。 实现步骤 基数排序的实现步骤如下： 1. 获取待排序数组中的最大值，确定最大位数...</description>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
@@ -490,9 +585,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>堆排序</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%A0%86%E6%8E%92%E5%BA%8F.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%A0%86%E6%8E%92%E5%BA%8F.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">堆排序</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%A0%86%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%A0%86%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">堆排序</source>
       <description>堆排序（Heap Sort）是利用堆（Heap）这种数据结构进行选择排序的一种算法。堆是一个可以推导具有最大或最小值的树形结构，堆排序利用堆的特性进行排序。 堆排序分为两个步骤： 1. 建堆（Build Heap）：将一个无序的数组构建成一个大顶堆（Max Heap）。大顶堆的特点是父节点的值大于或等于其子节点的值。建堆的过程从数组的最后一个非叶子节点...</description>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
@@ -520,9 +615,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>希尔排序</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">希尔排序</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">希尔排序</source>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 希尔排序</h1>
@@ -530,9 +625,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>归并排序</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">归并排序</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">归并排序</source>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 归并排序</h1>
@@ -540,9 +635,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>快速排序</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">快速排序</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">快速排序</source>
       <description>快速排序是一种常用的排序算法，采用分治法（Divide and Conquer）的思想。它的基本步骤如下： 1. 从数列中挑出一个元素，称为“基准”（pivot）。 2. 将所有比基准值小的元素都放在基准前面，比基准值大的元素都放在基准的后面（相同的数可以放在任一边）。在这个分区退出之后，该基准就处于数列的中间位置。 3. 对基准的左右两个分区重复步骤...</description>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
@@ -566,9 +661,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>插入排序</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">插入排序</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">插入排序</source>
       <description>插入排序是一种简单直观的排序算法。它的基本思想是通过构建有序序列，对未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。 时间复杂度 在最坏的情况下，插入排序需要O(n^2)的时间复杂度和O(1)的空间复杂度。 空间复杂度 在最好情况下，插入排序需要O(n)的时间复杂度和O(1)的空间复杂度。 Java代码实现</description>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
@@ -583,9 +678,9 @@ binlog 时 MySQL 本身的组件</p>
     </item>
     <item>
       <title>斐波那契数列问题</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">斐波那契数列问题</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%97%AE%E9%A2%98.html</guid>
+      <source url="https://suveng.github.io/rss.xml">斐波那契数列问题</source>
       <description>数学公式如下: $$ \begin{align} f(n) = \left\{ \begin{matrix} 0 &amp; n=0 \\ 1 &amp; n=1 \\ f(n-1)+f(n-2) &amp; n&amp;gt;=1 \end{matrix} \right. \end{align} $$</description>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
@@ -610,9 +705,9 @@ f(n)  =
     </item>
     <item>
       <title>桶排序</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%A1%B6%E6%8E%92%E5%BA%8F.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E6%A1%B6%E6%8E%92%E5%BA%8F.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">桶排序</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%A1%B6%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E6%A1%B6%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">桶排序</source>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 桶排序</h1>
@@ -620,9 +715,9 @@ f(n)  =
     </item>
     <item>
       <title>计数排序</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">计数排序</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">计数排序</source>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 计数排序</h1>
@@ -630,9 +725,9 @@ f(n)  =
     </item>
     <item>
       <title>选择排序</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">选择排序</source>
+      <link>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">选择排序</source>
       <description>选择排序是一种简单直观的排序算法。它的基本思想是：每次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。 步骤 选择排序的算法步骤如下： 1. 在待排序的元素中，找到最小（大）的元素，将其与第一个元素交换位置。 2. 在剩下的元素中，找到最小（大）的元素，将其与第二个元素交换位置。 3. 重复上述步骤...</description>
       <category>算法</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
@@ -663,10 +758,70 @@ f(n)  =
 ]]></content:encoded>
     </item>
     <item>
+      <title>JVM内存模型</title>
+      <link>https://suveng.github.io/jvm/memory/model.html</link>
+      <guid>https://suveng.github.io/jvm/memory/model.html</guid>
+      <source url="https://suveng.github.io/rss.xml">JVM内存模型</source>
+      <category>Java</category>
+      <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> JVM内存模型</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>JVM参数调优</title>
+      <link>https://suveng.github.io/jvm/args/optimize.html</link>
+      <guid>https://suveng.github.io/jvm/args/optimize.html</guid>
+      <source url="https://suveng.github.io/rss.xml">JVM参数调优</source>
+      <category>Java</category>
+      <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> JVM参数调优</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>JVM垃圾回收</title>
+      <link>https://suveng.github.io/jvm/garbage/collection.html</link>
+      <guid>https://suveng.github.io/jvm/garbage/collection.html</guid>
+      <source url="https://suveng.github.io/rss.xml">JVM垃圾回收</source>
+      <category>Java</category>
+      <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> JVM垃圾回收</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>CountDownLatch锁</title>
+      <link>https://suveng.github.io/juc/CountDownLatch.html</link>
+      <guid>https://suveng.github.io/juc/CountDownLatch.html</guid>
+      <source url="https://suveng.github.io/rss.xml">CountDownLatch锁</source>
+      <category>Java</category>
+      <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> CountDownLatch锁</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>CyclicBarrier锁</title>
+      <link>https://suveng.github.io/juc/CyclicBarrier.html</link>
+      <guid>https://suveng.github.io/juc/CyclicBarrier.html</guid>
+      <source url="https://suveng.github.io/rss.xml">CyclicBarrier锁</source>
+      <category>Java</category>
+      <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> CyclicBarrier锁</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Phaser锁</title>
+      <link>https://suveng.github.io/juc/countDownLatch.html</link>
+      <guid>https://suveng.github.io/juc/countDownLatch.html</guid>
+      <source url="https://suveng.github.io/rss.xml">Phaser锁</source>
+      <category>Java</category>
+      <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Phaser锁</h1>
+]]></content:encoded>
+    </item>
+    <item>
       <title>线程</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">线程</source>
+      <link>https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B.html</link>
+      <guid>https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B.html</guid>
+      <source url="https://suveng.github.io/rss.xml">线程</source>
       <description>Java的线程是程序执行的最小单位，是操作系统进行调度的基本单元。Java中的线程由Thread类和Runnable接口实现。Thread类是一个实现了Runnable接口的类，它包含线程的控制方法和线程的生命周期方法。Runnable接口定义了一个run()方法，该方法包含线程要执行的代码。 Java中的线程有以下几种状态： 1. 初始(NEW)：新...</description>
       <category>Java</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
@@ -687,9 +842,9 @@ f(n)  =
     </item>
     <item>
       <title>线程池</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">线程池</source>
+      <link>https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html</link>
+      <guid>https://suveng.github.io/zh/posts/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html</guid>
+      <source url="https://suveng.github.io/rss.xml">线程池</source>
       <description>线程池设计思想 Java线程池的设计思想是为了提高线程的使用效率和响应能力，以及降低资源消耗和线程管理的复杂度。 Java线程池主要具有以下设计思想： 1. 重复使用线程：Java线程池中的线程可以被重复使用，而不是为每个任务创建一个新的线程。这样可以避免线程的创建和销毁带来的开销，提高程序的性能。 2. 控制资源消耗：Java线程池可以控制线程的数量...</description>
       <category>Java</category>
       <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
@@ -730,10 +885,20 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
 ]]></content:encoded>
     </item>
     <item>
+      <title>SpringBean的生命周期</title>
+      <link>https://suveng.github.io/spring/bean/life/cycle.html</link>
+      <guid>https://suveng.github.io/spring/bean/life/cycle.html</guid>
+      <source url="https://suveng.github.io/rss.xml">SpringBean的生命周期</source>
+      <category>Java</category>
+      <pubDate>Thu, 11 Jan 2024 02:25:57 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> SpringBean的生命周期</h1>
+]]></content:encoded>
+    </item>
+    <item>
       <title>MySQL主从复制</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL主从复制</source>
+      <link>https://suveng.github.io/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html</link>
+      <guid>https://suveng.github.io/zh/posts/MySQL/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html</guid>
+      <source url="https://suveng.github.io/rss.xml">MySQL主从复制</source>
       <category>MySQL</category>
       <pubDate>Mon, 08 Jan 2024 15:24:42 GMT</pubDate>
       <content:encoded><![CDATA[<h1> MySQL主从复制</h1>
@@ -741,9 +906,9 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
     </item>
     <item>
       <title>MySQL事务</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL事务</source>
+      <link>https://suveng.github.io/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html</link>
+      <guid>https://suveng.github.io/zh/posts/MySQL/MySQL%E4%BA%8B%E5%8A%A1.html</guid>
+      <source url="https://suveng.github.io/rss.xml">MySQL事务</source>
       <category>MySQL</category>
       <pubDate>Mon, 08 Jan 2024 15:24:42 GMT</pubDate>
       <content:encoded><![CDATA[<h1> MySQL事务</h1>
@@ -751,9 +916,9 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
     </item>
     <item>
       <title>MySQL分库分表</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">MySQL分库分表</source>
+      <link>https://suveng.github.io/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</link>
+      <guid>https://suveng.github.io/zh/posts/MySQL/MySQL%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.html</guid>
+      <source url="https://suveng.github.io/rss.xml">MySQL分库分表</source>
       <description>为什么要分库分表 需要分库分表的情况无非是数据库性能无法满足业务要求; 1. 读慢 数据量过大,导致InnoDB的存储文件.ibd过大, MySQL需要先将ibd文件读取到内存中进行查找,然后将数据返回给客户端 磁盘IO可能成为瓶颈, 读取文件; CPU内存查找可能成为瓶颈, 查找; 网络传输可能成为瓶颈; 2. 写慢 数据量过大,导致InnoDB的存...</description>
       <category>MySQL</category>
       <pubDate>Mon, 08 Jan 2024 15:24:42 GMT</pubDate>
@@ -790,27 +955,27 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
     </item>
     <item>
       <title>电商售后设计方案</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%94%AE%E5%90%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%94%AE%E5%90%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">电商售后设计方案</source>
+      <link>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%94%AE%E5%90%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%94%AE%E5%90%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
+      <source url="https://suveng.github.io/rss.xml">电商售后设计方案</source>
       <description>电商业务流程时序.md (%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.md)</description>
       <category>电商</category>
       <pubDate>Sun, 07 Jan 2024 09:14:51 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 电商售后设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 ]]></content:encoded>
     </item>
     <item>
       <title>电商商品设计方案</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">电商商品设计方案</source>
+      <link>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E5%95%86%E5%93%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
+      <source url="https://suveng.github.io/rss.xml">电商商品设计方案</source>
       <description>电商业务流程时序.md (%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.md) 商品的职责有哪些? 商品来源; 企业生产(自产自销) : 一般是有自己的供应链,公司内部记录和管理; 企业采购(B2B) : 从外部企业渠道采购到公司内部, 并由公司内部记录...</description>
       <category>电商</category>
       <pubDate>Sun, 07 Jan 2024 09:14:51 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 电商商品设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 <h2> 商品的职责有哪些?</h2>
 <ul>
@@ -866,55 +1031,55 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
 <li>订单</li>
 </ul>
 <h3> ES数据同步方案</h3>
-<p><a href="/suveng_blog/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html" target="blank">MySQL同步数据ES.md</a></p>
+<p><a href="/zh/posts/ElasticSearch/MySQL%E5%90%8C%E6%AD%A5%E6%95%B0%E6%8D%AEES%E6%96%B9%E6%A1%88.html" target="blank">MySQL同步数据ES.md</a></p>
 <p>通过上面文章的方案比较, 最终选用数据订阅方式,进行ES数据同步</p>
 ]]></content:encoded>
     </item>
     <item>
       <title>电商搜索设计方案</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%90%9C%E7%B4%A2%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%90%9C%E7%B4%A2%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">电商搜索设计方案</source>
+      <link>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%90%9C%E7%B4%A2%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%90%9C%E7%B4%A2%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
+      <source url="https://suveng.github.io/rss.xml">电商搜索设计方案</source>
       <description>电商业务流程时序.md (%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.md) https://zq99299.github.io/note-book/back-end-storage/</description>
       <category>电商</category>
       <pubDate>Sun, 07 Jan 2024 09:14:51 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 电商搜索设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 <p>https://zq99299.github.io/note-book/back-end-storage/</p>
 ]]></content:encoded>
     </item>
     <item>
       <title>电商支付设计方案</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%94%AF%E4%BB%98%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%94%AF%E4%BB%98%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">电商支付设计方案</source>
+      <link>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%94%AF%E4%BB%98%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E6%94%AF%E4%BB%98%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
+      <source url="https://suveng.github.io/rss.xml">电商支付设计方案</source>
       <description>电商业务流程时序.md (%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.md)</description>
       <category>电商</category>
       <pubDate>Sun, 07 Jan 2024 09:14:51 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 电商支付设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 ]]></content:encoded>
     </item>
     <item>
       <title>电商购物车方案</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%B4%AD%E7%89%A9%E8%BD%A6%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%B4%AD%E7%89%A9%E8%BD%A6%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">电商购物车方案</source>
+      <link>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%B4%AD%E7%89%A9%E8%BD%A6%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%B4%AD%E7%89%A9%E8%BD%A6%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
+      <source url="https://suveng.github.io/rss.xml">电商购物车方案</source>
       <description>电商业务流程时序.md (%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.md)</description>
       <category>电商</category>
       <pubDate>Sun, 07 Jan 2024 09:14:51 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 电商购物车方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 ]]></content:encoded>
     </item>
     <item>
       <title>电商业务流程时序</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">电商业务流程时序</source>
+      <link>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html</guid>
+      <source url="https://suveng.github.io/rss.xml">电商业务流程时序</source>
       <description>startuml skin rose autonumber actor 顾客 activate 顾客 顾客 --&amp;gt; 认证授权 ++ : 登录认证授权 return 登录成功 顾客 --&amp;gt; 商品 ++: 浏览商品列表 return 商品列表 顾客 --&amp;gt; 搜索 ++ : 搜索商品 return 商品列表 顾客 --&amp;gt; 商品 ++ : 查看商品详情 ret...</description>
       <category>电商</category>
       <pubDate>Sun, 07 Jan 2024 07:44:20 GMT</pubDate>
@@ -926,14 +1091,14 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
     </item>
     <item>
       <title>电商订单设计方案</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%AE%A2%E5%8D%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%AE%A2%E5%8D%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">电商订单设计方案</source>
+      <link>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%AE%A2%E5%8D%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E8%AE%A2%E5%8D%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88.html</guid>
+      <source url="https://suveng.github.io/rss.xml">电商订单设计方案</source>
       <description>电商业务流程时序.md (%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.md) 电商订单的职责 1. 电商订单是记录电商平台上的交易信息的重要数据实体，包括订单号、商品信息、收货地址、支付信息等。 2. 电商订单具有以下职责： 记录并管理交易信息：电商订...</description>
       <category>电商</category>
       <pubDate>Sun, 07 Jan 2024 07:44:20 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 电商订单设计方案</h1>
-<p><a href="/suveng_blog/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
+<p><a href="/zh/posts/%E7%94%B5%E5%95%86/%E7%94%B5%E5%95%86%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F.html" target="blank">电商业务流程时序.md</a></p>
 <img src="https://www.plantuml.com/plantuml/svg/XPFVJi8m5CRl-nIz9xm05uPNcReBeenaRDuZOAO8mm3-IJ24HON4i968BBg8BxDsvIqSdexiB29NQt-dt_Vrj5snQYYwOPPFIVMaf56zKbKfKKoZefdbGrKdH3aoAZfTZrVCTJQJqfbYgCcSm9VcymTKk4_2g_6EnH_hD9UZ1Hez1EnhaEP4LmrJrsI5MrrsDK8cR731UhLONg3ytHOJ2m2pxiHucgWHIwjvTnWj70Y7CIpTAzp6ReIZvsZO0YAy5rvlOhbak7M7jGUowTSMQx-9nIpyc1DPsAo9-bDk-Ti8uJbW47wFUSrB8X1BgJCRZDL0i1gnb9htlJ2u1xNe-Co-1OBLVxFbkhTazXoVSyeFnaIYx6a0bXUDSlvXoTP_tSAWnywduCRi6x6OR1_Hx9Ajcf8HkIwx0IZZCCJIVQMpejagRdwNBLInxLwswya8hn46Ff3iMsi8ztEdaBdNiJKMmWmgX1HLxJZ-kNy0" alt="uml diagram" loading="lazy">
 <h2> 电商订单的职责</h2>
 <ol>
@@ -980,9 +1145,9 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
     </item>
     <item>
       <title>数组</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">数组</source>
+      <link>https://suveng.github.io/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84.html</guid>
+      <source url="https://suveng.github.io/rss.xml">数组</source>
       <description>数组是一种线性数据结构，它由一组连续的内存空间组成，用于存储同一类型的数据元素。 数组的主要优点包括： 1. 直接访问 可以通过索引直接访问数组中的元素，时间复杂度为O(1)。 2. 灵活操作 可以通过索引对数组中的元素进行增加、删除、修改等操作。 3. 空间有效利用 在创建数组时，会预分配足够的内存空间用于存储元素，可以有效利用内存空间。 数组的主要...</description>
       <category>数据结构</category>
       <pubDate>Fri, 05 Jan 2024 11:15:57 GMT</pubDate>
@@ -1008,9 +1173,9 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
     </item>
     <item>
       <title>记录搭建VuePress博客</title>
-      <link>https://suveng.github.io/suveng_blog/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">记录搭建VuePress博客</source>
+      <link>https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html</link>
+      <guid>https://suveng.github.io/zh/posts/%E8%AE%B0%E5%BD%95/%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BAVuePress%E5%8D%9A%E5%AE%A2.html</guid>
+      <source url="https://suveng.github.io/rss.xml">记录搭建VuePress博客</source>
       <description>VuePress (https://theme-hope.vuejs.press/zh/guide/blog/article.html)</description>
       <category>博客</category>
       <pubDate>Thu, 04 Jan 2024 09:45:47 GMT</pubDate>
@@ -1020,9 +1185,9 @@ Java线程池的设计思想是基于生产者-消费者模式，通过工作线
     </item>
     <item>
       <title>介绍页</title>
-      <link>https://suveng.github.io/suveng_blog/zh/intro.html</link>
-      <guid>https://suveng.github.io/suveng_blog/zh/intro.html</guid>
-      <source url="https://suveng.github.io/suveng_blog/rss.xml">介绍页</source>
+      <link>https://suveng.github.io/zh/intro.html</link>
+      <guid>https://suveng.github.io/zh/intro.html</guid>
+      <source url="https://suveng.github.io/rss.xml">介绍页</source>
       <description>这是我的个人简历 个人信息 姓名: 苏文广 性别: 男 出生年月: 1996-12 大学: 韩山师范学院-软件工程专业(2015.9~2019.6/全日制统招本科) 手机号: 18320664028 邮箱: suveng@163.com 开发技能 4年工作经验; 熟悉 Java 语言, IO,反射,SPI,jvm, java agent; 精通业务关系...</description>
       <category>博主</category>
       <pubDate>Thu, 04 Jan 2024 08:10:21 GMT</pubDate>
