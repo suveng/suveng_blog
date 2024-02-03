@@ -43,7 +43,12 @@ export default defineUserConfig({
     //     <meta name="google-site-verification" content="BCYLlBTqItZkRsuw9tNYXU_GV5p78SwaYz2dmaWI6EQ" />
     ['meta', { name: 'google-site-verification', content: 'BCYLlBTqItZkRsuw9tNYXU_GV5p78SwaYz2dmaWI6EQ'}],
     ['meta', { name: 'keywords', content: 'suveng,苏文广'}],
-  ]
+  ],
+  markdown:{
+    links : {
+      externalAttrs:{ target: '_blank', rel: 'nofollow noopener noreferrer' }
+    }
+  }
 
   // Enable it with pwa
   // shouldPrefetch: false,
