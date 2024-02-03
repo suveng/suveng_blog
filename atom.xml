@@ -3,7 +3,7 @@
   <id>https://suveng.site/</id>
   <title>苏文广的博客</title>
   <subtitle>苏文广的博客</subtitle>
-  <updated>2024-02-03T12:24:34.794Z</updated>
+  <updated>2024-02-03T12:33:04.194Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://suveng.site/atom.xml"/>
   <link rel="alternate" href="https://suveng.site/"/>
@@ -22,7 +22,7 @@
     <title type="text">长沙旅游</title>
     <id>https://suveng.site/zh/posts/%E6%97%85%E6%B8%B8/%E9%95%BF%E6%B2%99.html</id>
     <link href="https://suveng.site/zh/posts/%E6%97%85%E6%B8%B8/%E9%95%BF%E6%B2%99.html"/>
-    <updated>2024-02-03T12:23:54.000Z</updated>
+    <updated>2024-02-03T12:31:47.000Z</updated>
     <summary type="html"><![CDATA[<h1> 长沙旅游</h1>
 <h2> 旅游地点</h2>
 <ol>
@@ -152,42 +152,7 @@
 </tbody>
 </table>
 <h2> 计划图</h2>
-<p>@startwbs<br>
-skin rose</p>
-<ul>
-<li>长沙<br>
-** day-1<br>
-*** 上海出发<br>
-*** 长沙到达<br>
-*** 潮宗街<br>
-*** 五一广场<br>
-*** IFS国金中心<br>
-*** 黄兴步行街<br>
-*** 太平街<br>
-*** 坡子街<br>
-*** 文和友<br>
-*** 杜甫江阁<br>
-** day-2<br>
-*** 橘子洲<br>
-*** 岳麓山<br>
-*** 爱晚亭<br>
-*** 岳麓书院<br>
-*** 湖南大学<br>
-*** 后湖<br>
-*** 麓山南路<br>
-** day-3<br>
-*** 月湖公园<br>
-*** 世界之窗<br>
-*** 湖南广电<br>
-*** 开福寺<br>
-*** 烈士公园<br>
-*** 万家丽广场<br>
-*** 米粉街<br>
-*** 杨帆夜市<br>
-** day-4<br>
-*** 回家<br>
-@endwbs</li>
-</ul>
+<img src="https://www.plantuml.com/plantuml/svg/LL7BJi9G4DttAxfkuiB71x0oSUqNO61XL4menhX34Li51HGeID6WY0eMR05fgz2VkNDl-nUMZYMukdFEp3btSYOYfgB9rD71FXS9gkCTaHFtTXDyyb2CSvp0UnM76dLE4FXOz6HbrIy4dfXNT3m1oOP2AI1m2EHFTpOB23hjGrznMmhEssLYfi5oGBK3Ocjp6nfJJoeHKmCdWnxVvv0TKUt5RUL38RIxO0qNgDa2hHWYMfNWDW-57AAcoiezgZzwjTDmsJNilDTy5HqPw64CFViET3r0JDPf_PxOsbAFM1sl_eHIgmhN2hHVGUlWHF76vt3TmCLlkvD1-E4wgbHvBin-G4FxYwlAAdbYvLXNMVQr75OUe-zFcdKACC1qM4Q6vzu_0mdwNyISBaN8z24pBXTXDD_0l82s2kPPkCq6MZSUV2qNYITYyzlEN__Qlm00" alt="uml diagram" loading="lazy">
 ]]></content>
     <category term="旅游"/>
     <published>2024-02-03T12:23:40.000Z</published>
