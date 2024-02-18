@@ -46,8 +46,8 @@ export default defineUserConfig({
     ['meta', { name: 'baidu-site-verification', content: 'codeva-f98lPyKEsD'}],
     // <meta name="360-site-verification" content="a42643b271efa7fc86b04ccbed4a8a52" />
     ['meta', { name: '360-site-verification', content: 'a42643b271efa7fc86b04ccbed4a8a52'}],
-    // <meta name="sogou_site_verification" content="w4K0QAVDKy" />
-    ['meta', { name: 'sogou_site_verification', content: 'w4K0QAVDKy'}],
+    // <meta name="sogou_site_verification" content="pKjHBMUpwK" />
+    ['meta', { name: 'sogou_site_verification', content: 'pKjHBMUpwK'}],
     ['meta', { name: 'keywords', content: 'suveng,苏文广'}],
   ],
   markdown:{
