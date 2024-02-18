@@ -32,7 +32,7 @@ export default hopeTheme({
       // sidebar
       sidebar: enSidebar,
 
-      footer: "go faster",
+      footer: '<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2024183073号</a>',
 
       displayFooter: true,
 
@@ -56,7 +56,7 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "每天进步一点点",
+      footer: '<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2024183073号</a>',
 
       displayFooter: true,
 
