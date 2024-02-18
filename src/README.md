@@ -9,7 +9,4 @@ heroFullScreen: true
 tagline: 每天进步一点点
 projects:
     
-footer: 每天进步一点点
 ---
-
-todo: https://java.ist`ure.com
